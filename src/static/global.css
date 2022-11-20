@@ -1,0 +1,100 @@
+@import "fonts.css";
+
+:root {
+	/* COLORS */
+	--color-black: #0a090c;
+	--color-slate: #07393c;
+	--color-apricot-light: #fcd7ad;
+	--color-isabelline: #f0edee;
+	--color-blue-baby: #90ddf0;
+	--color-green: #2c666e;
+	--color-purple: #7f7caf;
+	--color-gray-light: #eee;
+
+	--link-color: var(--color-apricot-light);
+
+	/* TYPE */
+
+	--font-size-very-large: 1.8rem;
+	--font-size-large: 1.2rem;
+	--font-size: 1rem;
+	--font-size-small: 0.85rem;
+
+	--sans-serif-fonts: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	--display-fonts: "BreulGroteskBBold", sans-serif;
+	--serif-fonts: "Times New Roman", "Georgia", serif;
+
+	/* // SCAFFOLDING */
+	--gap: 1rem;
+	--container-width: 65rem;
+	--container-padding-h: max(var(--gap), calc((100% - var(--container-width)) / 2));
+}
+
+html body {
+	margin: 0;
+	padding: 0;
+	min-height: -webkit-fill-available;
+}
+
+/* RELEVANT RESET */
+html body * {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 var(--gap) 0;
+}
+
+/* A valid, accessible method for visually hiding content (such as text labels on icon buttons) while preserving it for screen readers and other sight-assist tools. */
+.visually-hidden:not(:focus) {
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.serif {
+	font: var(--font-size) / 1.5em var(--serif-fonts);
+}
+
+.sans-serif {
+	font: var(--font-size) / 1.3em var(--sans-serif-fonts);
+}
+
+.label {
+	font: bold var(--font-size-large) / 1.3em var(--display-fonts);
+}
+.header {
+	font: bold var(--font-size-very-large) / 1.3em var(--display-fonts);
+}
+
+.agate {
+	font: var(--font-size-small) / 1.3em var(--sans-serif-fonts);
+}
+
+p:not([class]) {
+	font: var(--font-size-large) / 1.3em var(--serif-fonts);
+}
+
+/* SCAFFOLDING FUN */
+
+.container {
+	padding: calc(2 * var(--gap)) var(--container-padding-h);
+}
+
+.stack {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: var(--gap);
+}
+
+.stack > * {
+	margin-block: 0;
+}

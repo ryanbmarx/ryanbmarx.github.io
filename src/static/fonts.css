@@ -1,0 +1,40 @@
+@font-face {
+	font-family: "BreulGroteskBLight";
+	src: local("BreulGroteskBLight");
+	src: url("/fonts/BreulGroteskB-Light.eot"); /* IE9 Compat Modes */
+	src: url("/fonts/BreulGroteskB-Light.eot?#iefix") format("embedded-opentype"),
+		/* IE6-IE8 */ url("/fonts/BreulGroteskB-Light.woff") format("woff"),
+		/* Modern Browsers */ url("/fonts/BreulGroteskB-Light.ttf") format("truetype"),
+		/* Safari, Android, iOS */ url("/fonts/BreulGroteskB-Light.svg#BreulGroteskB-Light")
+			format("svg"); /* Legacy iOS */
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+	unicode-range: U+000-5FF; /* Latin glyphs */
+}
+@font-face {
+	font-family: "BreulGroteskBBold";
+	src: local("BreulGroteskBBold");
+	src: url("/fonts/BreulGroteskB-Bold.eot"); /* IE9 Compat Modes */
+	src: url("/fonts/BreulGroteskB-Bold.eot?#iefix") format("embedded-opentype"),
+		/* IE6-IE8 */ url("/fonts/BreulGroteskB-Bold.woff") format("woff"),
+		/* Modern Browsers */ url("/fonts/BreulGroteskB-Bold.ttf") format("truetype"),
+		/* Safari, Android, iOS */ url("/fonts/BreulGroteskB-Bold.svg#BreulGroteskB-Bold")
+			format("svg"); /* Legacy iOS */
+	font-weight: normal;
+	unicode-range: U+000-5FF; /* Latin glyphs */
+	text-rendering: optimizeLegibility;
+}
+
+@font-face {
+	font-family: "BreulGroteskBBlack";
+	src: local("BreulGroteskBBlack");
+	src: url("/fonts/BreulGroteskB-Black.eot"); /* IE9 Compat Modes */
+	src: url("/fonts/BreulGroteskB-Black.eot?#iefix") format("embedded-opentype"),
+		/* IE6-IE8 */ url("/fonts/BreulGroteskB-Black.woff") format("woff"),
+		/* Modern Browsers */ url("/fonts/BreulGroteskB-Black.ttf") format("truetype"),
+		/* Safari, Android, iOS */ url("/fonts/BreulGroteskB-Black.svg#BreulGroteskB-Black")
+			format("svg"); /* Legacy iOS */
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+	unicode-range: U+000-5FF; /* Latin glyphs */
+}
