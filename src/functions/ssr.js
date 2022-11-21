@@ -32,7 +32,7 @@ async function preview() {
 
 	const rendered = template.replace("{{HTML}}", await renderHTML());
 
-	return fs.writeFile(path.resolve(__dirname, "../index.html"), rendered, "utf-8");
+	return fs.writeFile(path.resolve(__dirname, "../../index.html"), rendered, "utf-8");
 }
 
 if (require.main === module) {
