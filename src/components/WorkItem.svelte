@@ -9,6 +9,21 @@
 	.item > * {
 		margin: 0 0 calc(var(--gap) / 2);
 	}
+	.item > *:last-child {
+		margin: 0;
+	}
+
+	.role {
+		margin: 0;
+	}
+
+	.time {
+		line-height: 2em;
+		font-weight: bold;
+		font-size: 0.85rem;
+		font-style: normal;
+		display: block;
+	}
 </style>
 
 <li class="item">

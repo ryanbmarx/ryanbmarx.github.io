@@ -14,6 +14,23 @@
 				"I designed the initial wireframes and, eventually, developed this web app, with a focus on scaffolding and UX. I worked with two other developers to incorporate the 3D modeling. Optimizing the mobile performance was a challenge, given the sheer volume of patterns/textures and other related files needed to make this a fun experience.",
 		},
 		{
+			image: "decider.png",
+			label: "The decider: A polar decision matrix",
+			description:
+				'In the run-up to the 2022 midterm elections, we were approached by multiple newsrooms looking to help undecided voters choose their candidates. I designed and developed this application which presents a series of prompts from user-selected topics. Responses to the prompts are categorized, and "agreement" is calculated.',
+			links: [
+				{
+					headline:
+						"Raphael Warnock or Herschel Walker? See which candidate is your closest match ",
+					link: "https://www.savannahnow.com/storytelling/herschel-walker-raphael-warnock-georgia-senate-candidate-how-choose/",
+				},
+				{
+					headline: "How conservative are you?",
+					link: "https://www.usatoday.com/storytelling/find-out-how-conservative-you-really-are/",
+				},
+			],
+		},
+		{
 			image: "quiz.png",
 			label: "The USA TODAY News Quiz",
 			links: [
@@ -54,30 +71,92 @@
 		},
 
 		{
-			label: "In-Depth (toppers, layouts)",
-			image: "fpo.png",
-			links: [{ link: "https://google.com" }, { link: "https://google.com" }],
+			label: "In-Depth",
+			image: "indepth.jpg",
+			links: [
+				{
+					headline:
+						"Hallowed Sound, Vol. 2: Stories of perseverance and preservation from the American South",
+					link: "https://www.tennessean.com/in-depth/entertainment/music/2021/09/23/hallowed-sound-stories-perseverance-preservation-american-south-music/5617513001/",
+				},
+				{
+					headline:
+						"A look at the stadiums where teams will compete in the 2022 FIFA World Cup in Qatar",
+					link: "https://www.usatoday.com/in-depth/graphics/2022/11/18/how-many-stadiums-does-qatar-2022-have-mapping-out-world-cup/8305335001/",
+				},
+				{
+					headline: "Meet the Black dancer who broke the Rockettes' color barrier",
+					link: "https://www.lohud.com/in-depth/news/2022/11/17/jennifer-jones-rockette-radio-city-music-hall/69616543007/",
+				},
+			],
 			description:
 				"My team at Gannett is responsible for designing, engineering and maintaining the In-Depth article framework. This collection of tools enables more than 100 web producers across the company to craft visually stunning, reader-focused multimedia presentations using the everyday CMS and our own story editor.\n\nIt's been used to create more than 7,500 (as of December 2022) articles often representing the strongest, most impactful journalism the Gannett has to offer. It has generated hundreds of thousands of pageviews, a 2x increase in engaged time over standard templates and frequently leads to subscriber conversions.",
 		},
 		{
 			label: "In-depth: Audiograms",
-			image: "fpo.png",
-			links: [{ link: "https://google.com" }, { link: "https://google.com" }],
+			image: "audiogram.png",
+			links: [
+				{
+					headline:
+						"Opinion — Black lives matter: We must live up to Declaration of Independence’s promise",
+					link: "https://www.northjersey.com/in-depth/opinion/2020/07/02/black-lives-matter-trump-declaration-of-independence-2020/3256925001/",
+				},
+				{
+					headline:
+						"'El Paso gave me the values I have': Black leaders emerge from a Hispanic majority border city.",
+					link: "https://www.elpasotimes.com/in-depth/news/2021/03/30/meet-black-leaders-emerged-el-paso-texas-hispanic-majority-city/4578132001/",
+				},
+				{
+					headline:
+						"'They are not alone': Hispanic domestic abuse survivors speak out to help other victims",
+					link: "https://www.oklahoman.com/in-depth/news/2021/08/31/hispanic-domestic-abuse-survivors-speak-out-help-other-victims/7497178002/",
+				},
+			],
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				"This component for the In-Depth toolbox was our second-pass at audio clips. I designed and developed this from scratch as an attempt to grow the poor interaction rates observed with the first version. It's bigger and bolder — more pixels on the page — and has a strong visual presence.",
 		},
 		{
 			label: "In-depth: SMS emulator",
-			links: [{ link: "https://google.com" }, { link: "https://google.com" }],
-			image: "fpo.png",
+			links: [
+				{
+					headline:
+						"The Girl Collector: The story of Cody Jackson and the 16 girls who were his quarry",
+					link: "https://www.cincinnati.com/in-depth/news/2018/10/21/girl-collector-cincinnati-cody-jackson/1409756002/",
+				},
+				{
+					headline:
+						"He murdered three women and was hunting a fourth. These women outsmarted a serial killer",
+					link: "https://www.northjersey.com/in-depth/news/crime/2020/02/03/how-group-women-stopped-nj-serial-killer/2661900001/",
+				},
+				{
+					headline:
+						"A fiery crash shattered four lives. 20 years later, their connection yields serenity.",
+					link: "https://www.desmoinesregister.com/in-depth/news/local/columnists/courtney-crowder/2019/11/26/abbie-kampman-iowa-strangers-find-peace-20-years-after-wrong-way-crash-kills-5-mother-sisters/2570864001/",
+				},
+			],
+			image: "sms.png",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				"This component from the In-Depth toolbox is a top-to-bottom refactor of an existing app. Originally written in Angular (with the data hard-coded into the application), I rewrote it in our preferred Svelte, and abstracted the input data so that it could be used in any project. Visually, it uses the same CSS styling variables as the broader article stylesheets, so it adapts to existing ",
 		},
 		{
 			label: "In-depth: Sliders",
-			image: "fpo.png",
-			links: [{ link: "https://google.com" }, { link: "https://google.com" }],
+			image: "slider.jpg",
+			links: [
+				{
+					headline: "Modernizing images of long-ago Billerica",
+					link: "https://www.wickedlocal.com/in-depth/billerica-minuteman/2021/12/27/bilerica-ma-kevin-murphy-photo-restoration-colorization-historical-pictures/6416979001/",
+				},
+				{
+					headline:
+						"Lane County relies on same alert tools used during Holiday Farm Fire, but when emergency strikes, residents always will have to help each other.",
+					link: "https://www.registerguard.com/in-depth/news/2021/08/26/holiday-farm-fire-emergency-warning-system-residents-help-crucial/8102205002/",
+				},
+				{
+					headline:
+						"Picture this: Eye-opening images of what climate change has done and could do to our world",
+					link: "https://www.usatoday.com/in-depth/graphics/2021/07/07/climate-change-images-offer-present-and-future-views-our-world/5173622001/",
+				},
+			],
 			description:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		},
@@ -143,7 +222,7 @@
 		},
 		{
 			label: "Cincy neighborhoods",
-			image: "fpo.png",
+			image: "cincy.png",
 			links: [
 				{
 					headline: "A statistical tour of Cincinnati: Breaking down the neighborhoods",
@@ -159,7 +238,7 @@
 				},
 			],
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				'A new census brings new data, and we developed this data-explorer microsite with the journalists in Cincinatti who were intent on unpacking claims made by politicians about "the Cincinatti Comeback." This site presents a mountain of the most recent demographic data in two ways: by statistic and by neighborhood. I worked with the journalists to design each of the different views and shared development duties with the entire team. It\'s proven to be a success as it consistently generates traffic/engagement which spikes when new investigative articles publish. ',
 		},
 	];
 	const otherStuff = [
@@ -206,13 +285,12 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		/* display: flex; */
-		/* flex-wrap: wrap; */
 	}
 
 	.links li {
 		padding: 0 0 0 calc(var(--arrow-width) + 0.5em);
 		position: relative;
+		margin: 0 0 0.5rem 0;
 	}
 	.links li::before {
 		content: "\2192";
@@ -223,12 +301,7 @@
 		left: 0;
 	}
 
-	/* .links li:not(:last-child)::after {
-		content: ",";
-	} */
-
 	.link {
-		font-family: var(--display-fonts);
 		font-weight: bold;
 	}
 </style>
@@ -251,7 +324,7 @@
 				<h3 class="label">{label}</h3>
 				<p>{@html description}</p>
 				{#if links.length > 1}
-					<h4 class="label">Examples:</h4>
+					<h4 class="sublabel">Examples:</h4>
 				{/if}
 				<ul class="links">
 					{#each links as { headline, link }}

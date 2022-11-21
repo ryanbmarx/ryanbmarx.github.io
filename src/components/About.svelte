@@ -8,7 +8,7 @@
 			org: "Gannett",
 			role: "Storytelling developer",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				"The Gannett Storytelling Studio is a skunkworks-like team who work on narrative experiences that fall outside the tradition article or photograph. We collaborate with newsrooms across the country to do journalism with our own custom-built tools, frameworks and ad-hoc applications.",
 		},
 		{
 			start: 2010,
@@ -16,7 +16,7 @@
 			org: "Chicago Tribune",
 			role: "Graphics, Assistant DataViz Editor",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				"Developed digital online experiences, and even a few custom-built investigation articles, for news, sports, business, features and beyond. I was central to developing our team's digital strategy and technology stack.",
 		},
 		{
 			start: 2005,
@@ -24,15 +24,15 @@
 			org: "The Times of Northwest Indiana (Munster, Ind.)",
 			role: "Designer, Graphics Editor",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				"I designed newspaper pages and graphics for all sections and contributed digital presentation and graphics (expecially around election time). ",
 		},
 		{
 			start: 2002,
 			end: 2005,
 			org: "The News-Enterprise (Elizabethtown, Ky.)",
-			role: "Copy editor, designer, Presentation Editor",
+			role: "Copy editor, Presentation Editor",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				"I designed newspaper pages and graphics for all sections, edited copy and helped coordinate entertainment coverage ",
 		},
 	];
 </script>
@@ -87,15 +87,17 @@
 		<h3 class="header">How I work</h3>
 		<p>
 			For starters, I work well with others. As a group, we need to discover our true
-			goals, express them clearly, and consider our resrouces.
+			goals, define them clearly, and consider our resources. A well-scoped project is
+			important to success and I always try to do things the "right way" within that
+			scope. This includes accessible design and construction of web experiences.
+			Inclusivity is not an option.
 		</p>
 		<p>
 			I speak fluent <strong>HTML</strong>, <strong>CSS</strong> and
 			<strong>Javascript</strong>. I can get around with <strong>Python</strong> and
 			<strong>Go</strong>. I'm a big fan of the SvelteJS framework. I also know others
-			(including Wordpress). I like Github Actions using Google as an ad-hoc CMS.
+			(including Wordpress). I like Github Actions and using Google as an ad-hoc CMS.
 		</p>
-		<p>I collaborate and try to always do things the _right_ way.</p>
 		<p>I like to document things. It's important and future me needs a lot of help.</p>
 	</div>
 	<div class="work">

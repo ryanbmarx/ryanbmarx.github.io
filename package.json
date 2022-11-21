@@ -6,6 +6,7 @@
 		"@rollup/plugin-json": "^4.1.0",
 		"@rollup/plugin-node-resolve": "^13.3.0",
 		"@rollup/plugin-replace": "^4.0.0",
+		"esm": "^3.2.25",
 		"html-minifier": "^4.0.0",
 		"image-size": "^1.0.0",
 		"lodash.throttle": "^4.1.1",
@@ -29,7 +30,8 @@
 		"dev": "run-p start:dev autobuild",
 		"start": "sirv public --single",
 		"start:dev": "sirv public --single --dev",
-		"static": "mkdir -p ./public && cp -rf src/static/* public/"
+		"static": "mkdir -p ./public && cp -rf src/static/* public/",
+		"svg": "svg-sprite --config svg.config.json src/svg/**/*.svg"
 	},
 	"browserslist": "> 0.25%, not dead"
 }

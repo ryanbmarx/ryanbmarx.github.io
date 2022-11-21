@@ -6,7 +6,7 @@
 </script>
 
 <Header />
-<Contact />
+<Contact label="Find me here:" />
 <About />
 <Portfolio />
 <Contact />
