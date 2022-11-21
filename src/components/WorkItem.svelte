@@ -1,5 +1,5 @@
 <script>
-	export let org, start, end, role, description;
+	export let org, start, end, role, description, orgLink;
 </script>
 
 <style>
@@ -13,11 +13,11 @@
 		margin: 0;
 	}
 
-	.role {
+	.item__role {
 		margin: 0;
 	}
 
-	.time {
+	.item__meta {
 		line-height: 2em;
 		font-weight: bold;
 		font-size: 0.85rem;
@@ -27,11 +27,13 @@
 </style>
 
 <li class="item">
-	<h3 class="role">
-		{role},
-		<span class="org">{org}</span>
+	<h3 class="item__role">
+		{role}
 	</h3>
-	<span class="time">{start} to {end}</span>
+	<p class="item__meta">
+		<a class="org" href={orgLink} target="_blank" rel="noopener noreferrer">{org}</a>:
+		<span class="time">{start} to {end}</span>
+	</p>
 	{#if description}
 		<p>{@html description}</p>
 	{/if}

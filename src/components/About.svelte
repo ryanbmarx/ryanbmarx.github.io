@@ -6,6 +6,7 @@
 			start: 2017,
 			end: "present",
 			org: "Gannett",
+			orgLink: "https://www.usatoday.com/",
 			role: "Storytelling developer",
 			description:
 				"The Gannett Storytelling Studio is a skunkworks-like team who work on narrative experiences that fall outside the tradition article or photograph. We collaborate with newsrooms across the country to do journalism with our own custom-built tools, frameworks and ad-hoc applications.",
@@ -14,14 +15,16 @@
 			start: 2010,
 			end: 2017,
 			org: "Chicago Tribune",
-			role: "Graphics, Assistant DataViz Editor",
+			orgLink: "https://www.chicagotribune.com/",
+			role: "Assistant DataViz Editor, Graphic reporter",
 			description:
 				"Developed digital online experiences, and even a few custom-built investigation articles, for news, sports, business, features and beyond. I was central to developing our team's digital strategy and technology stack.",
 		},
 		{
 			start: 2005,
 			end: 2010,
-			org: "The Times of Northwest Indiana (Munster, Ind.)",
+			org: "The Times of Northwest Indiana",
+			orgLink: "https://www.nwi.com/",
 			role: "Designer, Graphics Editor",
 			description:
 				"I designed newspaper pages and graphics for all sections and contributed digital presentation and graphics (expecially around election time). ",
@@ -29,7 +32,8 @@
 		{
 			start: 2002,
 			end: 2005,
-			org: "The News-Enterprise (Elizabethtown, Ky.)",
+			orgLink: "https://www.thenewsenterprise.com/",
+			org: "The News-Enterprise",
 			role: "Copy editor, Presentation Editor",
 			description:
 				"I designed newspaper pages and graphics for all sections, edited copy and helped coordinate entertainment coverage ",
@@ -71,17 +75,15 @@
 		<p>
 			I've spent my career in communications — specifically, the information
 			communications business. Through information visualization, writing, editing and
-			design, I find the important messages and express them in the best ways possible.
-			Sometimes I reach this goal with a few carefully chosen words. More often,
+			ux design, I find the important messages and express them in the best ways
+			possible. Sometimes all it takes is a few carefully chosen words. More often,
 			however, the effort involves distilling mountains of information into meaningful
-			and enjoyable experiences. This makes repeat customers out of consumers of media.
+			and enjoyable experiences. This makes repeat customers out of media consumers.
 		</p>
 		<p>
-			Having a leadership role in a high-pressure, results-oriented newsroom presents a
-			mountain of challenges. It's important to know when to collaborate, delegate and
-			run solo. Success requires juggling the needs of multiple audiences on multiple
-			platforms, and being a quick study doesn't hurt either. (All while on deadline, of
-			course.)
+			It's important to know when to collaborate, delegate and run solo. Success
+			requires juggling the needs of multiple audiences on multiple platforms, and being
+			a quick study doesn't hurt either. (All while on deadline, of course.)
 		</p>
 
 		<h3 class="header">How I work</h3>
@@ -93,7 +95,7 @@
 			Inclusivity is not an option.
 		</p>
 		<p>
-			I speak fluent <strong>HTML</strong>, <strong>CSS</strong> and
+			I speak fluent front-end: <strong>HTML</strong>, <strong>CSS</strong> and
 			<strong>Javascript</strong>. I can get around with <strong>Python</strong> and
 			<strong>Go</strong>. I'm a big fan of the SvelteJS framework. I also know others
 			(including Wordpress). I like Github Actions and using Google as an ad-hoc CMS.

@@ -4,6 +4,7 @@
 		{
 			image: "design-a-kit.png",
 			label: "World Cup: Design your own uniform",
+			repo: "https://github.com/ryanbmarx/design-a-world-cup-kit",
 			links: [
 				{
 					headline: "Design a World Cup 2022 kit",
@@ -264,9 +265,6 @@
 		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 	}
 
-	.project {
-	}
-
 	.project__image {
 		overflow: hidden;
 		border: 1px solid var(--color-gray-light);
@@ -281,6 +279,33 @@
 		transform: scale(1.1) rotate(3deg);
 	}
 
+	.project__repo {
+		border: none;
+		width: fit-content;
+		padding: 0.5rem;
+		margin: 0;
+		text-decoration: none;
+		background-color: var(--color-slate);
+		color: white;
+
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+	}
+
+	.project__repo__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 1.5rem;
+		width: 1.5rem;
+		background-color: white;
+		border-radius: 50%;
+	}
+	.project__repo__icon svg {
+		width: 65%;
+		height: 65%;
+	}
 	.links {
 		list-style: none;
 		margin: 0;
@@ -310,7 +335,7 @@
 	<h2 id="portfolio-header" class="header">Selected work</h2>
 	<p class="sublabel">{sublabel}</p>
 	<ul class="projects">
-		{#each portfolio as { label, description, image, links = [] }}
+		{#each portfolio as { label, description, image, links = [], repo = null }}
 			<li class="project stack">
 				<div class="project__image">
 					<img
@@ -323,6 +348,17 @@
 				</div>
 				<h3 class="label">{label}</h3>
 				<p>{@html description}</p>
+				{#if repo}
+					<a class="project__repo sans-serif" href={repo}>
+						<span class="project__repo__icon">
+							<svg>
+								<title>Github logo</title>
+								<use href="#github" />
+							</svg>
+						</span>
+						See the code
+					</a>
+				{/if}
 				{#if links.length > 1}
 					<h4 class="sublabel">Examples:</h4>
 				{/if}
