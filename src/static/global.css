@@ -30,6 +30,7 @@
 	--gap: 1rem;
 	--container-width: 65rem;
 	--container-padding-h: max(var(--gap), calc((100% - var(--container-width)) / 2));
+	--tap-target: 48px;
 }
 
 html body {
@@ -113,4 +114,11 @@ a {
 
 .stack > :is(*, p:not([class])) {
 	margin-block: 0;
+}
+
+@media (pointer: fine) {
+	/* We're using a mouse/This is not a touchscreen */
+	:root {
+		--tap-target: 0;
+	}
 }

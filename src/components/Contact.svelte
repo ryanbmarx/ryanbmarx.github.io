@@ -3,11 +3,6 @@
 	let networks = [
 		{ label: "Twitter", icon: "twitter", url: "https://www.twitter.com/ryanmarx" },
 		{ label: "Github", icon: "github", url: "https://github.com/ryanbmarx" },
-		// {
-		// 	label: "Instagram",
-		// 	icon: "instagram",
-		// 	url: "https://www.instagram.com/ryanmarx/",
-		// },
 		{
 			label: "LinkedIn",
 			icon: "linkedin",
@@ -19,6 +14,9 @@
 			url: "mailto:ryanbmarx+homepage@gmail.com",
 		},
 	];
+
+	// So we can have unique IDs even with multiple component instances
+	const rand = Math.random();
 </script>
 
 <style>
@@ -86,8 +84,8 @@
 	}
 </style>
 
-<section class="contact" aria-labelledby="contact-header">
-	<h2 id="contact-header" class="header contact__text">
+<section class="contact" aria-labelledby="contact-header-{rand}">
+	<h2 id="contact-header-{rand}" class="header contact__text">
 		{label}
 	</h2>
 	<ul class="contact__social">

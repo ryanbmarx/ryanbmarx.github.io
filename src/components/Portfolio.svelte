@@ -354,6 +354,8 @@
 	}
 
 	.link {
+		display: inline-block;
+		min-height: var(--tap-target);
 		font-weight: bold;
 	}
 </style>
