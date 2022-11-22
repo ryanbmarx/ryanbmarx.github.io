@@ -2,7 +2,7 @@ install:
 	npm ci
 
 build:
-	npm run static
+	npm run publish
 	npm run svg
 	node ./src/functions/ssr.js
 	npm run build

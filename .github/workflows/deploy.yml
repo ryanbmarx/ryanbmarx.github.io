@@ -1,8 +1,5 @@
-# Deploy static files to staging or production
-
+# Build and deploy the site
 name: Publish app
-
-# Controls when the action will run.
 on:
   workflow_dispatch:
   merge: branches:[main]
