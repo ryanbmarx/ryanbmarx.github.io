@@ -30,13 +30,16 @@ jobs:
           node-version: "16"
       - name: Install dependencies
         run: npm ci
+      - run: mkdir -p public
       - name: Generate bundled files
         run: npm run build
       - name: Move static assets
-        run: npm run publish
+        run: npm run static
       - name: Generate the index file
         run: |
           npm run svg
           node ./src/functions/ssr.js
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: public # The folder the action should deploy.
