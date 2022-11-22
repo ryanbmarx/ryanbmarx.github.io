@@ -241,6 +241,18 @@
 			description:
 				'A new census brings new data, and we developed this data-explorer microsite with the journalists in Cincinatti who were intent on unpacking claims made by politicians about "the Cincinatti Comeback." This site presents a mountain of the most recent demographic data in two ways: by statistic and by neighborhood. I worked with the journalists to design each of the different views and shared development duties with the entire team. It\'s proven to be a success as it consistently generates traffic/engagement which spikes when new investigative articles publish. ',
 		},
+		{
+			label: "This actual site",
+			image: "portfolio.jpg",
+			repo: "https://github.com/ryanbmarx/ryanbmarx.github.io",
+			links: [
+				{
+					link: "https://ryanbmarx.com",
+				},
+			],
+			description:
+				"The website you are visiting right now is built with SvelteJS andand is compiled to a static HTML file. It requires no javascript to run.",
+		},
 	];
 	const otherStuff = [
 		{
