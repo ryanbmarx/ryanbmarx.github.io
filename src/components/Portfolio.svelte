@@ -35,25 +35,9 @@
 			],
 		},
 		{
-			image: "quiz.png",
-			label: "The USA TODAY News Quiz",
-			links: [
-				{
-					headline: "Test your knowledge with the USA TODAY news quiz",
-					link: "https://www.usatoday.com/storytelling/weekly-news-quiz/",
-				},
-				{
-					headline:
-						"Quiz: How well do you know the Sibley's building in downtown Rochester?",
-					link: "https://www.democratandchronicle.com/storytelling/sibley-building-downtown-rochester-ny-quiz/",
-				},
-			],
-			description:
-				"Sometimes the news can and should be fun. Part of our ongoing 'news play' experiments, this quiz framework has been used to create topical and evergreen quizzes for 6 different news properties, and has been published weekly  by USA TODAY for more than two years. The primary business goals of this project was to drive reader registrations (not subscriptions). Thousands of quiztakers visited Gannett sign-up pages. To encourage habitual quiztaking, this frameworks supports the possibility of two different leaderboards — weekly and all-time — as well as syndication across Gannett properties.",
-		},
-		{
 			label: "Cast of Characters",
 			image: "cast.png",
+			repo: "https://github.com/ryanbmarx/storytelling-cast-of-characters/",
 			links: [
 				{
 					headline: "Meet the Teams: USA, Mexico and Canada",
@@ -72,6 +56,23 @@
 			],
 			description:
 				"A developer friend-of-the-team asked us for help with the persistent need to make a \"Who's who\" dictionary of people for large investigative projects. We designed this page and built out a framework that pulls data from a Google spreadsheet and enriches it with some organizational tools and filtering/searching. We've tracked Capitol rioters, corrupt ohio officials and colleges that cheat. It's been used to display violence databases and sports rankings and has more configurable features than anything else I've made. There are about 30 published instances.",
+		},
+		{
+			image: "quiz.png",
+			label: "The USA TODAY News Quiz",
+			links: [
+				{
+					headline: "Test your knowledge with the USA TODAY news quiz",
+					link: "https://www.usatoday.com/storytelling/weekly-news-quiz/",
+				},
+				{
+					headline:
+						"Quiz: How well do you know the Sibley's building in downtown Rochester?",
+					link: "https://www.democratandchronicle.com/storytelling/sibley-building-downtown-rochester-ny-quiz/",
+				},
+			],
+			description:
+				"Sometimes the news can and should be fun. Part of our ongoing 'news play' experiments, this quiz framework has been used to create topical and evergreen quizzes for 6 different news properties, and has been published weekly  by USA TODAY for more than two years. The primary business goals of this project was to drive reader registrations (not subscriptions). Thousands of quiztakers visited Gannett sign-up pages. To encourage habitual quiztaking, this frameworks supports the possibility of two different leaderboards — weekly and all-time — as well as syndication across Gannett properties.",
 		},
 
 		{
@@ -162,11 +163,12 @@
 				},
 			],
 			description:
-				"This component for In-Depth takes two images, lines them up and toggles between them. ",
+				"This component for In-Depth takes two images, lines them up and toggles between them. We had originally decided to let the myriad 3rd-party versions of this tool serve In-Depth, but this one provides us useful analytics.",
 		},
 		{
 			label: "FAQs but better: The Big Page of Help",
 			image: "bpoh.png",
+			repo: "https://github.com/ryanbmarx/storytelling-big-page-of-help",
 			links: [
 				{
 					headline: "Your guide to coronavirus and COVID-19",
@@ -204,8 +206,9 @@
 				"This collaboration with the Arizona Republic and the USA TODAY graphics team is a custom-build interface for a custom-built database of wildfire potential in the U.S. west. Each town is measured by a series of metrics calculating the probability that it could be consumed by wildfire. The application had a standalone instance with it's own URL, but it also was embedded into a handful of articles (built using the In-Depth framework) and pre-configured to display specific towns.",
 		},
 		{
-			label: "Covituaries",
+			label: "Covid obituaries",
 			image: "covituaries.png",
+			repo: "https://github.com/ryanbmarx/storytelling-covid-obituaries",
 			links: [
 				{
 					headline: "Detroit Free Press: We will remember",
