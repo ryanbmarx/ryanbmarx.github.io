@@ -31,6 +31,7 @@
 		"start": "sirv public --single",
 		"start:dev": "sirv public --single --dev",
 		"static": "mkdir -p ./public && cp -rf src/static/* public/",
+		"publish": "cp -rf src/static/* .",
 		"svg": "svg-sprite --config svg.config.json src/svg/**/*.svg"
 	},
 	"browserslist": "> 0.25%, not dead"

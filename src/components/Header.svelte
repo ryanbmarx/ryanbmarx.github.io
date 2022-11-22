@@ -87,6 +87,7 @@
 		.header {
 			background: #eee url(/img/header-background--desktop.jpg) center center no-repeat;
 			background-size: cover;
+			min-height: 30vw;
 			height: 70vh;
 			margin-bottom: 0;
 			text-align: left;
@@ -106,6 +107,7 @@
 		.header__text-wrapper {
 			background: rgba(0, 0, 0, 0.6);
 			width: 40%;
+			min-width: 550px;
 			height: 100%;
 			position: static;
 		}

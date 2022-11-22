@@ -3,7 +3,7 @@
 
 	const work = [
 		{
-			start: 2017,
+			start: 2018,
 			end: "present",
 			org: "Gannett",
 			orgLink: "https://www.usatoday.com/",
@@ -13,7 +13,7 @@
 		},
 		{
 			start: 2010,
-			end: 2017,
+			end: 2018,
 			org: "Chicago Tribune",
 			orgLink: "https://www.chicagotribune.com/",
 			role: "Assistant DataViz Editor, Graphic reporter",
