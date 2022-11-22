@@ -9,9 +9,12 @@
 		text-align: center;
 	}
 
-	.header__thumb {
+	.header__image {
 		border-radius: 50%;
-		max-width: 200px;
+		width: 20rem;
+		height: 20rem;
+		object-fit: cover;
+		object-position: center;
 		margin: 15px auto;
 	}
 
@@ -44,12 +47,9 @@
 
 		display: block;
 		padding: 0 0 0 10px;
-		border-left: 3px solid white;
-		border-right: 3px solid white;
 		margin: 0 0 calc(var(--gap) / 2) 0;
-		border-color: currentColor;
 	}
-	.header__text--name {
+	.header__text.header__text--name {
 		font-weight: normal;
 		font-size: 0.9em;
 		background: var(--color-black);
@@ -61,15 +61,12 @@
 	}
 	.header__text--data {
 		color: var(--color-apricot-light);
-		/* border-color: var(--color-apricot-light); */
 	}
 	.header__text--stories {
 		color: var(--color-isabelline);
-		/* border-color: var(--color-isabelline); */
 	}
 	.header__text--experiences {
 		color: var(--color-blue-baby);
-		/* border-color: $blue-baby; */
 	}
 
 	.header__photo-credit {
@@ -85,22 +82,25 @@
 
 	@media all and (min-width: 768px) {
 		.header {
-			background: #eee url(/img/header-background--desktop.jpg) center center no-repeat;
-			background-size: cover;
 			min-height: 30vw;
 			height: 70vh;
 			margin-bottom: 0;
 			text-align: left;
 		}
-		.header__thumb {
-			display: none;
+		.header__image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: unset;
+			margin: 0;
 		}
-
 		.header__text {
-			border-right: none;
+			border-left: 5px solid currentColor;
 		}
 
-		.header__text--name {
+		.header__text.header__text--name {
 			margin-left: 0;
 		}
 
@@ -109,13 +109,20 @@
 			width: 40%;
 			min-width: 550px;
 			height: 100%;
-			position: static;
+			position: relative;
+			z-index: 2;
 		}
 	}
 </style>
 
 <header id="header" class="header">
-	<img class="header__thumb" src="img/header-background--thumb.jpg" alt="Ryan Marx" />
+	<picture>
+		<source srcset="/img/header-background--desktop.jpg" media="(min-width: 768px)" />
+		<img
+			class="header__image"
+			src="/img/header-background--thumb.jpg"
+			alt="An overhead view of Ryan Marx, smiling while he works, sitting at his desk. The walls of his cubicle are covered in small posters and family photos. Ryan is wearing one of his favofite fleece zip-up jackets." />
+	</picture>
 	<div class="header__text-wrapper">
 		<h1
 			class="header__text-container"
