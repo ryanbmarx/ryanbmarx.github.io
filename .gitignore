@@ -108,8 +108,8 @@ dist
 public/
 
 # Generated content
-./fonts.css
-./global.css
-./img/
-./fonts/
-./thumbs/
+fonts.css
+global.css
+img/
+fonts/
+thumbs/
