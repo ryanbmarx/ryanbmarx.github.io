@@ -1,4 +1,6 @@
 <script>
+	import { marked } from "marked";
+
 	const label = "Selected work";
 	const sublabel =
 		"These are projects to which I made significant contributions. I've included links to code repositories where possible.";
@@ -55,7 +57,7 @@
 				},
 			],
 			description:
-				"A developer friend-of-the-team asked us for help with the persistent need to make a \"Who's who\" dictionary of people for large investigative projects. We designed this page and built out a framework that pulls data from a Google spreadsheet and enriches it with some organizational tools and filtering/searching. We've tracked Capitol rioters, corrupt ohio officials and colleges that cheat. It's been used to display violence databases and sports rankings and has more configurable features than anything else I've made. There are about 30 published instances.",
+				"A developer friend-of-the-team asked us for help with the persistent need to make a \"Who's who\" dictionary of people for large investigative projects. We designed this page and built out a framework that pulls data from a Google spreadsheet and enriches it with some organizational tools and filtering/searching.\n\nWe've tracked Capitol rioters, corrupt ohio officials and colleges that cheat. It's been used to display violence databases and sports rankings and has more configurable features than anything else I've made. There are about 30 published instances.",
 		},
 		{
 			image: "quiz.png",
@@ -72,7 +74,7 @@
 				},
 			],
 			description:
-				"Sometimes the news can and should be fun. Part of our ongoing 'news play' experiments, this quiz framework has been used to create topical and evergreen quizzes for 6 different news properties, and has been published weekly  by USA TODAY for more than two years. The primary business goals of this project was to drive reader registrations (not subscriptions). Thousands of quiztakers visited Gannett sign-up pages. To encourage habitual quiztaking, this frameworks supports the possibility of two different leaderboards — weekly and all-time — as well as syndication across Gannett properties.",
+				"Sometimes the news can and should be fun. Part of our ongoing 'news play' experiments, this quiz framework has been used to create topical and evergreen quizzes for 6 different news properties, and has been published weekly  by USA TODAY for more than two years. The primary business goals of this project was to drive reader registrations (not subscriptions).\n\nThousands of quiztakers visited Gannett sign-up pages. To encourage habitual quiztaking, this frameworks supports the possibility of two different leaderboards — weekly and all-time — as well as syndication across Gannett properties.",
 		},
 
 		{
@@ -95,7 +97,7 @@
 				},
 			],
 			description:
-				"My team at Gannett is responsible for designing, engineering and maintaining the In-Depth article framework. This collection of tools enables more than 100 web producers across the company to craft visually stunning, reader-focused multimedia presentations using the everyday CMS and our own story editor.\n\nIt's been used to create more than 7,500 (as of December 2022) articles often representing the strongest, most impactful journalism the Gannett has to offer. It has generated hundreds of thousands of pageviews, a 2x increase in engaged time over standard templates and frequently leads to subscriber conversions.",
+				"My team at Gannett is responsible for designing, engineering and maintaining the In-Depth article framework. This collection of tools enables more than 100 web producers across the company to craft visually stunning, reader-focused multimedia presentations using the everyday CMS and our own story editor.\n\nIt's been used to create more than 7,500 (as of December 2022) articles and is the tool of choice to present the strongest, most impactful journalism Gannett has to offer.\n\nIt has generated hundreds of thousands of pageviews, a 2x increase in engaged time over standard templates and frequently leads to subscriber conversions.",
 		},
 		{
 			label: "In-depth: Audiograms",
@@ -203,7 +205,7 @@
 				},
 			],
 			description:
-				"This collaboration with the Arizona Republic and the USA TODAY graphics team is a custom-build interface for a custom-built database of wildfire potential in the U.S. west. Each town is measured by a series of metrics calculating the probability that it could be consumed by wildfire. The application had a standalone instance with it's own URL, but it also was embedded into a handful of articles (built using the In-Depth framework) and pre-configured to display specific towns.",
+				"This collaboration with the Arizona Republic and the USA TODAY graphics team is a custom-build interface for a custom-built database of wildfire potential in the U.S. west. Each town is measured by a series of metrics calculating the probability that it could be consumed by wildfire.\n\nThe application had a standalone instance with it's own URL, but it also was embedded into a handful of articles (built using the In-Depth framework) and pre-configured to display specific towns.",
 		},
 		{
 			label: "Covid obituaries",
@@ -246,7 +248,7 @@
 				},
 			],
 			description:
-				'A new census brings new data, and we developed this data-explorer microsite with the journalists in Cincinatti who were intent on unpacking claims made by politicians about "the Cincinatti Comeback." This site presents a mountain of the most recent demographic data in two ways: by statistic and by neighborhood. I worked with the journalists to design each of the different views and shared development duties with the entire team. It\'s proven to be a success as it consistently generates traffic/engagement which spikes when new investigative articles publish. ',
+				'A new census brings new data, and we developed this data-explorer microsite with the journalists in Cincinatti who were intent on unpacking claims made by politicians about "the Cincinatti Comeback." This site presents a mountain of the most recent demographic data in two ways: by statistic and by neighborhood.\n\nI worked with the journalists to design each of the different views and shared development duties with the entire team. It\'s proven to be a success as it consistently generates traffic/engagement which spikes when new investigative articles publish. ',
 		},
 		{
 			label: "This actual site",
@@ -376,7 +378,7 @@
 						width="16" />
 				</div>
 				<h3 class="label">{label}</h3>
-				<p>{@html description}</p>
+				{@html marked.parse(description)}
 				{#if repo}
 					<a class="project__repo sans-serif" href={repo}>
 						<span class="project__repo__icon">
