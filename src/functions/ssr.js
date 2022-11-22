@@ -16,10 +16,8 @@ async function renderHTML(content = {}) {
 	const sprite = await fs.readFile(path.resolve(__dirname, "./sprite.svg"), "utf-8");
 
 	return minify(
-		`<main id="app" class="app">
-		<div style="display:none;">${sprite}</div>
-		${html}
-		</main>`,
+		`<div style="display:none;">${sprite}</div>
+		<main id="app" class="app">${html}</main>`,
 		{
 			minifyCSS: true,
 			minifyJS: true,

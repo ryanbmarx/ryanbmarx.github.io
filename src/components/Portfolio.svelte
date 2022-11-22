@@ -1,5 +1,7 @@
 <script>
-	const sublabel = "Projects to which I made significant contributions";
+	const label = "Selected work";
+	const sublabel =
+		"These are projects to which I made significant contributions. I've included links to code repositories where possible.";
 	const portfolio = [
 		{
 			image: "design-a-kit.png",
@@ -17,6 +19,7 @@
 		{
 			image: "decider.png",
 			label: "The decider: A polar decision matrix",
+			repo: "https://github.com/ryanbmarx/storytelling-decider/",
 			description:
 				'In the run-up to the 2022 midterm elections, we were approached by multiple newsrooms looking to help undecided voters choose their candidates. I designed and developed this application which presents a series of prompts from user-selected topics. Responses to the prompts are categorized, and "agreement" is calculated.',
 			links: [
@@ -159,7 +162,7 @@
 				},
 			],
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				"This component for In-Depth takes two images, lines them up and toggles between them. ",
 		},
 		{
 			label: "FAQs but better: The Big Page of Help",
@@ -184,6 +187,7 @@
 		},
 		{
 			label: "Wildfire lookup",
+			repo: "https://github.com/ryanbmarx/storytelling-wildfire-lookup",
 			image: "wildfire.png",
 			links: [
 				{
@@ -266,6 +270,14 @@
 </script>
 
 <style>
+	.header {
+		margin: 0;
+	}
+
+	.subheader {
+		margin-top: 0;
+	}
+
 	.projects {
 		--arrow-width: 1em;
 		list-style: none;
@@ -344,8 +356,8 @@
 </style>
 
 <section id="portfolio" class="container" aria-labelledby="portfolio-header">
-	<h2 id="portfolio-header" class="header">Selected work</h2>
-	<p class="sublabel">{sublabel}</p>
+	<h2 id="portfolio-header" class="header">{label}</h2>
+	<p class="subheader sans-serif">{sublabel}</p>
 	<ul class="projects">
 		{#each portfolio as { label, description, image, links = [], repo = null }}
 			<li class="project stack">
