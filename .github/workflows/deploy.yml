@@ -23,6 +23,8 @@ jobs:
       - name: Move static assets
         run: npm run publish
       - name: Generate the index file
-        run: npm run svg && node ./src/functions/ssr.js
+        run: |
+          npm run svg
+          node ./src/functions/ssr.js
       - name: Generate bundled files
-	      run: npm run build
+        run: npm run build
