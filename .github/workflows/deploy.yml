@@ -2,7 +2,8 @@
 name: Publish app
 on:
   workflow_dispatch:
-  merge: branches:[main]
+  push:
+    branches: [main]
 
 defaults:
   run:
