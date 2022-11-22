@@ -100,7 +100,10 @@
 			<strong>Go</strong>. I'm a big fan of the SvelteJS framework. I also know others
 			(including Wordpress). I like Github Actions and using Google as an ad-hoc CMS.
 		</p>
-		<p>I like to document things. It's important and future me needs a lot of help.</p>
+		<p>
+			I like to document things. It's important and future me needs a lot of help. I
+			even write notes to myself, such as grocery lists, in markdown.
+		</p>
 	</div>
 	<div class="work">
 		<h2 class="header">Experience</h2>
