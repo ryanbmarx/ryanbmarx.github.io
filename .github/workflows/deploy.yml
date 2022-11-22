@@ -23,6 +23,7 @@ concurrency:
 jobs:
   build:
     runs-on: [ubuntu-latest]
+    steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
@@ -31,7 +32,6 @@ jobs:
         run: npm ci
       - name: Generate bundled files
         run: npm run build
-
 
   deploy:
     # The type of runner that the job will run on
