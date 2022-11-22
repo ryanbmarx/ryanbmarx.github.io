@@ -105,11 +105,6 @@ dist
 
 
 .DS_Store
-public/
 
 # Generated content
-fonts.css
-global.css
-img/
-fonts/
-thumbs/
+public/
