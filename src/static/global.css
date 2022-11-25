@@ -18,9 +18,12 @@
 	/* TYPE */
 
 	--font-size-very-large: 1.8rem;
-	--font-size-large: 1.5rem;
-	--font-size: 1.2rem;
+	--font-size-large: 1.55rem;
+	--font-size: 1.35rem;
 	--font-size-small: 1rem;
+	--line-height-tight: 1.2em;
+	--line-height: 1.3em;
+	--line-height-loose: 1.5em;
 
 	--sans-serif-fonts: "Arial", "Helvetica Neue", "Helvetica", sans-serif;
 	--display-fonts: "BreulGroteskBBold", sans-serif;
@@ -73,15 +76,15 @@ h6 {
 }
 
 .header {
-	font: var(--font-size-very-large) / 1.2em var(--display-fonts);
+	font: var(--font-size-very-large) / var(--line-height-tight) var(--display-fonts);
 }
 
 .label {
-	font: var(--font-size-large) / 1.2em var(--display-fonts);
+	font: var(--font-size-large) / var(--line-height-tight) var(--display-fonts);
 	font-weight: 200;
 }
 .sublabel {
-	font: var(--font-size) / 1.2em var(--display-fonts);
+	font: var(--font-size) / var(--line-height-tight) var(--display-fonts);
 	font-weight: 200;
 }
 
@@ -91,7 +94,7 @@ h6 {
 
 p:not([class]) {
 	/* Any standalone paragraph tag should just get this base styling*/
-	font: var(--font-size) / 1.3em var(--serif-fonts);
+	font: var(--font-size) / var(--line-height-loose) var(--serif-fonts);
 	color: var(--color-font);
 	margin: 1rem 0;
 }
