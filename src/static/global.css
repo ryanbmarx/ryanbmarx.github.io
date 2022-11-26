@@ -6,10 +6,12 @@
 	--color-slate: #07393c;
 	--color-apricot-light: #fcd7ad;
 	--color-isabelline: #f0edee;
+	--color-blue: #04b0f0;
 	--color-blue-baby: #90ddf0;
 	--color-green: #2c666e;
 	--color-purple: #7f7caf;
 	--color-gray-light: #eee;
+	--color-gray: #aaa;
 	--color-red: #ea0b3f;
 
 	--color-link: var(--color-red);
@@ -31,9 +33,13 @@
 
 	/* // SCAFFOLDING */
 	--gap: 1rem;
-	--container-width: 65rem;
+	--container-width: 70rem;
 	--container-padding-h: max(var(--gap), calc((100% - var(--container-width)) / 2));
 	--tap-target: 48px;
+
+	/* OTHER VISUAL THINGS */
+	--speed-transition: 150ms;
+	--speed-transition-quick: 80ms;
 }
 
 html body {

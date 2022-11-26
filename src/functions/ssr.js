@@ -6,16 +6,20 @@ const path = require("path");
 const App = require("../App.svelte").default;
 const minify = require("html-minifier").minify;
 
+// Default to prod
+const { MODE = "production" } = process.env;
+
 // One function to render all of the HTML we would want for an initial state.
 // It's good for both SSR and preview rendering
 async function renderHTML(content = {}) {
+	console.log("RENDERING FOR", MODE);
 	// Get our HTML rendered in the roadblocked state
 	// If it is set to no CPS, then true, otherwise, not.
 	const { html } = App.render(content);
 
 	const sprite = await fs.readFile(path.resolve(__dirname, "./sprite.svg"), "utf-8");
 
-	return minify(
+	let HTML = minify(
 		`<div style="display:none;">${sprite}</div>
 		<main id="app" class="app">${html}</main>`,
 		{
@@ -24,6 +28,9 @@ async function renderHTML(content = {}) {
 			collapseWhitespace: true,
 		}
 	);
+
+	if (MODE === "dev") HTML += `<script defer src="bundle.js"></script>`;
+	return HTML;
 }
 
 async function preview() {
