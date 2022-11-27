@@ -54,7 +54,7 @@
 			org: "The News-Enterprise",
 			role: "Copy editor, Presentation Editor",
 			description:
-				"I designed newspaper pages and graphics for all sections, edited copy and helped coordinate entertainment coverage ",
+				"I designed newspaper pages and graphics for all sections, edited copy and helped coordinate entertainment coverage and special projects. I also helped guide the overall look and feel of the paper while coaching teammates on visual matters.",
 		},
 	];
 </script>
