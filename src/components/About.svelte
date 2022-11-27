@@ -9,7 +9,7 @@
 			orgLink: "https://www.usatoday.com/",
 			role: "Storytelling developer",
 			description:
-				"My team — The Storytelling Studio — collaborates with newsrooms across the company to facilitate top-notch storytelling by developing tools, frameworks and custom experiences to empower our partners. We use an agile, human-centered approach as we iteratively test our hypotheses and refine our goals. Journalists often approach us with their centerpiece work and a desire to maximize its impact. Our tools are built from end to end to achieve a facility on our company's infrastructure and a collaboration of technologies that wouldn't otherwise exist.",
+				"My team — The Storytelling Studio — collaborates with newsrooms across the company to facilitate top-notch storytelling by developing tools, frameworks and custom experiences to empower our partners in more than 200 newsrooms across the country. We use an agile, human-centered approach as we iteratively test our hypotheses and refine our goals. Journalists often approach us with their centerpiece work and a desire to maximize its impact. We build our tools from end to end to achieve a facility on our company's infrastructure and a alignment of technologies that wouldn't otherwise exist.",
 		},
 		{
 			start: 2013,
