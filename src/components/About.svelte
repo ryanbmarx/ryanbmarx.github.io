@@ -91,13 +91,13 @@
 	<div class="bio stack">
 		<h2 id="about-header" class="header header--intro">Hi. I'm Ryan.</h2>
 		<p>
-			I am a journalist, designer and developer base in Chicago, Illinois. I've spent my
-			career in communications — specifically, the information communications business.
-			Through information visualization, writing, editing and ux design, I find the
-			important messages and express them in the best ways possible. Sometimes all it
-			takes is a few carefully chosen words. More often, however, the effort involves
-			distilling mountains of information into meaningful and enjoyable experiences.
-			This makes repeat customers out of media consumers.
+			I am an interactive designer, front-end developer and journalist based in Chicago,
+			Illinois. I've spent my career in communications — specifically, the information
+			communications business. Through information visualization, writing, editing and
+			UX design, I find the important messages and express them in the best ways
+			possible. Sometimes all it takes is a few carefully chosen words. More often,
+			however, the effort involves distilling mountains of information into meaningful
+			and enjoyable experiences. This makes repeat customers out of media consumers.
 		</p>
 		<p>
 			It's important to know when to collaborate, delegate and run solo. Success
