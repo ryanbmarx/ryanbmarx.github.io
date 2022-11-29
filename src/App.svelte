@@ -8,11 +8,11 @@
 	import About from "./components/About.svelte";
 	import Portfolio from "./components/Portfolio.svelte";
 
-	export let portfolio = [];
+	export let portfolioItems = [];
 	export let tagDefinitions = [];
 
 	setContext("ryanbmarx", {
-		portfolio,
+		portfolioItems,
 		tagDefinitions,
 	});
 </script>
@@ -20,5 +20,5 @@
 <Header />
 <Contact label="Find me here:" />
 <About />
-<Portfolio {portfolio} />
+<Portfolio />
 <Contact />

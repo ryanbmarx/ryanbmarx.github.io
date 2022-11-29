@@ -13,7 +13,7 @@
 		"These are projects to which I made significant contributions. I've included links to code repositories where possible. Some of these links are older and, given the nature of the web and media businesses, are no longer available or fully functional in the current environment. I've included them anyways because I remain proud of that work, but they are labeled <span class=\"tag\">impaired</span>.";
 
 	// DATA
-	const { tagDefinitions, portfolio } = getContext("ryanbmarx");
+	const { tagDefinitions, portfolioItems } = getContext("ryanbmarx");
 </script>
 
 <style>
@@ -97,7 +97,7 @@
 		</dl>
 	</details>
 	<ul class="projects">
-		{#each portfolio.filter(p => p.label && p.description && p.image) as p}
+		{#each portfolioItems.filter(p => p.label && p.description && p.image) as p}
 			<PortfolioItem {...p} />
 		{/each}
 	</ul>
