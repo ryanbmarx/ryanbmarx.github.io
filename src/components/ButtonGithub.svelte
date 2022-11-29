@@ -24,7 +24,7 @@
 	}
 
 	.repo:hover svg {
-		fill: var(--color-gray-dark);
+		fill: var(--color-link);
 	}
 	.repo:focus {
 		outline: 2px solid var(--color-link);
