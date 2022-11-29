@@ -1,0 +1,22 @@
+{
+	"ui": {
+		"label": "UI",
+		"description": "Whether it's a dashboard or something else, these are good examples of user interfaces I have built. These applications tend to have more interactivity."
+	},
+	"article": {
+		"label": "Featured",
+		"description": "A nicely-designed article or other featured content that might not have a ton of interactivity but is full of information and organization."
+	},
+	"tool": {
+		"label": "Tool",
+		"description": "These are not one-off projects. The codebase consitutes a tool or framework and has been reused several times."
+	},
+	"svelte": {
+		"label": "Svelte",
+		"description": "Made with [Svelte](https://svelte.dev), a popular framework that I rather enjoy using."
+	},
+	"impaired": {
+		"label": "Impaired",
+		"description": "Older projects with published links that might not work well (or at all)anymore because of CMS migrations or other factors. I'm proud of this work, so why not take a look at the code?"
+	}
+}

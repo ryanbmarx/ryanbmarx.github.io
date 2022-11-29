@@ -9,7 +9,9 @@
 	--color-blue: #04b0f0;
 	--color-blue-baby: #90ddf0;
 	--color-green: #2c666e;
-	--color-purple: #7f7caf;
+	/* --color-purple: #7f7caf; */
+	--color-purple: #5a587c;
+	--color-purple-light: #f2f1fb;
 	--color-gray-light: #eee;
 	--color-gray: #aaa;
 	--color-red: #ea0b3f;
@@ -23,6 +25,7 @@
 	--font-size-large: 1.55rem;
 	--font-size: 1.35rem;
 	--font-size-small: 1rem;
+	--font-size-very-small: 0.85rem;
 	--line-height-tight: 1.2em;
 	--line-height: 1.3em;
 	--line-height-loose: 1.5em;
