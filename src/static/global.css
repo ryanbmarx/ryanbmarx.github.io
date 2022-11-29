@@ -16,8 +16,9 @@
 	--color-gray: #aaa;
 	--color-gray-dark: #555;
 	--color-red: #ea0b3f;
+	--color-pink: #f86d8d;
 
-	--color-link: var(--color-red);
+	--color-link: var(--color-pink);
 	--color-link-text: white;
 	--color-font: var(--color-slate);
 
@@ -117,28 +118,15 @@ a {
 	transition: color var(--speed-transition-quick);
 }
 
-a::before {
-	content: "";
-	display: block;
-	background-color: red;
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	/* transform: scaleY(0); */
-	opacity: 0;
-	transition: transform var(--speed-transition-quick),
-		opacity var(--speed-transition-quick);
+a {
+	background: linear-gradient(0deg, var(--color-link), var(--color-link)) no-repeat
+		right bottom / 0 var(--bg-h);
+	transition: background-size 350ms;
+	--bg-h: 100%;
 }
-
-a:is(:hover, :focus) {
-	color: var(--color-link-text);
-}
-
-a:is(:hover, :focus)::before {
-	opacity: 1;
+a:where(:hover, :focus-visible) {
+	background-size: 100% var(--bg-h);
+	background-position-x: left;
 }
 
 /* SCAFFOLDING FUN */
