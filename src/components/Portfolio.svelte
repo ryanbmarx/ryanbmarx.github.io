@@ -1,15 +1,15 @@
 <script>
 	// UTILS
 	import { marked } from "marked";
-	import ButtonGithub from "./ButtonGithub.svelte";
-
-	// COMPONENTS
-	import Tags from "./Tags.svelte";
 
 	// DATA
-	export let portfolio = [];
-	export let tagDefinitions = {};
+	import tagDefinitions from "../config/tags.json";
+	import portfolio from "../config/portfolio.json";
 
+	// COMPONENTS
+	import PortfolioItem from "./PortfolioItem.svelte";
+
+	// TEXT BITS
 	const label = "Selected work";
 	const tagsLabel = "About the labels";
 	const sublabel =
@@ -21,9 +21,9 @@
 		margin: 0;
 	}
 
-	.subheader {
+	/* .subheader {
 		margin-top: 0;
-	}
+	} */
 
 	.projects {
 		--arrow-width: 1em;
@@ -34,46 +34,6 @@
 		display: grid;
 		gap: calc(2 * var(--gap));
 		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-	}
-
-	.project__image {
-		overflow: hidden;
-		border: 1px solid var(--color-gray-light);
-	}
-	.project__image__img {
-		display: block;
-		width: 100%;
-		height: auto;
-		transition: transform 150ms ease-in-out;
-	}
-	.project__image__img:hover {
-		transform: scale(1.1) rotate(3deg);
-	}
-
-	.links {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	.links li {
-		padding: 0 0 0 calc(var(--arrow-width) + 0.5em);
-		position: relative;
-		margin: 0 0 0.5rem 0;
-	}
-	.links li::before {
-		content: "\2192";
-		display: block;
-		width: var(--arrow-width);
-		height: var(--arrow-width);
-		position: absolute;
-		left: 0;
-	}
-
-	.link {
-		display: inline-block;
-		min-height: var(--tap-target);
-		font-weight: bold;
 	}
 
 	.portfolio__definitions {
@@ -108,8 +68,8 @@
 	:global(.tag) {
 		padding: 0.25rem 0.5rem;
 		border-radius: 0.25rem;
-		background-color: var(--color-purple);
-		color: var(--color-gray-light);
+		/* background-color: var(--color-purple); */
+		/* color: var(--color-gray-light); */
 		font: bold var(--font-size-very-small) / var(--line-height) var(--sans-serif-fonts);
 		text-transform: uppercase;
 
@@ -137,36 +97,8 @@
 		</dl>
 	</details>
 	<ul class="projects">
-		{#each portfolio.filter(p => p.label && p.description && p.image) as { label, description, image, links = [], repo = null, tags = [] }}
-			<li class="project stack">
-				<div class="project__image">
-					<img
-						class="project__image__img"
-						src="thumbs/{image}"
-						alt=""
-						loading="lazy"
-						height="9"
-						width="16" />
-				</div>
-				<h3 class="label">{label}</h3>
-				<Tags {tags} {tagDefinitions} />
-				{@html marked.parse(description)}
-				<ButtonGithub {repo} />
-				{#if links.length > 1}
-					<h4 class="sublabel">Examples:</h4>
-				{/if}
-				<ul class="links">
-					{#each links as { headline, link }}
-						<li>
-							<a
-								class="link sans-serif"
-								target="_blank"
-								rel="noopener noreferrer"
-								href={link}>{headline || link}</a>
-						</li>
-					{/each}
-				</ul>
-			</li>
+		{#each portfolio.filter(p => p.label && p.description && p.image) as p}
+			<PortfolioItem {...p} />
 		{/each}
 	</ul>
 </section>

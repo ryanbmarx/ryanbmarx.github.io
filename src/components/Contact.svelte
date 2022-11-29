@@ -26,8 +26,6 @@
 		padding: var(--gap) var(--gap);
 	}
 	.contact__text {
-		/* font: 1rem/1.3em var(--sans-serif-fonts); */
-		/* font-weight: bold; */
 		text-align: center;
 		margin: 0 0 var(--gap) 0;
 		color: var(--color-apricot-light);
@@ -67,6 +65,13 @@
 		fill: black;
 		width: 65%;
 		height: 65%;
+	}
+
+	a::before {
+		content: none;
+	}
+	a:focus {
+		outline: 2px solid var(--color-link);
 	}
 
 	@media all and (min-width: 768px) {
