@@ -1,10 +1,7 @@
 <script>
 	// UTILS
 	import { marked } from "marked";
-
-	// DATA
-	import tagDefinitions from "../config/tags.json";
-	import portfolio from "../config/portfolio.json";
+	import { getContext } from "svelte";
 
 	// COMPONENTS
 	import PortfolioItem from "./PortfolioItem.svelte";
@@ -14,6 +11,9 @@
 	const tagsLabel = "About the labels";
 	const sublabel =
 		"These are projects to which I made significant contributions. I've included links to code repositories where possible. Some of these links are older and, given the nature of the web and media businesses, are no longer available or fully functional in the current environment. I've included them anyways because I remain proud of that work, but they are labeled <span class=\"tag\">impaired</span>.";
+
+	// DATA
+	const { tagDefinitions, portfolio } = getContext("ryanbmarx");
 </script>
 
 <style>
