@@ -3,6 +3,10 @@
 		"label": "UI",
 		"description": "Whether it's a dashboard or something else, these are good examples of user interfaces I have built. These applications tend to have more interactivity."
 	},
+	"data": {
+		"label": "Data visualization",
+		"descriotion": "The primary purpose of these projects is to tell a story by conveying data through a visual format."
+	},
 	"article": {
 		"label": "Featured",
 		"description": "A nicely-designed article or other featured content that might not have a ton of interactivity but is full of information and organization."
