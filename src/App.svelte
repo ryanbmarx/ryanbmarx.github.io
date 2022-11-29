@@ -9,16 +9,11 @@
 	import Portfolio from "./components/Portfolio.svelte";
 
 	export let portfolioItems = [];
-	export let tagDefinitions = [];
-
-	setContext("ryanbmarx", {
-		portfolioItems,
-		tagDefinitions,
-	});
+	export let tagDefinitions = {};
 </script>
 
 <Header />
 <Contact label="Find me here:" />
 <About />
-<Portfolio />
+<Portfolio {portfolioItems} {tagDefinitions} />
 <Contact />

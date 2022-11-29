@@ -13,9 +13,36 @@ const { MODE = "production" } = process.env;
 // It's good for both SSR and preview rendering
 async function renderHTML(content = {}) {
 	console.log("RENDERING FOR", MODE);
-	// Get our HTML rendered in the roadblocked state
-	// If it is set to no CPS, then true, otherwise, not.
-	const { html } = App.render(content);
+
+	// Get our list of external files
+	let config = await fs.readdir(path.join(__dirname, "../config/")).catch(e => {
+		console.error(e);
+		process.exit(1);
+	});
+	// Filter out all but JSON files
+	config = config.filter(c => c.includes(".json"));
+
+	// Read all the JSON files
+	const files = await Promise.all(
+		config.map(c => {
+			return fs
+				.readFile(path.join(__dirname, "../config/", c), "utf-8")
+				.catch(e => {
+					console.error(e);
+					process.exit(1);
+				})
+				.then(JSON.parse);
+		})
+	);
+
+	// Create a data object with `filename: data`
+	const props = config.reduce((acc, curr, index) => {
+		acc[curr.replace(".json", "")] = files[index];
+		return acc;
+	}, {});
+
+	// Render out the HTML
+	const { html } = App.render({ ...props });
 
 	const sprite = await fs.readFile(path.resolve(__dirname, "./sprite.svg"), "utf-8");
 

@@ -1,8 +1,8 @@
 <script>
+	import { marked } from "marked";
+
 	import Tags from "./Tags.svelte";
 	import ButtonGithub from "./ButtonGithub.svelte";
-	import { marked } from "marked";
-	import tagDefinitions from "../config/tags.json";
 
 	// export let tagDefinitions = {};
 	export let label;
@@ -11,6 +11,8 @@
 	export let links = [];
 	export let repo = null;
 	export let tags = [];
+
+	export let tagDefinitions = {};
 </script>
 
 <style>

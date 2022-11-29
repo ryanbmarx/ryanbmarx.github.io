@@ -2,7 +2,7 @@
 	import { getContext } from "svelte";
 	export let tags = [];
 
-	const { tagDefinitions } = getContext("ryanbmarx");
+	export let tagDefinitions = {};
 </script>
 
 <style>
