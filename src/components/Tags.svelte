@@ -1,5 +1,6 @@
 <script>
 	export let tags = [];
+	export let tagDefinitions = {};
 </script>
 
 <style>
@@ -21,8 +22,8 @@
 
 {#if tags.length}
 	<ul class="tags" role="list">
-		{#each tags as tag}
-			<li class="tag" role="listitem">{tag}</li>
+		{#each tags.filter(t => t in tagDefinitions) as tag}
+			<li class="tag" role="listitem">{tagDefinitions[tag].label}</li>
 		{/each}
 	</ul>
 {/if}

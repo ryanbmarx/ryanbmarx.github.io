@@ -1,6 +1,7 @@
 <script>
 	// UTILS
 	import { marked } from "marked";
+	import ButtonGithub from "./ButtonGithub.svelte";
 
 	// COMPONENTS
 	import Tags from "./Tags.svelte";
@@ -49,33 +50,6 @@
 		transform: scale(1.1) rotate(3deg);
 	}
 
-	.project__repo {
-		border: none;
-		width: fit-content;
-		padding: 0.5rem;
-		margin: 0;
-		text-decoration: none;
-		background-color: var(--color-slate);
-		color: white;
-
-		display: flex;
-		gap: 0.5rem;
-		align-items: center;
-	}
-
-	.project__repo__icon {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 1.5rem;
-		width: 1.5rem;
-		background-color: white;
-		border-radius: 50%;
-	}
-	.project__repo__icon svg {
-		width: 65%;
-		height: 65%;
-	}
 	.links {
 		list-style: none;
 		margin: 0;
@@ -163,7 +137,7 @@
 		</dl>
 	</details>
 	<ul class="projects">
-		{#each portfolio as { label, description, image, links = [], repo = null, tags = [] }}
+		{#each portfolio.filter(p => p.label && p.description && p.image) as { label, description, image, links = [], repo = null, tags = [] }}
 			<li class="project stack">
 				<div class="project__image">
 					<img
@@ -175,19 +149,9 @@
 						width="16" />
 				</div>
 				<h3 class="label">{label}</h3>
-				<Tags {tags} />
+				<Tags {tags} {tagDefinitions} />
 				{@html marked.parse(description)}
-				{#if repo}
-					<a class="project__repo sans-serif" href={repo}>
-						<span class="project__repo__icon">
-							<svg>
-								<title>Github logo</title>
-								<use href="#github" />
-							</svg>
-						</span>
-						See the code
-					</a>
-				{/if}
+				<ButtonGithub {repo} />
 				{#if links.length > 1}
 					<h4 class="sublabel">Examples:</h4>
 				{/if}

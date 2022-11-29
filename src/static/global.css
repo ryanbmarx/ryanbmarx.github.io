@@ -10,13 +10,15 @@
 	--color-blue-baby: #90ddf0;
 	--color-green: #2c666e;
 	/* --color-purple: #7f7caf; */
-	--color-purple: #5a587c;
+	--color-purple: #565670;
 	--color-purple-light: #f2f1fb;
 	--color-gray-light: #eee;
 	--color-gray: #aaa;
+	--color-gray-dark: #555;
 	--color-red: #ea0b3f;
 
 	--color-link: var(--color-red);
+	--color-link-text: white;
 	--color-font: var(--color-slate);
 
 	/* TYPE */
@@ -110,6 +112,33 @@ p:not([class]) {
 a {
 	color: currentColor;
 	text-decoration-color: var(--color-link);
+	position: relative;
+	z-index: 2;
+	transition: color var(--speed-transition-quick);
+}
+
+a::before {
+	content: "";
+	display: block;
+	background-color: red;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	/* transform: scaleY(0); */
+	opacity: 0;
+	transition: transform var(--speed-transition-quick),
+		opacity var(--speed-transition-quick);
+}
+
+a:is(:hover, :focus) {
+	color: var(--color-link-text);
+}
+
+a:is(:hover, :focus)::before {
+	opacity: 1;
 }
 
 /* SCAFFOLDING FUN */
@@ -132,5 +161,15 @@ a {
 	/* We're using a mouse/This is not a touchscreen */
 	:root {
 		--tap-target: 0;
+	}
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+	a::before {
+		transform-origin: middle bottom;
+		transform: translate(0, 100%) scaleY(0);
+	}
+	a:is(:hover, :focus)::before {
+		transform: translate(0, 0) scaleY(1);
 	}
 }
