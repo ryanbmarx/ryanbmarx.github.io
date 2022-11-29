@@ -91,13 +91,21 @@
 	<div class="bio stack">
 		<h2 id="about-header" class="header header--intro">Hi. I'm Ryan.</h2>
 		<p>
-			I am an interactive designer, front-end developer and journalist based in Chicago,
-			Illinois. I've spent my career in communications — specifically, the information
-			communications business. Through information visualization, writing, editing and
-			UX design, I find the important messages and express them in the best ways
-			possible. Sometimes all it takes is a few carefully chosen words. More often,
-			however, the effort involves distilling mountains of information into meaningful
-			and enjoyable experiences. This makes repeat customers out of media consumers.
+			I am a journalist, designer and developer based in Chicago, and I've spent my
+			career in the information communications business. Through visualization, writing,
+			editing and ux design, I find the important messages and express them in the best
+			ways possible.
+		</p>
+		<p>
+			Throughout the years, I've made it all: small static charts, large featured
+			interactives, standalone presentations and dashboard user interfaces. Each format
+			has its place, and choosing the right one for the job is a delicate, practical
+			art.
+		</p>
+		<p>
+			Whether the solution is a few carefully chosen words or something more, the goal
+			always is to distill mountains of information into meaningful and empowering
+			experiences. This makes repeat customers out of media consumers.
 		</p>
 		<p>
 			It's important to know when to collaborate, delegate and run solo. Success
@@ -109,19 +117,20 @@
 		<p>
 			For starters, I work well with others. As a group, we need to discover our true
 			goals, define them clearly, and consider our resources. A well-scoped project is
-			important to success and I always try to do things the "right way" within that
-			scope. This includes accessible design and construction of web experiences.
-			Inclusivity is not an option.
+			important to success and, when it comes to data management, app architecture and
+			inclusive design, I always try to do things the "right way" within that scope.
 		</p>
 		<p>
 			I speak fluent front-end: <strong>HTML</strong>, <strong>CSS</strong> and
-			<strong>Javascript</strong>. I can get around with <strong>Python</strong> and
-			<strong>Go</strong>. I'm a big fan of the SvelteJS framework. I also know others
-			(including Wordpress). I like Github Actions and using Google as an ad-hoc CMS.
+			<strong>Javascript</strong>. I know my way around Node and can get things done
+			with <strong>Python</strong> and <strong>Go</strong>. I'm a big fan of the
+			Svelte.js framework. I also know others (including <strong>Wordpress</strong>). I
+			like <strong>Github Actions</strong> and using
+			<strong>Google Spreadsheets</strong> as an ad-hoc CMS.
 		</p>
 		<p>
-			I like to document things. It's important and future me needs a lot of help. I
-			even write notes to myself, such as grocery lists, in markdown.
+			I appreciate good, useful documentation. From others, for the tools I'm using.
+			Also to me from my previous self. Future me needs a lot of help.
 		</p>
 	</div>
 	<div class="work">
