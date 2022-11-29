@@ -8,7 +8,7 @@
 		"description": "A nicely-designed article or other featured content that might not have a ton of interactivity but is full of information and organization."
 	},
 	"tool": {
-		"label": "Tool",
+		"label": "Tools",
 		"description": "These are not one-off projects. The codebase consitutes a tool or framework and has been reused several times."
 	},
 	"svelte": {
