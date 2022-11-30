@@ -6,12 +6,12 @@
 
 	// export let tagDefinitions = {};
 	export let label;
+	export let date;
 	export let description;
 	export let image;
 	export let links = [];
 	export let repo = null;
 	export let tags = [];
-
 	export let tagDefinitions = {};
 </script>
 
@@ -30,6 +30,11 @@
 		transform: scale(1.1) rotate(3deg);
 	}
 
+	.project__date {
+		font: bold var(--font-size-very-small) / var(--line-height) var(--sans-serif-fonts);
+		color: var(--color-purple);
+		margin-top: calc(-1 * var(--gap));
+	}
 	.links {
 		list-style: none;
 		margin: 0;
@@ -68,6 +73,7 @@
 			width="16" />
 	</div>
 	<h3 class="label">{label}</h3>
+	{#if date}<span class="project__date">Published: {date}</span>{/if}
 	<Tags {tags} {tagDefinitions} />
 	{@html marked.parse(description)}
 	<ButtonGithub {repo} />

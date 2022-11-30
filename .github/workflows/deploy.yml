@@ -21,7 +21,12 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  test:
+    runs-on: [ubuntu-latest]
+    steps:
+      - run: npm run test
   build_and_deploy:
+    needs: test
     runs-on: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v2

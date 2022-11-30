@@ -1,0 +1,20 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Tag",
+	"type": "object",
+	"properties": {
+		"objects": {
+			"properties": {
+				"label": {
+					"type": "string",
+					"description": "The human-readable short name for the tag category"
+				},
+				"description": {
+					"type": "string",
+					"description": "A pithy description of the tag category"
+				}
+			},
+			"required": ["label", "description"]
+		}
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Portfolio item",
+	"type": "array",
+	"items": { "$ref": "#/$defs/portfolioItem" },
+	"$defs": {
+		"portfolioItem": {
+			"type": "object",
+			"properties": {
+				"image": {
+					"type": "string"
+				},
+				"label": { "type": "string", "description": "The header of the item" },
+				"repo": {
+					"type": "string",
+					"description": "The absolute url to the github repo"
+				},
+				"date": {
+					"type": "string",
+					"description": "A human-readable date for the published"
+				},
+				"links": {
+					"type": "array",
+					"description": "An array of example link objects",
+					"items": { "$ref": "#/$defs/link" }
+				},
+				"description": {
+					"type": "string",
+					"description": "A longer description of the portfolio item"
+				},
+				"tags": {
+					"type": "array",
+					"description": "An array of helpful category tags",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"required": ["image", "label", "description", "links"]
+		},
+		"link": {
+			"type": "object",
+			"properties": {
+				"link": {
+					"type": "string",
+					"pattern": "^https://",
+					"description": "The absolute URL of the page"
+				},
+				"headline": {
+					"type": "string",
+					"description": "The headline of the linked page"
+				}
+			},
+			"required": ["link"]
+		}
+	}
+}
