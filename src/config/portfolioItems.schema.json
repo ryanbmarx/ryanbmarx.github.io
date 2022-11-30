@@ -43,7 +43,7 @@
 			"properties": {
 				"link": {
 					"type": "string",
-					"pattern": "^https://",
+					"pattern": "^http",
 					"description": "The absolute URL of the page"
 				},
 				"headline": {

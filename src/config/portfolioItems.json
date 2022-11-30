@@ -257,46 +257,7 @@
 		],
 		"tags": ["article"]
 	},
-	{
-		"label": "Post-election: Examining Illinois after Trump election",
-		"image": "elex2016.png",
-		"date": "Nov 15, 2016",
-		"description": " The \"blue island\" in a red midwest was a theme we tackled in several ways following Donald Trump's presidential election. These charts try to shed light on what happened by exploring the red/blue midwestern divide via several demographics.",
-		"repo": "https://github.com/ryanbmarx/midwest-voting-demographics-trump",
-		"links": [
-			{
-				"headline": "Illinois, a blue island in a red sea: Data analysis",
-				"link": "https://www.chicagotribune.com/news/ct-election-midwest-voting-demographics-htmlstory.html"
-			}
-		],
-		"tags": ["data", "impaired"]
-	},
-	{
-		"label": "All the bands at that big music festival",
-		"image": "lollapalooza.png",
-		"description": "A visualization of all the bands to ever play Lollapalooza (updated for the 25th anniversary). Includes details for each band. The data was procured by scraping the Lollapalooza website and joining it with the taxonomy from Gracenote.",
-		"repo": "https://github.com/ryanbmarx/lollapalooza-genres",
-		"links": [
-			{
-				"headline": "How Lollapalooza has evolved",
-				"link": "https://graphics.chicagotribune.com/entertainment/lollapalooza-history/"
-			}
-		],
-		"tags": ["data"]
-	},
-	{
-		"label": "Visualization & Lookup: Paying for public schools ",
-		"image": "schoolfunding.png",
-		"description": "An analysis of school funding data showing that school districts in richer counties shoulder a larger share of public school costs than do districts in poorer counties. This presentation includes some analytics maps and charting along with a searchable interface for the entire dataset.",
-		"repo": "https://github.com/ryanbmarx/local-funding-schools-2016",
-		"links": [
-			{
-				"headline": "Wealthier counties shoulder more of school costs: Search the database",
-				"link": "https://www.chicagotribune.com/news/ct-local-school-funding-htmlstory.html"
-			}
-		],
-		"tags": ["data"]
-	},
+
 	{
 		"label": "Faces of DACA",
 		"image": "daca.jpg",
@@ -310,6 +271,23 @@
 			}
 		],
 		"tags": ["article"]
+	},
+	{
+		"label": "Graphic novel presentations",
+		"image": "graphicnovel.jpg",
+		"description": "For a Chicago Tribune investigative project on wards of the state, illustrator Rick Tuma and I worked with the Watchdog team to produce several youth-oriented stories in graphic novel format. The main investigative pieces were critical, but a bit dry. Much of the human elements were lost in the editing process, so we collected them in these graphic essays. This rig was used again for an essay commemorating the historic disaster of the SS Eastland.",
+		"repo": "https://github.com/ryanbmarx/residential-treatment-centers",
+		"links": [
+			{
+				"headline": "Harsh Treatment",
+				"link": "https://graphics.chicagotribune.com/news/watchdog/rtc/graphic-essays/"
+			},
+			{
+				"headline": "Disaster on the Eastland: 1915 catastrophe on the Chicago River claimed 844 lives",
+				"link": "https://graphics.chicagotribune.com/news/local/eastland/"
+			}
+		],
+		"tags": ["article", "tool"]
 	},
 	{
 		"label": "The Tax Divide - A 4-part series",
@@ -334,26 +312,49 @@
 		"links": [
 			{
 				"headline": "How weeds defeat weedkillers",
-				"link": "https://graphics.chicagotribune.com/news/watchdog/how-weeds-resist/"
+				"link": "http://graphics.chicagotribune.com/news/watchdog/how-weeds-resist/"
 			}
 		],
-		"tags": ["article"]
+		"tags": ["article", "impaired"]
 	},
 	{
-		"label": "Graphic novel presentations",
-		"image": "graphicnovel.jpg",
-		"description": "For a Chicago Tribune investigative project on wards of the state, illustrator Rick Tuma and I worked with the Watchdog team to produce several youth-oriented stories in graphic novel format. The main investigative pieces were critical, but a bit dry. Much of the human elements were lost in the editing process, so we collected them in these graphic essays. This rig was used again for an essay commemorating the historic disaster of the SS Eastland.",
-		"repo": "https://github.com/ryanbmarx/residential-treatment-centers",
+		"label": "All the bands at that big music festival",
+		"image": "lollapalooza.png",
+		"description": "A visualization of all the bands to ever play Lollapalooza (updated for the 25th anniversary). Includes details for each band. The data was procured by scraping the Lollapalooza website and joining it with the taxonomy from Gracenote.",
+		"repo": "https://github.com/ryanbmarx/lollapalooza-genres",
 		"links": [
 			{
-				"headline": "Harsh Treatment",
-				"link": "https://graphics.chicagotribune.com/news/watchdog/rtc/graphic-essays/"
-			},
-			{
-				"headline": "Disaster on the Eastland: 1915 catastrophe on the Chicago River claimed 844 lives",
-				"link": "https://graphics.chicagotribune.com/news/local/eastland/"
+				"headline": "How Lollapalooza has evolved",
+				"link": "https://graphics.chicagotribune.com/entertainment/lollapalooza-history/"
 			}
 		],
-		"tags": ["article", "tool"]
+		"tags": ["data", "impaired"]
+	},
+	{
+		"label": "Post-election: Examining Illinois after Trump election",
+		"image": "elex2016.png",
+		"date": "Nov 15, 2016",
+		"description": " The \"blue island\" in a red midwest was a theme we tackled in several ways following Donald Trump's presidential election. These charts try to shed light on what happened by exploring the red/blue midwestern divide via several demographics.",
+		"repo": "https://github.com/ryanbmarx/midwest-voting-demographics-trump",
+		"links": [
+			{
+				"headline": "Illinois, a blue island in a red sea: Data analysis",
+				"link": "https://www.chicagotribune.com/news/ct-election-midwest-voting-demographics-htmlstory.html"
+			}
+		],
+		"tags": ["data", "impaired"]
+	},
+	{
+		"label": "Visualization & Lookup: Paying for public schools ",
+		"image": "schoolfunding.png",
+		"description": "An analysis of school funding data showing that school districts in richer counties shoulder a larger share of public school costs than do districts in poorer counties. This presentation includes some analytics maps and charting along with a searchable interface for the entire dataset.",
+		"repo": "https://github.com/ryanbmarx/local-funding-schools-2016",
+		"links": [
+			{
+				"headline": "Wealthier counties shoulder more of school costs: Search the database",
+				"link": "https://www.chicagotribune.com/news/ct-local-school-funding-htmlstory.html"
+			}
+		],
+		"tags": ["data", "impaired"]
 	}
 ]
