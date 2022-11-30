@@ -26,11 +26,15 @@ async function validateSchemas() {
 				fs
 					.readFile(`./src/config/${t}.json`, "utf8")
 					.then(JSON.parse)
-					.catch(console.error),
+					.catch(e => {
+						assert(false, e);
+					}),
 				fs
 					.readFile(`./src/config/${t}.schema.json`, "utf8")
 					.then(JSON.parse)
-					.catch(console.error),
+					.catch(e => {
+						assert(false, e);
+					}),
 			]);
 			const validation = v.validate(data, schema);
 
