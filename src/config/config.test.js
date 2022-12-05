@@ -5,21 +5,21 @@ const path = require("node:path");
 
 const Validator = require("jsonschema").Validator;
 const v = new Validator();
-// var instance = 4;
-// var schema = { type: "number" };
-// console.log(v.validate(instance, schema));
 
 describe("Validate config files against schemas", validateSchemas);
 
 async function validateSchemas() {
 	const files = await fs.readdir("./src/config");
+
+	// Look for our schema files and collect the filenames/slugs
 	const tests = files.reduce((acc, curr) => {
-		if (path.extname(curr) === ".json") {
+		if (curr.includes(".schema.json")) {
 			acc.add(curr.replace(/.json/, "").replace(/.schema/, ""));
 		}
 		return acc;
 	}, new Set());
 
+	// For each schema file, test its corresponding json. Config files without schemas are assumed to be immaculate
 	for (let t of tests) {
 		test(`JSON validation:  ${t}`, async () => {
 			const [data, schema] = await Promise.all([
