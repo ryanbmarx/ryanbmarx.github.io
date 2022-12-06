@@ -244,6 +244,19 @@
 		"tags": ["svelte"]
 	},
 	{
+		"label": "Indonesia deforestation",
+		"description": "This timelapse visualization depicts deforestation in Indonesia and projects the tree loss under several different scenarios. My work here was to design and build an interface to tell this story using the data provided.",
+		"image": "orbitas-indonesia.png",
+		"date": "Published: Dec. 3, 2020",
+		"links": [
+			{
+				"headline": "Agriculture in the Age of Climate Transitions: Stranded Assets. Less Land. New Costs. New Opportunities.",
+				"link": "https://orbitas.finance/2020/12/03/ag-climate-transitions-risk-opportunities/"
+			}
+		],
+		"tags": ["data", "svelte"]
+	},
+	{
 		"label": "Timeline: Class warfare in Chicago",
 		"image": "classwarfare.png",
 		"date": "Published: July 27, 2014",
