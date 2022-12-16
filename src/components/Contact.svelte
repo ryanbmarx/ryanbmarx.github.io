@@ -1,7 +1,12 @@
 <script>
 	export let label = "Are you ready to get started? Let's talk:";
 	let networks = [
-		{ label: "Twitter", icon: "twitter", url: "https://www.twitter.com/ryanmarx" },
+		{
+			label: "Mastodon",
+			icon: "mastodon",
+			rel: "me",
+			url: "https://home.social/@ryanbmarx",
+		},
 		{ label: "Github", icon: "github", url: "https://github.com/ryanbmarx" },
 		{
 			label: "LinkedIn",
@@ -13,6 +18,7 @@
 			icon: "email",
 			url: "mailto:ryanbmarx+homepage@gmail.com",
 		},
+		{ label: "Twitter", icon: "twitter", url: "https://www.twitter.com/ryanmarx" },
 	];
 
 	// So we can have unique IDs even with multiple component instances
@@ -94,9 +100,9 @@
 		{label}
 	</h2>
 	<ul class="contact__social">
-		{#each networks as { label, icon, url }}
+		{#each networks as { label, icon, url, rel = "" }}
 			<li class="contact__link contact__link--{label}">
-				<a href={url} target="_blank" rel="noopener noreferrer">
+				<a href={url} target="_blank" rel="noopener noreferrer {rel}">
 					<span class="visually-hidden">Visit me on {label}</span>
 					<svg class="icon">
 						<title>{label} icon</title>
