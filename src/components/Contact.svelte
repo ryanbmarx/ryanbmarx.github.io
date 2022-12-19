@@ -100,9 +100,9 @@
 		{label}
 	</h2>
 	<ul class="contact__social">
-		{#each networks as { label, icon, url, rel = "" }}
+		{#each networks as { label, icon, url, rel = null }}
 			<li class="contact__link contact__link--{label}">
-				<a href={url} target="_blank" rel="noopener noreferrer {rel}">
+				<a href={url} target="_blank" {rel}>
 					<span class="visually-hidden">Visit me on {label}</span>
 					<svg class="icon">
 						<title>{label} icon</title>
