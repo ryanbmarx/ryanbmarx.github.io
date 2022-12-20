@@ -17,9 +17,8 @@
 		right: var(--gap);
 		list-style: none;
 		margin: 0;
-		outline: 1px solid red;
 		padding: 0.5rem;
-		background: white;
+		background: rgba(0, 0, 0, 0.35);
 	}
 
 	.visually-hidden {
@@ -38,6 +37,30 @@
 		color: var(--color-gray);
 		text-transform: uppercase;
 		margin: 0;
+		padding: 0 0 0.15rem 0;
+		color: white;
+		transform: color var(--speed-transition) ease-in-out;
+		position: relative;
+	}
+
+	.switcher__label::after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 100%;
+		background-color: currentColor;
+		width: 100%;
+		height: 2px;
+		transition: transform var(--speed-transition) ease-in-out;
+	}
+
+	.switcher__label--muted {
+		color: var(--color-gray);
+		border-color: transparent;
+	}
+	.switcher__label--muted::after {
+		transform: scaleX(0);
 	}
 
 	.switcher__toggle {
@@ -116,8 +139,11 @@
 		bind:checked
 		class="visually-hidden" />
 	<label class="switcher__wrapper" for="{id}-switcher" aria-label={label}>
-		{#if labelLeft}<span class="switcher__label switcher__label--left">{labelLeft}</span
-			>{/if}
+		{#if labelLeft}
+			<span
+				class="switcher__label switcher__label--left"
+				class:switcher__label--muted={checked}>{labelLeft}</span>
+		{/if}
 		<span class="switcher__toggle">
 			<span class="switcher__toggle__dot">
 				<svg
@@ -135,6 +161,9 @@
 			</span>
 		</span>
 		{#if labelRight}
-			<span class="switcher__label switcher__label--right">{labelRight}</span>{/if}
+			<span
+				class="switcher__label switcher__label--right"
+				class:switcher__label--muted={!checked}>{labelRight}</span>
+		{/if}
 	</label>
 </div>

@@ -45,8 +45,8 @@
 	--tap-target: 48px;
 
 	/* OTHER VISUAL THINGS */
-	--speed-transition: 150ms;
-	--speed-transition-quick: 80ms;
+	--speed-transition: 1ms;
+	--speed-transition-quick: 1ms;
 }
 
 /* ------ DARK MODE */
@@ -165,6 +165,10 @@ a:where(:hover, :focus-visible) {
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
+	:root {
+		--speed-transition: 150ms;
+		--speed-transition-quick: 80ms;
+	}
 	a::before {
 		transform-origin: middle bottom;
 		transform: translate(0, 100%) scaleY(0);
