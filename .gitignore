@@ -108,4 +108,4 @@ dist
 
 # Generated content
 public/
-functions/sprite.svg
+src/functions/sprite.svg
