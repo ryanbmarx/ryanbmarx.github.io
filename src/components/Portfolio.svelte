@@ -63,20 +63,6 @@
 		padding: 0;
 		margin: 0;
 	}
-
-	:global(.tag) {
-		padding: 0.25rem 0.5rem;
-		border-radius: 0.25rem;
-		/* background-color: var(--color-purple); */
-		/* color: var(--color-gray-light); */
-		font: bold var(--font-size-very-small) / var(--line-height) var(--sans-serif-fonts);
-		text-transform: uppercase;
-
-		border: 1px solid var(--color-purple);
-		color: var(--color-purple);
-		background-color: transparent;
-		transition: background-color var(--speed-transition) ease-in-out;
-	}
 </style>
 
 <section id="portfolio" class="container" aria-labelledby="portfolio-header">

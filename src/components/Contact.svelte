@@ -102,7 +102,7 @@
 	<ul class="contact__social">
 		{#each networks as { label, icon, url, rel = null, target = null }}
 			<li class="contact__link contact__link--{label}">
-				<a href={url} {target} {rel}>
+				<a href={url} {target} {rel} tabindex="0">
 					<span class="visually-hidden">Visit me on {label}</span>
 					<svg class="icon">
 						<title>{label} icon</title>

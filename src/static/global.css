@@ -52,6 +52,7 @@
 /* ------ DARK MODE */
 
 .dark {
+	/* Also applied in media query below */
 	--color-font: #eee;
 	--color-font-muted: #aaa;
 	background: var(--color-black);
@@ -175,5 +176,16 @@ a:where(:hover, :focus-visible) {
 	}
 	a:is(:hover, :focus)::before {
 		transform: translate(0, 0) scaleY(1);
+	}
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		/* Also applied in media query below */
+		--color-font: #eee;
+		--color-font-muted: #aaa;
+	}
+	body {
+		background: var(--color-black);
 	}
 }

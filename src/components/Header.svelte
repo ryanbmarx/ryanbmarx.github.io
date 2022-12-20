@@ -2,8 +2,7 @@
 	import { onMount } from "svelte";
 	import Switcher from "./Switcher.svelte";
 
-	let modeSwitcher;
-
+	let displayModeSwitcher = false;
 	let darkMode = false;
 	$: modeLabel = `Dark mode ${darkMode ? "is" : "is not"} active. Press to toggle it ${
 		darkMode ? "off" : "on."
@@ -16,6 +15,9 @@
 
 		// On load, switch to dark if needed.
 		if (darkMode) document.body.classList.add("dark");
+
+		// We are using JS and should display the toggle
+		displayModeSwitcher = true;
 	});
 	function handleModeSwitch(e) {
 		document.body.classList.toggle("dark");
@@ -162,7 +164,7 @@
 			rel="noopener noreferrer">John J. Kim</a>
 	</p>
 	<Switcher
-		bind:this={modeSwitcher}
+		visible={displayModeSwitcher}
 		bind:checked={darkMode}
 		on:input={handleModeSwitch}
 		id="mode"
