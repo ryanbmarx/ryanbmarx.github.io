@@ -1,4 +1,26 @@
-<script></script>
+<script>
+	import { onMount } from "svelte";
+	import Switcher from "./Switcher.svelte";
+
+	let modeSwitcher;
+
+	let darkMode = false;
+	$: modeLabel = `Dark mode ${darkMode ? "is" : "is not"} active. Press to toggle it ${
+		darkMode ? "off" : "on."
+	}`;
+
+	onMount(() => {
+		// Initially set our darkmode state based on user preference.
+		// This will default to light mode, which is _my_ preference.
+		darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+		// On load, switch to dark if needed.
+		if (darkMode) document.body.classList.add("dark");
+	});
+	function handleModeSwitch(e) {
+		document.body.classList.toggle("dark");
+	}
+</script>
 
 <style>
 	.header {
@@ -139,4 +161,12 @@
 			target="_blank"
 			rel="noopener noreferrer">John J. Kim</a>
 	</p>
+	<Switcher
+		bind:this={modeSwitcher}
+		bind:checked={darkMode}
+		on:input={handleModeSwitch}
+		id="mode"
+		label={modeLabel}
+		labelLeft="Light"
+		labelRight="Dark" />
 </header>
