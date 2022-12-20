@@ -32,13 +32,14 @@
 
 	.project__date {
 		font: bold var(--font-size-very-small) / var(--line-height) var(--sans-serif-fonts);
-		color: var(--color-purple);
+		color: var(--color-font-muted);
 		margin-top: calc(-1 * var(--gap));
 	}
 	.links {
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		color: var(--color-font);
 	}
 
 	.links li {

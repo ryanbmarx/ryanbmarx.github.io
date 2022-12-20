@@ -49,6 +49,7 @@
 
 	.item__role {
 		font: bold var(--font-size) / var(--line-height) var(--sans-serif-fonts);
+		color: var(--color-font);
 		margin: 0;
 		cursor: pointer;
 	}
@@ -101,6 +102,9 @@
 		padding: 0 0 0 calc(var(--icon-width) + var(--gap));
 	}
 
+	.item__description :global(p) {
+		font: var(--font-size-small) / var(--line-height) var(--sans-serif-fonts);
+	}
 	.item__description :global(p:last-child) {
 		margin-bottom: 0;
 	}

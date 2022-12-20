@@ -67,6 +67,12 @@
 		gap: var(--gap);
 		flex-wrap: wrap;
 	}
+
+	:global(.dark) .about {
+		background-color: var(--color-slate);
+		gap: calc(2 * var(--gap));
+	}
+
 	.bio {
 		flex: 4 4 25rem;
 	}
@@ -78,6 +84,11 @@
 		flex: 1 1 20rem;
 		padding: var(--gap);
 		background: var(--color-apricot-light);
+	}
+
+	:global(.dark) .work {
+		background: transparent;
+		padding: 0;
 	}
 
 	.work ul {

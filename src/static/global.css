@@ -21,6 +21,7 @@
 	--color-link: var(--color-pink);
 	--color-link-text: white;
 	--color-font: var(--color-slate);
+	--color-font-muted: var(--color-purple);
 
 	/* TYPE */
 
@@ -46,6 +47,14 @@
 	/* OTHER VISUAL THINGS */
 	--speed-transition: 150ms;
 	--speed-transition-quick: 80ms;
+}
+
+/* ------ DARK MODE */
+
+.dark {
+	--color-font: #eee;
+	--color-font-muted: #aaa;
+	background: var(--color-black);
 }
 
 html body {
@@ -89,15 +98,18 @@ h6 {
 
 .header {
 	font: var(--font-size-very-large) / var(--line-height-tight) var(--display-fonts);
+	color: var(--color-font);
 }
 
 .label {
 	font: var(--font-size-large) / var(--line-height-tight) var(--display-fonts);
 	font-weight: 200;
+	color: var(--color-font);
 }
 .sublabel {
 	font: var(--font-size) / var(--line-height-tight) var(--display-fonts);
 	font-weight: 200;
+	color: var(--color-font);
 }
 
 .agate {
