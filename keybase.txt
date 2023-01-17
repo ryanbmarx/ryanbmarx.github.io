@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/ryanbmarx
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://ryanbmarx.com
+  * I am ryanbmarx (https://keybase.io/ryanbmarx) on keybase.
+  * I have a public key ASDpSFmECW1ABmfLxNTZnfs2mXFYXOlu8qlhiipTuy0MGAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e61435f2933d245c70f6bed1c74bd6ea1e46ad061a8284edd9d3d1175ba5a09a0a",
+      "host": "keybase.io",
+      "kid": "0120e9485984096d400667cbc4d4d99dfb369971585ce96ef2a9618a2a53bb2d0c180a",
+      "uid": "a7d38b587a8fbdbd9ad5b82bac1a0a19",
+      "username": "ryanbmarx"
+    },
+    "merkle_root": {
+      "ctime": 1673991416,
+      "hash": "42a907d1586c57b18f5617d94d4c670e98a322dae84eca1691f84189cc96a620d4ba7d060dd4828244902cc6fa49b9cb0d8190e1ed109afd17cbe9bd98dc7fa8",
+      "hash_meta": "6e53e6ec0c40a4342e21fe9dbc126976f8481df611e5074809add4e218bf95c5",
+      "seqno": 23886144
+    },
+    "service": {
+      "entropy": "U4wu8jxfNEtwCqbJDhbh0RI+",
+      "hostname": "ryanbmarx.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.4"
+  },
+  "ctime": 1673991489,
+  "expire_in": 504576000,
+  "prev": "674f1f5ab9abc4fb9109b11ac3dbd4df73e24a0a4b39f37fb907b6b0b1fcff6a",
+  "seqno": 46,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg6UhZhAltQAZny8TU2Z37NplxWFzpbvKpYYoqU7stDBgKp3BheWxvYWTESpcCLsQgZ08fWrmrxPuRCbEaw9vU33PiSgpLOfN/uQe2sLH8/2rEIBE/YZfGKVUXXDyh1kVe1qZ3tSFcGLiIQ6unv/cRAWoFAgHCo3NpZ8RAVfcS43ugrPOsXoaOXFISpQAkKRazJriQDsvUZtHgqF/OE94zpHsyAgStc6srwTmXu13VynswlnAp8jhGZg1xA6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILBYyxJaW5FfFFeKUChf0utdK9ydlRGtFBnR+gARg3Gco3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ryanbmarx
+
+==================================================================
