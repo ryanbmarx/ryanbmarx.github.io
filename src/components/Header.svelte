@@ -143,6 +143,7 @@
 	<picture>
 		<source srcset="/img/header-background--desktop.jpg" media="(min-width: 768px)" />
 		<img
+			fetchpriority="high"
 			class="header__image"
 			src="/img/header-background--thumb.jpg"
 			alt="An overhead view of Ryan Marx, smiling while he works, sitting at his desk. The walls of his cubicle are covered in small posters and family photos. Ryan is wearing one of his favofite fleece zip-up jackets." />

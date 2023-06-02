@@ -1,7 +1,4 @@
 <script>
-	// UTILS
-	import { setContext } from "svelte";
-
 	// COMPONENTS
 	import Header from "./components/Header.svelte";
 	import Contact from "./components/Contact.svelte";
