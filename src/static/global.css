@@ -21,6 +21,7 @@
 	--color-link: var(--color-pink);
 	--color-link-text: white;
 	--color-font: var(--color-slate);
+	--color-font-muted: var(--color-purple);
 
 	/* TYPE */
 
@@ -44,8 +45,17 @@
 	--tap-target: 48px;
 
 	/* OTHER VISUAL THINGS */
-	--speed-transition: 150ms;
-	--speed-transition-quick: 80ms;
+	--speed-transition: 1ms;
+	--speed-transition-quick: 1ms;
+}
+
+/* ------ DARK MODE */
+
+.dark {
+	/* Also applied in media query below */
+	--color-font: #eee;
+	--color-font-muted: #aaa;
+	background: var(--color-black);
 }
 
 html body {
@@ -89,15 +99,18 @@ h6 {
 
 .header {
 	font: var(--font-size-very-large) / var(--line-height-tight) var(--display-fonts);
+	color: var(--color-font);
 }
 
 .label {
 	font: var(--font-size-large) / var(--line-height-tight) var(--display-fonts);
 	font-weight: 200;
+	color: var(--color-font);
 }
 .sublabel {
 	font: var(--font-size) / var(--line-height-tight) var(--display-fonts);
 	font-weight: 200;
+	color: var(--color-font);
 }
 
 .agate {
@@ -153,11 +166,26 @@ a:where(:hover, :focus-visible) {
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
+	:root {
+		--speed-transition: 150ms;
+		--speed-transition-quick: 80ms;
+	}
 	a::before {
 		transform-origin: middle bottom;
 		transform: translate(0, 100%) scaleY(0);
 	}
 	a:is(:hover, :focus)::before {
 		transform: translate(0, 0) scaleY(1);
+	}
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		/* Also applied in media query below */
+		--color-font: #eee;
+		--color-font-muted: #aaa;
+	}
+	body {
+		background: var(--color-black);
 	}
 }

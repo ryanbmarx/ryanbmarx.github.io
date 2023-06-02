@@ -66,7 +66,9 @@
 		align-items: start;
 		gap: var(--gap);
 		flex-wrap: wrap;
+		transition: background-color var(--speed-transition) ease-in-out;
 	}
+
 	.bio {
 		flex: 4 4 25rem;
 	}
@@ -76,14 +78,36 @@
 
 	.work {
 		flex: 1 1 20rem;
+		align-self: stretch;
 		padding: var(--gap);
 		background: var(--color-apricot-light);
+		transition: background var(--speed-transition) ease-in-out;
 	}
 
 	.work ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
+	}
+
+	/* DARK MODE ---------- */
+	:global(.dark) .about {
+		background-color: var(--color-slate);
+		gap: calc(2 * var(--gap));
+	}
+
+	:global(.dark) .work {
+		background: rgba(0, 0, 0, 0.35);
+	}
+
+	@media screen and (prefers-color-scheme: dark) {
+		.about {
+			background-color: var(--color-slate);
+			gap: calc(2 * var(--gap));
+		}
+		.work {
+			background: rgba(0, 0, 0, 0.35);
+		}
 	}
 </style>
 

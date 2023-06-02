@@ -29,13 +29,13 @@
 				"link": "https://www.usatoday.com/storytelling/find-out-how-conservative-you-really-are/"
 			}
 		],
-		"tags": ["tool", "ui", "svelte"]
+		"tags": ["tools", "ui", "svelte"]
 	},
 	{
 		"label": "Cast of Characters",
 		"image": "cast.png",
 		"repo": "https://github.com/ryanbmarx/storytelling-cast-of-characters/",
-		"tags": ["tool", "svelte"],
+		"tags": ["tools", "svelte"],
 
 		"links": [
 			{
@@ -66,7 +66,7 @@
 				"link": "https://www.democratandchronicle.com/storytelling/sibley-building-downtown-rochester-ny-quiz/"
 			}
 		],
-		"tags": ["tool", "svelte"],
+		"tags": ["tools", "svelte"],
 		"description": "Sometimes the news can and should be fun. Part of our ongoing 'news play' experiments, this quiz framework has been used to create topical and evergreen quizzes for 6 different news properties, and has been published weekly  by USA TODAY for more than two years. The primary business goals of this project was to drive reader registrations (not subscriptions).\n\nThousands of quiztakers visited Gannett sign-up pages. To encourage habitual quiztaking, this frameworks supports the possibility of two different leaderboards — weekly and all-time — as well as syndication across Gannett properties."
 	},
 
@@ -87,7 +87,7 @@
 				"link": "https://www.lohud.com/in-depth/news/2022/11/17/jennifer-jones-rockette-radio-city-music-hall/69616543007/"
 			}
 		],
-		"tags": ["tool"],
+		"tags": ["tools"],
 		"description": "My team at Gannett is responsible for designing, engineering and maintaining the In-Depth article framework. This collection of tools enables more than 100 web producers across the company to craft visually stunning, reader-focused multimedia presentations using the everyday CMS and our own story editor.\n\nIt's been used to create more than 7,500 (as of December 2022) articles and is the tool of choice to present the strongest, most impactful journalism Gannett has to offer.\n\nIt has generated hundreds of thousands of pageviews, a 2x increase in engaged time over standard templates and frequently leads to subscriber conversions."
 	},
 	{
@@ -107,7 +107,7 @@
 				"link": "https://www.oklahoman.com/in-depth/news/2021/08/31/hispanic-domestic-abuse-survivors-speak-out-help-other-victims/7497178002/"
 			}
 		],
-		"tags": ["tool", "svelte"],
+		"tags": ["tools", "svelte"],
 		"description": "This component for the In-Depth toolbox was our second-pass at audio clips. I designed and developed this from scratch as an attempt to grow the poor interaction rates observed with the first version. It's bigger and bolder — more pixels on the page — and has a strong visual presence."
 	},
 	{
@@ -126,7 +126,7 @@
 				"link": "https://www.desmoinesregister.com/in-depth/news/local/columnists/courtney-crowder/2019/11/26/abbie-kampman-iowa-strangers-find-peace-20-years-after-wrong-way-crash-kills-5-mother-sisters/2570864001/"
 			}
 		],
-		"tags": ["tool", "svelte"],
+		"tags": ["tools", "svelte"],
 		"image": "sms.png",
 		"description": "This component from the In-Depth toolbox is a top-to-bottom refactor of an existing app. Originally written in Angular (with the data hard-coded into the application), I rewrote it in our preferred Svelte, and abstracted the input data so that it could be used in any project. Visually, it uses the same CSS styling variables as the broader article stylesheets, so it adapts to existing "
 	},
@@ -147,7 +147,7 @@
 				"link": "https://www.usatoday.com/in-depth/graphics/2021/07/07/climate-change-images-offer-present-and-future-views-our-world/5173622001/"
 			}
 		],
-		"tags": ["tool", "svelte"],
+		"tags": ["tools", "svelte"],
 		"description": "This component for In-Depth takes two images, lines them up and toggles between them. We had originally decided to let the myriad 3rd-party versions of this tool serve In-Depth, but this one provides us useful analytics."
 	},
 	{
@@ -168,7 +168,7 @@
 				"link": "https://www.palmbeachpost.com/storytelling/palm-beach-florida-election-voters-guide-2022/"
 			}
 		],
-		"tags": ["tool", "svelte"],
+		"tags": ["tools", "svelte"],
 		"description": "This concept was born in the early days of the Covid-19 pandemic. Our readers had lots of questions and needed easy access to the answers. Gannett was covering the heck out of the ordeal, but organizing that content in ways satisfy these specific, informational needs was difficult. Enter the big page of help.\n\nConstructed with SEO as a top priority, these experiences are intuitive and transactional. Individual questions are grouped by topic, and each question, by design, has an answer with more information available if desired.\n\nThe concept has been adapted for civic resources, hurricane preparedness and voting."
 	},
 	{
@@ -186,7 +186,7 @@
 				"link": "https://www.azcentral.com/in-depth/news/local/arizona-wildfires/2019/07/22/wildfire-risks-more-than-500-spots-have-greater-hazard-than-paradise/1434502001/"
 			}
 		],
-		"tags": ["tool", "ui", "svelte"],
+		"tags": ["tools", "ui", "svelte"],
 		"description": "This collaboration with the Arizona Republic and the USA TODAY graphics team is a custom-build interface for a custom-built database of wildfire potential in the U.S. west. Each town is measured by a series of metrics calculating the probability that it could be consumed by wildfire.\n\nThe application had a standalone instance with it's own URL, but it also was embedded into a handful of articles (built using the In-Depth framework) and pre-configured to display specific towns."
 	},
 	{
@@ -207,7 +207,7 @@
 				"link": "https://www.palmbeachpost.com/storytelling/news/surfside-miami-florida-building-collapse-victims-who-died-obituaries/"
 			}
 		],
-		"tags": ["tool", "svelte"],
+		"tags": ["tools", "svelte"],
 		"description": "The Covid-19 pandemic claimed at least 1.1 million Americans, and at least 6.6 million worldwide. This presentation was developed in conjunction with a newsroom in New Jersey as an artful, elegant and respectful way  to display the names of people who had died in the pandemic. It was adapted for use in Detroit and south Florida  for similar purposes."
 	},
 	{
@@ -300,7 +300,7 @@
 				"link": "https://graphics.chicagotribune.com/news/local/eastland/"
 			}
 		],
-		"tags": ["article", "tool"]
+		"tags": ["article", "tools"]
 	},
 	{
 		"label": "The Tax Divide - A 4-part series",

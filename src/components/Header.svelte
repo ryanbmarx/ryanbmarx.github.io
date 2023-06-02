@@ -1,4 +1,28 @@
-<script></script>
+<script>
+	import { onMount } from "svelte";
+	import Switcher from "./Switcher.svelte";
+
+	let displayModeSwitcher = false;
+	let darkMode = false;
+	$: modeLabel = `Dark mode ${darkMode ? "is" : "is not"} active. Press to toggle it ${
+		darkMode ? "off" : "on."
+	}`;
+
+	onMount(() => {
+		// Initially set our darkmode state based on user preference.
+		// This will default to light mode, which is _my_ preference.
+		darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+		// On load, switch to dark if needed.
+		if (darkMode) document.body.classList.add("dark");
+
+		// We are using JS and should display the toggle
+		displayModeSwitcher = true;
+	});
+	function handleModeSwitch(e) {
+		document.body.classList.toggle("dark");
+	}
+</script>
 
 <style>
 	.header {
@@ -119,6 +143,7 @@
 	<picture>
 		<source srcset="/img/header-background--desktop.jpg" media="(min-width: 768px)" />
 		<img
+			fetchpriority="high"
 			class="header__image"
 			src="/img/header-background--thumb.jpg"
 			alt="An overhead view of Ryan Marx, smiling while he works, sitting at his desk. The walls of his cubicle are covered in small posters and family photos. Ryan is wearing one of his favofite fleece zip-up jackets." />
@@ -139,4 +164,12 @@
 			target="_blank"
 			rel="noopener noreferrer">John J. Kim</a>
 	</p>
+	<Switcher
+		visible={displayModeSwitcher}
+		bind:checked={darkMode}
+		on:input={handleModeSwitch}
+		id="mode"
+		label={modeLabel}
+		labelLeft="Light"
+		labelRight="Dark" />
 </header>
