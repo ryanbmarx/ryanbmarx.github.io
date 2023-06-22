@@ -5,7 +5,7 @@
 			label: "Mastodon",
 			icon: "mastodon",
 			rel: "me",
-			url: "https://home.social/@ryanbmarx",
+			url: "https://newsie.social/@ryanbmarx",
 		},
 		{ label: "Github", icon: "github", url: "https://github.com/ryanbmarx" },
 		{
