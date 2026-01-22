@@ -4,27 +4,29 @@
 	import Tags from "./Tags.svelte";
 	import ButtonGithub from "./ButtonGithub.svelte";
 
-	interface Props {
+	type PorfolioItem = {
 		label: string;
 		date?: string;
 		description: string;
 		image: string;
-		links?: { headline?: string; link: string }[];
+		links?: { headline?: string; link: string; archived?: boolean }[];
 		repo?: string | null;
 		tags?: string[];
 		tagDefinitions?: Record<string, { label: string; description: string }>;
-	}
+	};
 
 	const {
 		label,
 		date,
 		description,
 		image,
-		links = [],
+		links: rawLinks = [],
 		repo = null,
 		tags = [],
 		tagDefinitions = {},
-	}: Props = $props();
+	}: PorfolioItem = $props();
+
+	const links = $derived(rawLinks.filter(l => !l.archived));
 </script>
 
 <li class="project stack">

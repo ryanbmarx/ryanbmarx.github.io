@@ -49,6 +49,10 @@
 				"headline": {
 					"type": "string",
 					"description": "The headline of the linked page"
+				},
+				"archived": {
+					"type": "boolean",
+					"description": "Many of these links now, sadly, are broken. Rather than just deleting them, I will mark them as archived and keep them for posterity."
 				}
 			},
 			"required": ["link"]

@@ -7,7 +7,8 @@
 		"links": [
 			{
 				"headline": "Design a World Cup 2022 kit",
-				"link": "https://www.usatoday.com/storytelling/world-cup-jersey-design-your-own/"
+				"link": "https://www.usatoday.com/storytelling/world-cup-jersey-design-your-own/",
+				"archived": true
 			}
 		],
 		"description": "I designed the initial wireframes and, eventually, developed this web app, with a focus on scaffolding and UX. I worked with two other developers to incorporate the 3D modeling. Optimizing the mobile performance was a challenge, given the sheer volume of patterns/textures and other related files needed to make this a fun experience.",
@@ -22,11 +23,13 @@
 		"links": [
 			{
 				"headline": "Raphael Warnock or Herschel Walker? See which candidate is your closest match ",
-				"link": "https://www.savannahnow.com/storytelling/herschel-walker-raphael-warnock-georgia-senate-candidate-how-choose/"
+				"link": "https://www.savannahnow.com/storytelling/herschel-walker-raphael-warnock-georgia-senate-candidate-how-choose/",
+				"archived": true
 			},
 			{
 				"headline": "How conservative are you?",
-				"link": "https://www.usatoday.com/storytelling/find-out-how-conservative-you-really-are/"
+				"link": "https://www.usatoday.com/storytelling/find-out-how-conservative-you-really-are/",
+				"archived": true
 			}
 		],
 		"tags": ["tool", "ui", "svelte"]
@@ -40,15 +43,18 @@
 		"links": [
 			{
 				"headline": "Meet the Teams: USA, Mexico and Canada",
-				"link": "https://www.usatoday.com/storytelling/grid/world-cup-2022-mens-roster-usa-mexico-canada/"
+				"link": "https://www.usatoday.com/storytelling/grid/world-cup-2022-mens-roster-usa-mexico-canada/",
+				"archived": true
 			},
 			{
 				"headline": "Dozens of election-denying candidates are running for office in seven swing states. Here's what they've said or done.",
-				"link": "https://www.usatoday.com/storytelling/grid/election-deniers-running-for-office-2022/"
+				"link": "https://www.usatoday.com/storytelling/grid/election-deniers-running-for-office-2022/",
+				"archived": true
 			},
 			{
 				"headline": "Ohio Statehouse Corruption: Who you need to know in the federal bribery case",
-				"link": "https://www.cincinnati.com/storytelling/news/ohio-corruption-project/"
+				"link": "https://www.cincinnati.com/storytelling/news/ohio-corruption-project/",
+				"archived": true
 			}
 		],
 		"description": "A developer friend-of-the-team asked us for help with the persistent need to make a \"Who's who\" dictionary of people for large investigative projects. We designed this page and built out a framework that pulls data from a Google spreadsheet and enriches it with some organizational tools and filtering/searching.\n\nWe've tracked Capitol rioters, corrupt ohio officials and colleges that cheat. It's been used to display violence databases and sports rankings and has more configurable features than anything else I've made. There are about 30 published instances."
@@ -59,11 +65,13 @@
 		"links": [
 			{
 				"headline": "Test your knowledge with the USA TODAY news quiz",
-				"link": "https://www.usatoday.com/storytelling/weekly-news-quiz/"
+				"link": "https://www.usatoday.com/storytelling/weekly-news-quiz/",
+				"archived": true
 			},
 			{
 				"headline": "Quiz: How well do you know the Sibley's building in downtown Rochester?",
-				"link": "https://www.democratandchronicle.com/storytelling/sibley-building-downtown-rochester-ny-quiz/"
+				"link": "https://www.democratandchronicle.com/storytelling/sibley-building-downtown-rochester-ny-quiz/",
+				"archived": true
 			}
 		],
 		"tags": ["tool", "svelte"],
@@ -76,19 +84,22 @@
 		"links": [
 			{
 				"headline": "Hallowed Sound, Vol. 2: Stories of perseverance and preservation from the American South",
-				"link": "https://www.tennessean.com/in-depth/entertainment/music/2021/09/23/hallowed-sound-stories-perseverance-preservation-american-south-music/5617513001/"
+				"link": "https://www.tennessean.com/in-depth/entertainment/music/2021/09/23/hallowed-sound-stories-perseverance-preservation-american-south-music/5617513001/",
+				"archived": true
 			},
 			{
 				"headline": "A look at the stadiums where teams will compete in the 2022 FIFA World Cup in Qatar",
-				"link": "https://www.usatoday.com/in-depth/graphics/2022/11/18/how-many-stadiums-does-qatar-2022-have-mapping-out-world-cup/8305335001/"
+				"link": "https://www.usatoday.com/in-depth/graphics/2022/11/18/how-many-stadiums-does-qatar-2022-have-mapping-out-world-cup/8305335001/",
+				"archived": true
 			},
 			{
 				"headline": "Meet the Black dancer who broke the Rockettes' color barrier",
-				"link": "https://www.lohud.com/in-depth/news/2022/11/17/jennifer-jones-rockette-radio-city-music-hall/69616543007/"
+				"link": "https://www.lohud.com/in-depth/news/2022/11/17/jennifer-jones-rockette-radio-city-music-hall/69616543007/",
+				"archived": true
 			}
 		],
 		"tags": ["tool"],
-		"description": "My team at Gannett is responsible for designing, engineering and maintaining the In-Depth article framework. This collection of tools enables more than 100 web producers across the company to craft visually stunning, reader-focused multimedia presentations using the everyday CMS and our own story editor.\n\nIt's been used to create more than 7,500 (as of December 2022) articles and is the tool of choice to present the strongest, most impactful journalism Gannett has to offer.\n\nIt has generated hundreds of thousands of pageviews, a 2x increase in engaged time over standard templates and frequently leads to subscriber conversions."
+		"description": "My team at Gannett was responsible for designing, engineering and maintaining the In-Depth article framework. This collection of tools enables more than 100 web producers across the company to craft visually stunning, reader-focused multimedia presentations using the everyday CMS and our own story editor.\n\nIt's been used to create more than 7,500 (as of December 2022) articles and is the tool of choice to present the strongest, most impactful journalism Gannett has to offer.\n\nIt has generated hundreds of thousands of pageviews, a 2x increase in engaged time over standard templates and frequently leads to subscriber conversions."
 	},
 	{
 		"label": "In-depth: Audiograms",
@@ -96,15 +107,18 @@
 		"links": [
 			{
 				"headline": "Opinion — Black lives matter: We must live up to Declaration of Independence’s promise",
-				"link": "https://www.northjersey.com/in-depth/opinion/2020/07/02/black-lives-matter-trump-declaration-of-independence-2020/3256925001/"
+				"link": "https://www.northjersey.com/in-depth/opinion/2020/07/02/black-lives-matter-trump-declaration-of-independence-2020/3256925001/",
+				"archived": true
 			},
 			{
 				"headline": "'El Paso gave me the values I have': Black leaders emerge from a Hispanic majority border city.",
-				"link": "https://www.elpasotimes.com/in-depth/news/2021/03/30/meet-black-leaders-emerged-el-paso-texas-hispanic-majority-city/4578132001/"
+				"link": "https://www.elpasotimes.com/in-depth/news/2021/03/30/meet-black-leaders-emerged-el-paso-texas-hispanic-majority-city/4578132001/",
+				"archived": true
 			},
 			{
 				"headline": "'They are not alone': Hispanic domestic abuse survivors speak out to help other victims",
-				"link": "https://www.oklahoman.com/in-depth/news/2021/08/31/hispanic-domestic-abuse-survivors-speak-out-help-other-victims/7497178002/"
+				"link": "https://www.oklahoman.com/in-depth/news/2021/08/31/hispanic-domestic-abuse-survivors-speak-out-help-other-victims/7497178002/",
+				"archived": true
 			}
 		],
 		"tags": ["tool", "svelte"],
@@ -115,15 +129,18 @@
 		"links": [
 			{
 				"headline": "The Girl Collector: The story of Cody Jackson and the 16 girls who were his quarry",
-				"link": "https://www.cincinnati.com/in-depth/news/2018/10/21/girl-collector-cincinnati-cody-jackson/1409756002/"
+				"link": "https://www.cincinnati.com/in-depth/news/2018/10/21/girl-collector-cincinnati-cody-jackson/1409756002/",
+				"archived": true
 			},
 			{
 				"headline": "He murdered three women and was hunting a fourth. These women outsmarted a serial killer",
-				"link": "https://www.northjersey.com/in-depth/news/crime/2020/02/03/how-group-women-stopped-nj-serial-killer/2661900001/"
+				"link": "https://www.northjersey.com/in-depth/news/crime/2020/02/03/how-group-women-stopped-nj-serial-killer/2661900001/",
+				"archived": true
 			},
 			{
 				"headline": "A fiery crash shattered four lives. 20 years later, their connection yields serenity.",
-				"link": "https://www.desmoinesregister.com/in-depth/news/local/columnists/courtney-crowder/2019/11/26/abbie-kampman-iowa-strangers-find-peace-20-years-after-wrong-way-crash-kills-5-mother-sisters/2570864001/"
+				"link": "https://www.desmoinesregister.com/in-depth/news/local/columnists/courtney-crowder/2019/11/26/abbie-kampman-iowa-strangers-find-peace-20-years-after-wrong-way-crash-kills-5-mother-sisters/2570864001/",
+				"archived": true
 			}
 		],
 		"tags": ["tool", "svelte"],
@@ -136,15 +153,18 @@
 		"links": [
 			{
 				"headline": "Modernizing images of long-ago Billerica",
-				"link": "https://www.wickedlocal.com/in-depth/billerica-minuteman/2021/12/27/bilerica-ma-kevin-murphy-photo-restoration-colorization-historical-pictures/6416979001/"
+				"link": "https://www.wickedlocal.com/in-depth/billerica-minuteman/2021/12/27/bilerica-ma-kevin-murphy-photo-restoration-colorization-historical-pictures/6416979001/",
+				"archived": true
 			},
 			{
 				"headline": "Lane County relies on same alert tools used during Holiday Farm Fire, but when emergency strikes, residents always will have to help each other.",
-				"link": "https://www.registerguard.com/in-depth/news/2021/08/26/holiday-farm-fire-emergency-warning-system-residents-help-crucial/8102205002/"
+				"link": "https://www.registerguard.com/in-depth/news/2021/08/26/holiday-farm-fire-emergency-warning-system-residents-help-crucial/8102205002/",
+				"archived": true
 			},
 			{
 				"headline": "Picture this: Eye-opening images of what climate change has done and could do to our world",
-				"link": "https://www.usatoday.com/in-depth/graphics/2021/07/07/climate-change-images-offer-present-and-future-views-our-world/5173622001/"
+				"link": "https://www.usatoday.com/in-depth/graphics/2021/07/07/climate-change-images-offer-present-and-future-views-our-world/5173622001/",
+				"archived": true
 			}
 		],
 		"tags": ["tool", "svelte"],
@@ -157,15 +177,18 @@
 		"links": [
 			{
 				"headline": "Your guide to coronavirus and COVID-19",
-				"link": "https://www.usatoday.com/storytelling/covid19-coronavirus-resource-guide/"
+				"link": "https://www.usatoday.com/storytelling/covid19-coronavirus-resource-guide/",
+				"archived": true
 			},
 			{
 				"headline": "How to get help in Milwaukee",
-				"link": "https://www.jsonline.com/storytelling/milwaukee-resources-guide-housing-mental-health-education-public-safety-voting-employment-recycling/"
+				"link": "https://www.jsonline.com/storytelling/milwaukee-resources-guide-housing-mental-health-education-public-safety-voting-employment-recycling/",
+				"archived": true
 			},
 			{
 				"headline": "The ultimate Palm Beach County voter guide to the November 2022 election",
-				"link": "https://www.palmbeachpost.com/storytelling/palm-beach-florida-election-voters-guide-2022/"
+				"link": "https://www.palmbeachpost.com/storytelling/palm-beach-florida-election-voters-guide-2022/",
+				"archived": true
 			}
 		],
 		"tags": ["tool", "svelte"],
@@ -179,11 +202,13 @@
 		"links": [
 			{
 				"headline": "Wildfire risks: Look up every Western community",
-				"link": "https://www.azcentral.com/storytelling/wildfires-risks-map-california-arizona-oregon/"
+				"link": "https://www.azcentral.com/storytelling/wildfires-risks-map-california-arizona-oregon/",
+				"archived": true
 			},
 			{
 				"headline": "Where will the West's next deadly wildfire strike? The risks are everywhere",
-				"link": "https://www.azcentral.com/in-depth/news/local/arizona-wildfires/2019/07/22/wildfire-risks-more-than-500-spots-have-greater-hazard-than-paradise/1434502001/"
+				"link": "https://www.azcentral.com/in-depth/news/local/arizona-wildfires/2019/07/22/wildfire-risks-more-than-500-spots-have-greater-hazard-than-paradise/1434502001/",
+				"archived": true
 			}
 		],
 		"tags": ["tool", "ui", "svelte"],
@@ -196,15 +221,18 @@
 		"links": [
 			{
 				"headline": "Detroit Free Press: We will remember",
-				"link": "https://www.freep.com/storytelling/coronavirus-obituaries-michigan/"
+				"link": "https://www.freep.com/storytelling/coronavirus-obituaries-michigan/",
+				"archived": true
 			},
 			{
 				"headline": "Loved and Lost: Remembering our NJ family, friends and neighbors taken by coronavirus",
-				"link": "https://www.usatoday.com/storytelling/nj-coronavirus-deaths/"
+				"link": "https://www.usatoday.com/storytelling/nj-coronavirus-deaths/",
+				"archived": true
 			},
 			{
 				"headline": "Telling the stories of those who died in the Champlain Towers collapse in Surfside, Florida",
-				"link": "https://www.palmbeachpost.com/storytelling/news/surfside-miami-florida-building-collapse-victims-who-died-obituaries/"
+				"link": "https://www.palmbeachpost.com/storytelling/news/surfside-miami-florida-building-collapse-victims-who-died-obituaries/",
+				"archived": true
 			}
 		],
 		"tags": ["tool", "svelte"],
@@ -217,15 +245,18 @@
 		"links": [
 			{
 				"headline": "A statistical tour of Cincinnati: Breaking down the neighborhoods",
-				"link": "https://www.cincinnati.com/storytelling/cincinnati-neighborhoods/"
+				"link": "https://www.cincinnati.com/storytelling/cincinnati-neighborhoods/",
+				"archived": true
 			},
 			{
 				"headline": "A neighborhood report on Mount Adams",
-				"link": "https://www.cincinnati.com/storytelling/cincinnati-neighborhoods/neighborhoods/mount-adams/"
+				"link": "https://www.cincinnati.com/storytelling/cincinnati-neighborhoods/neighborhoods/mount-adams/",
+				"archived": true
 			},
 			{
 				"headline": "A neighborhood comparison: Age, population older than 18",
-				"link": "https://www.cincinnati.com/storytelling/cincinnati-neighborhoods/metrics/over-age-18/"
+				"link": "https://www.cincinnati.com/storytelling/cincinnati-neighborhoods/metrics/over-age-18/",
+				"archived": true
 			}
 		],
 		"tags": ["svelte", "data"],
