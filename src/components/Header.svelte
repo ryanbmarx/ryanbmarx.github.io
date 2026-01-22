@@ -1,4 +1,30 @@
-<script></script>
+<script lang="ts"></script>
+
+<header id="header" class="header">
+	<picture>
+		<source srcset="/img/header-background--desktop.jpg" media="(min-width: 768px)" />
+		<img
+			class="header__image"
+			src="/img/header-background--thumb.jpg"
+			alt="An overhead view of Ryan Marx, smiling while he works, sitting at his desk. The walls of his cubicle are covered in small posters and family photos. Ryan is wearing one of his favofite fleece zip-up jackets." />
+	</picture>
+	<div class="header__text-wrapper">
+		<h1
+			class="header__text-container"
+			aria-label="Ryan Marx: Telling stories, visualizing data, creating experiences">
+			<span class="header__text header__text--name">Ryan Marx</span>
+			<span class="header__text header__text--stories">Telling stories</span>
+			<span class="header__text header__text--data">Visualizing data</span>
+			<span class="header__text header__text--experiences">Creating experiences</span>
+		</h1>
+	</div>
+	<p class="header__photo-credit">
+		Photo by <a
+			href="https://twitter.com/jkimpictures"
+			target="_blank"
+			rel="noopener noreferrer">John J. Kim</a>
+	</p>
+</header>
 
 <style>
 	.header {
@@ -114,29 +140,3 @@
 		}
 	}
 </style>
-
-<header id="header" class="header">
-	<picture>
-		<source srcset="/img/header-background--desktop.jpg" media="(min-width: 768px)" />
-		<img
-			class="header__image"
-			src="/img/header-background--thumb.jpg"
-			alt="An overhead view of Ryan Marx, smiling while he works, sitting at his desk. The walls of his cubicle are covered in small posters and family photos. Ryan is wearing one of his favofite fleece zip-up jackets." />
-	</picture>
-	<div class="header__text-wrapper">
-		<h1
-			class="header__text-container"
-			aria-label="Ryan Marx: Telling stories, visualizing data, creating experiences">
-			<span class="header__text header__text--name">Ryan Marx</span>
-			<span class="header__text header__text--stories">Telling stories</span>
-			<span class="header__text header__text--data">Visualizing data</span>
-			<span class="header__text header__text--experiences">Creating experiences</span>
-		</h1>
-	</div>
-	<p class="header__photo-credit">
-		Photo by <a
-			href="https://twitter.com/jkimpictures"
-			target="_blank"
-			rel="noopener noreferrer">John J. Kim</a>
-	</p>
-</header>

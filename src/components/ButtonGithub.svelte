@@ -1,6 +1,22 @@
-<script>
-	const { repo } = $props();
+<script lang="ts">
+	interface Props {
+		repo?: string | null;
+	}
+
+	const { repo }: Props = $props();
 </script>
+
+{#if repo}
+	<a class="repo sans-serif" href={repo}>
+		<span class="repo__icon">
+			<svg>
+				<title>Github logo</title>
+				<use href="#github" />
+			</svg>
+		</span>
+		See the code
+	</a>
+{/if}
 
 <style>
 	.repo {
@@ -44,15 +60,3 @@
 		height: 65%;
 	}
 </style>
-
-{#if repo}
-	<a class="repo sans-serif" href={repo}>
-		<span class="repo__icon">
-			<svg>
-				<title>Github logo</title>
-				<use href="#github" />
-			</svg>
-		</span>
-		See the code
-	</a>
-{/if}

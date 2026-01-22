@@ -1,9 +1,42 @@
-<script>
+<script lang="ts">
 	import { marked } from "marked";
 
-	const { org, start, end, role, description, orgLink, open = null } = $props();
+	interface Props {
+		org: string;
+		start: number;
+		end: number | string;
+		role: string;
+		description: string;
+		orgLink: string;
+		open?: boolean;
+	}
+
+	const { org, start, end, role, description, orgLink, open = false }: Props = $props();
 	const rand = Math.random();
 </script>
+
+<li class="item" aria-labelledby="role-{rand}">
+	<details class="item__detail" {open}>
+		<summary id="role-{rand}" class="item__role">
+			<span class="item__role__name">{role}</span>
+			<span class="item__role__meta">
+				<a
+					class="item__role__org"
+					href={orgLink}
+					target="_blank"
+					rel="noopener noreferrer">
+					{org}
+				</a>
+				<span class="item__role__time">{start} to {end}</span>
+			</span>
+		</summary>
+		<div class="item__description">
+			{#if description}
+				{@html marked.parse(description)}
+			{/if}
+		</div>
+	</details>
+</li>
 
 <style>
 	.item {
@@ -77,7 +110,8 @@
 		z-index: 3;
 		clip-path: var(--toggle-plus);
 		transform: scale(0.6) rotate(90deg);
-		transition: transform var(--speed-transition) ease-in-out,
+		transition:
+			transform var(--speed-transition) ease-in-out,
 			clip-path var(--speed-transition) ease-in-out;
 	}
 
@@ -112,26 +146,3 @@
 		content: "";
 	}
 </style>
-
-<li class="item" aria-labelledby="role-{rand}">
-	<details class="item__detail" {open}>
-		<summary id="role-{rand}" class="item__role">
-			<span class="item__role__name">{role}</span>
-			<span class="item__role__meta">
-				<a
-					class="item__role__org"
-					href={orgLink}
-					target="_blank"
-					rel="noopener noreferrer">
-					{org}
-				</a>
-				<span class="item__role__time">{start} to {end}</span>
-			</span>
-		</summary>
-		<div class="item__description">
-			{#if description}
-				{@html marked.parse(description)}
-			{/if}
-		</div>
-	</details>
-</li>

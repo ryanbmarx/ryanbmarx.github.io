@@ -1,10 +1,30 @@
-<script>
+<script lang="ts">
 	import WorkItem from "./WorkItem.svelte";
 
-	const work = [
+	type WorkItem = {
+		start: number;
+		end: string | number;
+		org: string;
+		orgLink: string;
+		role: string;
+		description: string;
+	};
+
+	const work: WorkItem[] = [
+		{
+			start: 2023,
+			end: "present",
+			org: "Pulsar Informatics",
+			orgLink: "https://www.pulsarinformatics.com/",
+			role: "UX software engineer",
+			description: `
+- Serve as a core developer on a web-based fatigue management system, delivering real-time actionable insights to customers using GraphQL, TypeScript, and SvelteKit. 
+- Collaborate cross-functionally with engineering teams, product leadership, and customers to refine the end-user experience and contribute to roadmap planning.
+- Contribute to technical planning and system design sessions.`,
+		},
 		{
 			start: 2018,
-			end: "present",
+			end: 2023,
 			org: "Gannett",
 			orgLink: "https://www.usatoday.com/",
 			role: "Storytelling developer",
@@ -58,34 +78,6 @@
 		},
 	];
 </script>
-
-<style>
-	.about {
-		background: var(--color-isabelline);
-		display: flex;
-		align-items: start;
-		gap: var(--gap);
-		flex-wrap: wrap;
-	}
-	.bio {
-		flex: 4 4 25rem;
-	}
-	.header--intro {
-		font-size: 3rem;
-	}
-
-	.work {
-		flex: 1 1 20rem;
-		padding: var(--gap);
-		background: var(--color-apricot-light);
-	}
-
-	.work ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-</style>
 
 <section aria-labelledby="about-header" class="about container">
 	<div class="bio stack">
@@ -142,3 +134,31 @@
 		</ul>
 	</div>
 </section>
+
+<style>
+	.about {
+		background: var(--color-isabelline);
+		display: flex;
+		align-items: start;
+		gap: var(--gap);
+		flex-wrap: wrap;
+	}
+	.bio {
+		flex: 4 4 25rem;
+	}
+	.header--intro {
+		font-size: 3rem;
+	}
+
+	.work {
+		flex: 1 1 20rem;
+		padding: var(--gap);
+		background: var(--color-apricot-light);
+	}
+
+	.work ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+</style>

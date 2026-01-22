@@ -1,6 +1,19 @@
-<script>
-	const { tags = [], tagDefinitions = {} } = $props();
+<script lang="ts">
+	interface Props {
+		tags?: string[];
+		tagDefinitions?: Record<string, { label: string }>;
+	}
+
+	const { tags = [], tagDefinitions = {} }: Props = $props();
 </script>
+
+{#if tags.length}
+	<ul class="tags">
+		{#each tags.filter(t => t in tagDefinitions) as tag}
+			<li class="tag">{tagDefinitions[tag].label}</li>
+		{/each}
+	</ul>
+{/if}
 
 <style>
 	.tags {
@@ -18,11 +31,3 @@
 		flex: 0 0 fit-content;
 	}
 </style>
-
-{#if tags.length}
-	<ul class="tags" role="list">
-		{#each tags.filter(t => t in tagDefinitions) as tag}
-			<li class="tag" role="listitem">{tagDefinitions[tag].label}</li>
-		{/each}
-	</ul>
-{/if}

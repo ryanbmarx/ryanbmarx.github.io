@@ -1,6 +1,18 @@
-<script>
-	const { label = "Are you ready to get started? Let's talk:" } = $props();
-	const networks = [
+<script lang="ts">
+	interface Props {
+		label?: string;
+	}
+
+	interface Network {
+		label: string;
+		icon: string;
+		url: string;
+		rel?: string | null;
+		target?: string | null;
+	}
+
+	const { label = "Are you ready to get started? Let's talk:" }: Props = $props();
+	const networks: Network[] = [
 		{
 			label: "Mastodon",
 			icon: "mastodon",
@@ -23,6 +35,25 @@
 	// So we can have unique IDs even with multiple component instances
 	const rand = Math.random();
 </script>
+
+<section class="contact" aria-labelledby="contact-header-{rand}">
+	<h2 id="contact-header-{rand}" class="header contact__text">
+		{label}
+	</h2>
+	<ul class="contact__social">
+		{#each networks as { label, icon, url, rel = null, target = null }}
+			<li class="contact__link contact__link--{label}">
+				<a href={url} {target} {rel}>
+					<span class="visually-hidden">Visit me on {label}</span>
+					<svg class="icon">
+						<title>{label} icon</title>
+						<use href="#{icon}" />
+					</svg>
+				</a>
+			</li>
+		{/each}
+	</ul>
+</section>
 
 <style>
 	.contact {
@@ -93,22 +124,3 @@
 		}
 	}
 </style>
-
-<section class="contact" aria-labelledby="contact-header-{rand}">
-	<h2 id="contact-header-{rand}" class="header contact__text">
-		{label}
-	</h2>
-	<ul class="contact__social">
-		{#each networks as { label, icon, url, rel = null, target = null }}
-			<li class="contact__link contact__link--{label}">
-				<a href={url} {target} {rel}>
-					<span class="visually-hidden">Visit me on {label}</span>
-					<svg class="icon">
-						<title>{label} icon</title>
-						<use href="#{icon}" />
-					</svg>
-				</a>
-			</li>
-		{/each}
-	</ul>
-</section>

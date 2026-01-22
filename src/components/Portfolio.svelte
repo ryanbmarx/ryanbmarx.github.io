@@ -1,12 +1,39 @@
-<script>
+<script lang="ts">
 	// UTILS
 	import { marked } from "marked";
 
 	// COMPONENTS
 	import PortfolioItem from "./PortfolioItem.svelte";
 
+	// TYPES
+	interface PortfolioItemData {
+		label?: string;
+		date?: string;
+		description?: string;
+		image?: string;
+		links?: { headline?: string; link: string }[];
+		repo?: string | null;
+		tags?: string[];
+	}
+
+	interface ValidPortfolioItem extends PortfolioItemData {
+		label: string;
+		description: string;
+		image: string;
+	}
+
+	interface Props {
+		tagDefinitions?: Record<string, { label: string; description: string }>;
+		portfolioItems?: PortfolioItemData[];
+	}
+
+	// Type guard to ensure required fields exist
+	function isValidItem(p: PortfolioItemData): p is ValidPortfolioItem {
+		return Boolean(p.label && p.description && p.image);
+	}
+
 	// PROPS
-	const { tagDefinitions = {}, portfolioItems = [] } = $props();
+	const { tagDefinitions = {}, portfolioItems = [] }: Props = $props();
 
 	// TEXT BITS
 	const label = "Selected work";
@@ -14,6 +41,29 @@
 	const sublabel =
 		"These are projects to which I made significant contributions. I've included links to code repositories where possible. Some of these links are older and, given the nature of the web and media businesses, are no longer available or fully functional in the current environment. I've included them anyways because I remain proud of that work, but they are labeled <span class=\"tag\">impaired</span>.";
 </script>
+
+<section id="portfolio" class="container" aria-labelledby="portfolio-header">
+	<h2 id="portfolio-header" class="header">{label}</h2>
+	<p>{@html marked.parseInline(sublabel)}</p>
+	<details class="portfolio__definitions">
+		<summary class="portfolio__definitions__label">{tagsLabel}</summary>
+		<dl class="portfolio__definitions__list">
+			{#each Object.entries(tagDefinitions) as [_id, { label, description }]}
+				<div class="portfolio__definitions__tag">
+					<dt class="portfolio__definitions__name tag">{label}</dt>
+					<dd class="portfolio__definitions__text sans-serif">
+						{@html marked.parseInline(description)}
+					</dd>
+				</div>
+			{/each}
+		</dl>
+	</details>
+	<ul class="projects">
+		{#each portfolioItems.filter(isValidItem) as p}
+			<PortfolioItem {...p} {tagDefinitions} />
+		{/each}
+	</ul>
+</section>
 
 <style>
 	.header {
@@ -78,26 +128,3 @@
 		transition: background-color var(--speed-transition) ease-in-out;
 	}
 </style>
-
-<section id="portfolio" class="container" aria-labelledby="portfolio-header">
-	<h2 id="portfolio-header" class="header">{label}</h2>
-	<p>{@html marked.parseInline(sublabel)}</p>
-	<details class="portfolio__definitions">
-		<summary class="portfolio__definitions__label">{tagsLabel}</summary>
-		<dl class="portfolio__definitions__list">
-			{#each Object.entries(tagDefinitions) as [id, { label, description }]}
-				<div class="portfolio__definitions__tag">
-					<dt class="portfolio__definitions__name tag">{label}</dt>
-					<dd class="portfolio__definitions__text sans-serif">
-						{@html marked.parseInline(description)}
-					</dd>
-				</div>
-			{/each}
-		</dl>
-	</details>
-	<ul class="projects">
-		{#each portfolioItems.filter(p => p.label && p.description && p.image) as p}
-			<PortfolioItem {...p} {tagDefinitions} />
-		{/each}
-	</ul>
-</section>

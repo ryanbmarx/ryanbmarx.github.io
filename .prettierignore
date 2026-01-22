@@ -1,0 +1,6 @@
+.claude/
+_scratch/
+dist/
+node_modules/
+public/
+src/functions/sprite.svg
