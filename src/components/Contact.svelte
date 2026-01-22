@@ -18,7 +18,6 @@
 			icon: "email",
 			url: "mailto:ryanbmarx+homepage@gmail.com",
 		},
-		{ label: "Twitter", icon: "twitter", url: "https://www.twitter.com/ryanmarx" },
 	];
 
 	// So we can have unique IDs even with multiple component instances
