@@ -1,8 +1,5 @@
 <script>
-	import { getContext } from "svelte";
-	export let tags = [];
-
-	export let tagDefinitions = {};
+	const { tags = [], tagDefinitions = {} } = $props();
 </script>
 
 <style>

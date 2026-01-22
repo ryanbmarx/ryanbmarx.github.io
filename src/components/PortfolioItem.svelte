@@ -4,15 +4,16 @@
 	import Tags from "./Tags.svelte";
 	import ButtonGithub from "./ButtonGithub.svelte";
 
-	// export let tagDefinitions = {};
-	export let label;
-	export let date;
-	export let description;
-	export let image;
-	export let links = [];
-	export let repo = null;
-	export let tags = [];
-	export let tagDefinitions = {};
+	const {
+		label,
+		date,
+		description,
+		image,
+		links = [],
+		repo = null,
+		tags = [],
+		tagDefinitions = {},
+	} = $props();
 </script>
 
 <style>

@@ -1,15 +1,11 @@
 <script>
-	// UTILS
-	import { setContext } from "svelte";
-
 	// COMPONENTS
 	import Header from "./components/Header.svelte";
 	import Contact from "./components/Contact.svelte";
 	import About from "./components/About.svelte";
 	import Portfolio from "./components/Portfolio.svelte";
 
-	export let portfolioItems = [];
-	export let tagDefinitions = {};
+	const { portfolioItems = [], tagDefinitions = {} } = $props();
 </script>
 
 <Header />

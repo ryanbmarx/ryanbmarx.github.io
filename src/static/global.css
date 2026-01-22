@@ -104,8 +104,7 @@ h6 {
 	font: var(--font-size-small) / 1.3em var(--sans-serif-fonts);
 }
 
-p:not([class]) {
-	/* Any standalone paragraph tag should just get this base styling*/
+p {
 	font: var(--font-size) / var(--line-height-loose) var(--serif-fonts);
 	color: var(--color-font);
 	margin: 1rem 0;

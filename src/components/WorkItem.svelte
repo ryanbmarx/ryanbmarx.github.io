@@ -1,7 +1,7 @@
 <script>
 	import { marked } from "marked";
-	export let org, start, end, role, description, orgLink;
-	export let open = null;
+
+	const { org, start, end, role, description, orgLink, open = null } = $props();
 	const rand = Math.random();
 </script>
 

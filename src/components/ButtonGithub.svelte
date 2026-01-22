@@ -1,5 +1,5 @@
 <script>
-	export let repo;
+	const { repo } = $props();
 </script>
 
 <style>

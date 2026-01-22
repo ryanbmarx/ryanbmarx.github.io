@@ -1,6 +1,6 @@
 <script>
-	export let label = "Are you ready to get started? Let's talk:";
-	let networks = [
+	const { label = "Are you ready to get started? Let's talk:" } = $props();
+	const networks = [
 		{
 			label: "Mastodon",
 			icon: "mastodon",
