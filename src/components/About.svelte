@@ -8,10 +8,8 @@
 			org: "Pulsar Informatics",
 			orgLink: "https://www.pulsarinformatics.com/",
 			role: "UX software engineer",
-			description: `
-- Serve as a core developer on a web-based fatigue management system, delivering real-time actionable insights to customers using GraphQL, TypeScript, and SvelteKit. 
-- Collaborate cross-functionally with engineering teams, product leadership, and customers to refine the end-user experience and contribute to roadmap planning.
-- Contribute to technical planning and system design sessions.`,
+			description:
+				"I am a key developer on a web-based application offering workforce fatigue management solutions. We use GraphQL, TypeScript, and SvelteKit to deliver actionable insights in real time. I collaborate cross-functionally with other engineering teams, product leadership, and customers to refine the end-user experience and contribute to roadmap planning.",
 		},
 		{
 			start: 2018,
@@ -72,49 +70,56 @@
 
 <section aria-labelledby="about-header" class="about container">
 	<div class="bio stack">
-		<h2 id="about-header" class="header header--intro">Hi. I'm Ryan.</h2>
+		<h2 id="about-header" class="header header--intro">
+			Hello. My name is Ryan. Nice to meet you.
+		</h2>
 		<p>
-			I am a journalist, designer and developer based in Chicago, and I've spent my
-			career in the information communications business. Through visualization, writing,
-			editing and ux design, I find the important messages and express them in the best
-			ways possible.
+			I'm a designer, developer, and problem solver based in the Chicago area. I use
+			visualization, development, UX design, writing, and editing to dig past
+			surface-level asks and quickly deliver what's actually needed.
 		</p>
 		<p>
-			Throughout the years, I've made it all: small static charts, large featured
-			interactives, standalone presentations and dashboard user interfaces. Each format
-			has its place, and choosing the right one for the job is a delicate, practical
-			art.
+			Each step of my career has been spent working in cross-functional capacities,
+			helping disparate teams communicate and collaborate on shared goals. Whether I'm
+			designing, developing, or just managing a project, I bring a vigorous
+			human-focused approach, keeping everyone's eyes on the final product. This
+			requires speaking technology with content creators and content creation with
+			technologists, cutting through friction so work moves forward without bottlenecks.
 		</p>
 		<p>
-			Whether the solution is a few carefully chosen words or something more, the goal
-			always is to distill mountains of information into meaningful and empowering
-			experiences. This makes repeat customers out of media consumers.
+			Knowing when to collaborate, delegate, and run solo is an important skill. Success
+			requires juggling the needs of multiple audiences on multiple platforms on
+			deadline, and being a quick study who can ramp up and ship without a lengthy
+			runway.
 		</p>
 		<p>
-			It's important to know when to collaborate, delegate and run solo. Success
-			requires juggling the needs of multiple audiences on multiple platforms, and being
-			a quick study doesn't hurt either. (All while on deadline, of course.)
+			Throughout the years, I've made it all: featured interactives, standalone
+			presentations, and dashboard user interfaces. Each format has its place, and
+			choosing the right one for the job is a delicate, practical art. Whether the
+			solution is a few carefully chosen words or something more, the goal always is to
+			distill mountains of information into meaningful and empowering
+			experiences—efficiently, without unnecessary complexity.
 		</p>
 
 		<h3 class="header">How I work</h3>
 		<p>
-			For starters, I work well with others. As a group, we need to discover our true
-			goals, define them clearly, and consider our resources. A well-scoped project is
-			important to success and, when it comes to data management, app architecture and
-			inclusive design, I always try to do things the "right way" within that scope.
+			I work well with others. As a group, we need to discover our true goals, define
+			them clearly, and consider our resources. A well-scoped project is important to
+			success and, when it comes to data management, app architecture and inclusive
+			design, I always try to do things the "right way" within that scope—building lean
+			solutions that don't sacrifice quality for speed or speed for quality.
 		</p>
 		<p>
 			I speak fluent front-end: <strong>HTML</strong>, <strong>CSS</strong> and
-			<strong>Javascript</strong>. I know my way around Node and can get things done
+			<strong>JavaScript</strong>. I know my way around Node and can get things done
 			with <strong>Python</strong> and <strong>Go</strong>. I'm a big fan of the
-			Svelte.js framework. I also know others (including <strong>Wordpress</strong>). I
-			like <strong>Github Actions</strong> and using
-			<strong>Google Spreadsheets</strong> as an ad-hoc CMS.
+			<strong>SvelteKit</strong> framework for its ability to move quickly from
+			prototype to production. I also know others (including <strong>Vue.js</strong> and
+			<strong>WordPress</strong>). I like <strong>GitHub Actions</strong> and using
+			<strong>Google Spreadsheets</strong> as an ad-hoc CMS—whatever gets the job done well
+			without overengineering.
 		</p>
-		<p>
-			I appreciate good, useful documentation. From others, for the tools I'm using.
-			Also to me from my previous self. Future me needs a lot of help.
-		</p>
+		<p>Let's talk. I look forward to hearing from you.</p>
 	</div>
 	<div class="work">
 		<h2 class="header">Experience</h2>

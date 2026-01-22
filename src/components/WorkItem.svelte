@@ -140,6 +140,10 @@
 		padding: 0 0 0 calc(var(--icon-width) + var(--gap));
 	}
 
+	.item__description :global(p) {
+		font: var(--font-size-small) / 1.3em var(--sans-serif-fonts);
+	}
+
 	.item__description :global(p:last-child) {
 		margin-bottom: 0;
 	}
