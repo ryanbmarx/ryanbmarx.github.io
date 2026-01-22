@@ -1,15 +1,20 @@
+<script lang="ts" module>
+	export type WorkItem = {
+		start: number;
+		end: string | number;
+		org: string;
+		orgLink: string;
+		role: string;
+		description: string;
+	};
+</script>
+
 <script lang="ts">
 	import { marked } from "marked";
 
-	interface Props {
-		org: string;
-		start: number;
-		end: number | string;
-		role: string;
-		description: string;
-		orgLink: string;
+	type Props = WorkItem & {
 		open?: boolean;
-	}
+	};
 
 	const { org, start, end, role, description, orgLink, open = false }: Props = $props();
 	const rand = Math.random();

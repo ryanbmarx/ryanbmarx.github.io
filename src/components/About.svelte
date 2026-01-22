@@ -1,16 +1,7 @@
 <script lang="ts">
-	import WorkItem from "./WorkItem.svelte";
+	import WorkItem, { type WorkItem as WorkItemType } from "./WorkItem.svelte";
 
-	type WorkItem = {
-		start: number;
-		end: string | number;
-		org: string;
-		orgLink: string;
-		role: string;
-		description: string;
-	};
-
-	const work: WorkItem[] = [
+	const work: WorkItemType[] = [
 		{
 			start: 2023,
 			end: "present",
