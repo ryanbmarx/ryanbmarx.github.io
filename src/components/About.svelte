@@ -71,7 +71,7 @@
 <section aria-labelledby="about-header" class="about container">
 	<div class="bio stack">
 		<h2 id="about-header" class="header header--intro">
-			Hello. My name is Ryan. Nice to meet you.
+			Hello. My name is Ryan. <br /> It's nice to meet you.
 		</h2>
 		<p>
 			I'm a designer, developer, and problem solver based in the Chicago area. I use
