@@ -22,40 +22,42 @@ concurrency:
 
 jobs:
   test:
-    runs-on: [ubuntu-latest]
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: "20"
+          cache: "npm"
       - name: Install dependencies
         run: npm ci
-      - name: "Tests"
+      - name: Tests
         run: npm run test
+
   build_and_deploy:
     needs: test
-    runs-on: [ubuntu-latest]
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: "20"
+          cache: "npm"
       - name: Install dependencies
         run: npm ci
-      - run: mkdir -p public
-      - name: Generate bundled files
+      - name: Build
         run: npm run build
-      - name: Move static assets
-        run: npm run static
-      - name: Generate the index file
-        run: |
-          npm run svg
-          node ./src/functions/ssr.js
+      - name: Copy static assets to dist
+        run: cp -r src/static/* dist/
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: "public"
+          path: "dist"
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
