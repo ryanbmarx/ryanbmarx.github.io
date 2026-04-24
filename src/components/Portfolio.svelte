@@ -39,7 +39,7 @@
 	const label = "Selected work";
 	const tagsLabel = "About the labels";
 	const sublabel =
-		"My current role is focused on a single suite of proprietary softwares. Previous gigs have focused on smaller or shorter-term projects. Here are some of my favorites. I've included links to code repositories where possible. Some of these links are older and, sadly no longer available or fully functional. I've included what I can because I remain proud of that work, but they are labeled <span class=\"tag\">impaired</span>.";
+		"My current role is focused on a single suite of proprietary softwares. Previous gigs have focused on smaller or shorter-term projects. Here are some of my favorites. I've included links to code repositories where possible. Many of these links are older and, sadly no longer available or fully functional. I've included what I can because I remain proud of that work, but they are labeled <span class=\"tag\">impaired</span> and/or using links from the Wayback Machine on Archive.org.";
 </script>
 
 <section id="portfolio" class="container" aria-labelledby="portfolio-header">

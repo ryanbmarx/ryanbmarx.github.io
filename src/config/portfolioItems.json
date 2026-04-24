@@ -6,9 +6,9 @@
 		"date": "Nov. 18, 2022",
 		"links": [
 			{
-				"headline": "Design a World Cup 2022 kit",
-				"link": "https://www.usatoday.com/storytelling/world-cup-jersey-design-your-own/",
-				"archived": true
+				"headline": "Design a World Cup 2022 kit (Archive.org)",
+				"link": "https://web.archive.org/web/20241007125512/https://www.usatoday.com/storytelling/world-cup-jersey-design-your-own/",
+				"archived": false
 			}
 		],
 		"description": "I designed the initial wireframes and, eventually, developed this web app, with a focus on scaffolding and UX. I worked with two other developers to incorporate the 3D modeling. Optimizing the mobile performance was a challenge, given the sheer volume of patterns/textures and other related files needed to make this a fun experience.",
@@ -22,14 +22,14 @@
 		"description": "In the run-up to the 2022 midterm elections, we were approached by multiple newsrooms looking to help undecided voters choose their candidates. I designed and developed this application which presents a series of prompts from user-selected topics. Responses to the prompts are categorized, and \"agreement\" is calculated.",
 		"links": [
 			{
-				"headline": "Raphael Warnock or Herschel Walker? See which candidate is your closest match ",
-				"link": "https://www.savannahnow.com/storytelling/herschel-walker-raphael-warnock-georgia-senate-candidate-how-choose/",
-				"archived": true
+				"headline": "Raphael Warnock or Herschel Walker? See which candidate is your closest match (Archive.org)",
+				"link": "https://web.archive.org/web/20221110181835/https://www.savannahnow.com/storytelling/herschel-walker-raphael-warnock-georgia-senate-candidate-how-choose/",
+				"archived": false
 			},
 			{
-				"headline": "How conservative are you?",
-				"link": "https://www.usatoday.com/storytelling/find-out-how-conservative-you-really-are/",
-				"archived": true
+				"headline": "How conservative are you? (Archive.org)",
+				"link": "https://web.archive.org/web/20221112152519/https://www.usatoday.com/storytelling/find-out-how-conservative-you-really-are/",
+				"archived": false
 			}
 		],
 		"tags": ["tool", "ui", "svelte"]
@@ -42,9 +42,14 @@
 
 		"links": [
 			{
-				"headline": "Meet the Teams: USA, Mexico and Canada",
-				"link": "https://www.usatoday.com/storytelling/grid/world-cup-2022-mens-roster-usa-mexico-canada/",
-				"archived": true
+				"headline": "Capitol riot arrests: See who's been charged across the U.S. (Archive.org)",
+				"link": "https://web.archive.org/web/20240423172432/https://www.usatoday.com/storytelling/capitol-riot-mob-arrests/",
+				"archived": false
+			},
+			{
+				"headline": "Meet the Teams: USA, Mexico and Canada (Archive.org)",
+				"link": "https://web.archive.org/web/20241003164030/https://www.usatoday.com/storytelling/grid/world-cup-2022-mens-roster-usa-mexico-canada/",
+				"archived": false
 			},
 			{
 				"headline": "Dozens of election-denying candidates are running for office in seven swing states. Here's what they've said or done.",
@@ -52,9 +57,9 @@
 				"archived": true
 			},
 			{
-				"headline": "Ohio Statehouse Corruption: Who you need to know in the federal bribery case",
-				"link": "https://www.cincinnati.com/storytelling/news/ohio-corruption-project/",
-				"archived": true
+				"headline": "Ohio Statehouse Corruption: Who you need to know in the federal bribery case (Archive.org)",
+				"link": "https://web.archive.org/web/20231012125247/https://www.cincinnati.com/storytelling/news/ohio-corruption-project/",
+				"archived": false
 			}
 		],
 		"description": "A developer friend-of-the-team asked us for help with the persistent need to make a \"Who's who\" dictionary of people for large investigative projects. We designed this page and built out a framework that pulls data from a Google spreadsheet and enriches it with some organizational tools and filtering/searching.\n\nWe've tracked Capitol rioters, corrupt ohio officials and colleges that cheat. It's been used to display violence databases and sports rankings and has more configurable features than anything else I've made. There are about 30 published instances."
@@ -64,9 +69,9 @@
 		"label": "The USA TODAY News Quiz",
 		"links": [
 			{
-				"headline": "Test your knowledge with the USA TODAY news quiz",
-				"link": "https://www.usatoday.com/storytelling/weekly-news-quiz/",
-				"archived": true
+				"headline": "Test your knowledge with the USA TODAY news quiz (Archive.org)",
+				"link": "https://web.archive.org/web/20230701024141/https://www.usatoday.com/storytelling/weekly-news-quiz/",
+				"archived": false
 			},
 			{
 				"headline": "Quiz: How well do you know the Sibley's building in downtown Rochester?",
@@ -128,9 +133,9 @@
 		"label": "In-depth: SMS emulator",
 		"links": [
 			{
-				"headline": "The Girl Collector: The story of Cody Jackson and the 16 girls who were his quarry",
-				"link": "https://www.cincinnati.com/in-depth/news/2018/10/21/girl-collector-cincinnati-cody-jackson/1409756002/",
-				"archived": true
+				"headline": "The Girl Collector: The story of Cody Jackson and the 16 girls who were his quarry (Archive.org)",
+				"link": "https://web.archive.org/web/20190228145154/https://www.cincinnati.com/in-depth/news/2018/10/21/girl-collector-cincinnati-cody-jackson/1409756002/",
+				"archived": false
 			},
 			{
 				"headline": "He murdered three women and was hunting a fourth. These women outsmarted a serial killer",
@@ -176,23 +181,23 @@
 		"repo": "https://github.com/ryanbmarx/storytelling-big-page-of-help",
 		"links": [
 			{
-				"headline": "Your guide to coronavirus and COVID-19",
-				"link": "https://www.usatoday.com/storytelling/covid19-coronavirus-resource-guide/",
-				"archived": true
+				"headline": "Your guide to coronavirus and COVID-19 (Archive.org)",
+				"link": "https://web.archive.org/web/20221126091806/https://www.usatoday.com/storytelling/covid19-coronavirus-resource-guide/",
+				"archived": false
 			},
 			{
-				"headline": "How to get help in Milwaukee",
-				"link": "https://www.jsonline.com/storytelling/milwaukee-resources-guide-housing-mental-health-education-public-safety-voting-employment-recycling/",
-				"archived": true
+				"headline": "How to get help in Milwaukee (Archive.org)",
+				"link": "https://web.archive.org/web/20240919130803/https://www.jsonline.com/storytelling/milwaukee-resources-guide-housing-mental-health-education-public-safety-voting-employment-recycling/",
+				"archived": false
 			},
 			{
 				"headline": "The ultimate Palm Beach County voter guide to the November 2022 election",
 				"link": "https://www.palmbeachpost.com/storytelling/palm-beach-florida-election-voters-guide-2022/",
-				"archived": true
+				"archived": false
 			}
 		],
 		"tags": ["tool", "svelte"],
-		"description": "This concept was born in the early days of the Covid-19 pandemic. Our readers had lots of questions and needed easy access to the answers. Gannett was covering the heck out of the ordeal, but organizing that content in ways satisfy these specific, informational needs was difficult. Enter the big page of help.\n\nConstructed with SEO as a top priority, these experiences are intuitive and transactional. Individual questions are grouped by topic, and each question, by design, has an answer with more information available if desired.\n\nThe concept has been adapted for civic resources, hurricane preparedness and voting."
+		"description": "This concept was born in the early days of the Covid-19 pandemic. Our readers had lots of questions and needed easy access to the answers. Gannett was covering the heck out of the ordeal, but organizing that content in ways that satisfy the specific, informational needs of our readers was difficult. Enter the big page of help.\n\nConstructed with SEO as a top priority, these experiences are intuitive and transactional. Individual questions are grouped by topic, and each question, by design, has an answer with more information available if desired.\n\nThe concept has been adapted for civic resources, hurricane preparedness and voting."
 	},
 	{
 		"label": "Wildfire lookup",
@@ -201,9 +206,9 @@
 		"date": "July 22, 2019",
 		"links": [
 			{
-				"headline": "Wildfire risks: Look up every Western community",
-				"link": "https://www.azcentral.com/storytelling/wildfires-risks-map-california-arizona-oregon/",
-				"archived": true
+				"headline": "Wildfire risks: Look up every Western community (Archive.org)",
+				"link": "https://web.archive.org/web/20240728203343/https://www.azcentral.com/storytelling/wildfires-risks-map-california-arizona-oregon/",
+				"archived": false
 			},
 			{
 				"headline": "Where will the West's next deadly wildfire strike? The risks are everywhere",
@@ -221,13 +226,13 @@
 		"links": [
 			{
 				"headline": "Detroit Free Press: We will remember",
-				"link": "https://www.freep.com/storytelling/coronavirus-obituaries-michigan/",
-				"archived": true
+				"link": "https://web.archive.org/web/20211220122205/https://www.freep.com/storytelling/coronavirus-obituaries-michigan/",
+				"archived": false
 			},
 			{
 				"headline": "Loved and Lost: Remembering our NJ family, friends and neighbors taken by coronavirus",
-				"link": "https://www.usatoday.com/storytelling/nj-coronavirus-deaths/",
-				"archived": true
+				"link": "https://web.archive.org/web/20210620060144/https://www.usatoday.com/storytelling/nj-coronavirus-deaths/",
+				"archived": false
 			},
 			{
 				"headline": "Telling the stories of those who died in the Champlain Towers collapse in Surfside, Florida",
@@ -395,8 +400,8 @@
 		"repo": "https://github.com/ryanbmarx/local-funding-schools-2016",
 		"links": [
 			{
-				"headline": "Wealthier counties shoulder more of school costs: Search the database",
-				"link": "https://www.chicagotribune.com/news/ct-local-school-funding-htmlstory.html"
+				"headline": "Wealthier counties shoulder more of school costs: Search the database (Archive.org)",
+				"link": "https://web.archive.org/web/20161219093408/https://www.chicagotribune.com/news/ct-local-school-funding-htmlstory.html"
 			}
 		],
 		"tags": ["data", "impaired"]
