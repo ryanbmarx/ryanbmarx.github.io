@@ -8,7 +8,6 @@
 	import Section from "./Section.svelte";
 
 	import Nav from "./Nav.svelte";
-	import Contact from "./Contact.svelte";
 </script>
 
 <svelte:head>Ryan Marx | Communucating with data and code</svelte:head>
