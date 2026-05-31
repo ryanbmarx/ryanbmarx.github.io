@@ -2,7 +2,6 @@
 </script>
 
 <div class="stack">
-	<h2>About me</h2>
 	<p>I'm a designer, developer, and problem solver based in the Chicago area.</p>
 	<p>
 		I use visualization, development, UX design, writing, and editing to dig past

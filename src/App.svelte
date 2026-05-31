@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Portfolio from "./Portfolio.svelte";
+
 	import Header from "./Header.svelte";
 
 	import Resume from "./Resume.svelte";
@@ -15,15 +17,14 @@
 <Header></Header>
 <Nav></Nav>
 
-<Section id="about">
+<Section id="about" header="About me">
 	<About></About>
 </Section>
-<Section id="experience">
+<Section id="experience" header="My experience">
 	<Resume></Resume>
 </Section>
-<Section id="projects">
-	<h2>My projects</h2>
-	<div class="fpo"></div>
+<Section id="projects" header="My projects" wide>
+	<Portfolio></Portfolio>
 </Section>
 
 <div class="footer" role="presentation"></div>

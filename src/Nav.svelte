@@ -1,30 +1,20 @@
 <script lang="ts">
-	import Contact from "./Contact.svelte";
+	const networks = [
+		{ label: "Github", url: "https://github.com/ryanbmarx" },
+		{ label: "LinkedIn", url: "https://www.linkedin.com/in/ryanbmarx/" },
+		{ label: "Email", url: "mailto:ryanbmarx+homepage@gmail.com" },
+	];
 
-	const networks: {
-		label: string;
-		icon: string;
-		url: string;
-		rel?: string | null;
-		target?: string | null;
-	}[] = [
-		{ label: "Github", icon: "github", url: "https://github.com/ryanbmarx" },
-		{
-			label: "LinkedIn",
-			icon: "linkedin",
-			url: "https://www.linkedin.com/in/ryanbmarx/",
-		},
-		{
-			label: "Email",
-			icon: "email",
-			url: "mailto:ryanbmarx+homepage@gmail.com",
-		},
+	const navLinks = [
+		{ href: "#about", label: "Get to know me" },
+		{ href: "#experience", label: "My experience" },
+		{ href: "#projects", label: "My projects" },
 	];
 
 	let activeSection = $state("");
 
 	function trackActive(_nav: HTMLElement) {
-		const ids = ["about", "experience", "projects", "contact"];
+		const ids = navLinks.map(({ href }) => href.slice(1));
 		const targets = ids
 			.map(id => document.getElementById(id))
 			.filter((el): el is HTMLElement => el !== null);
@@ -78,36 +68,21 @@
 		<span>Ryan Marx</span>
 	</div>
 	<ul class="links">
-		<li>
-			<a
-				href="#about"
-				class:active={activeSection === "#about"}
-				aria-current={activeSection === "#about" ? "location" : undefined}
-				>Get to know me</a>
-		</li>
-		<li>
-			<a
-				href="#experience"
-				class:active={activeSection === "#experience"}
-				aria-current={activeSection === "#experience" ? "location" : undefined}
-				>My experience</a>
-		</li>
-		<li>
-			<a
-				href="#projects"
-				class:active={activeSection === "#projects"}
-				aria-current={activeSection === "#projects" ? "location" : undefined}
-				>My projects</a>
-		</li>
+		{#each navLinks as { href, label }}
+			<li>
+				<a
+					{href}
+					class:active={activeSection === href}
+					aria-current={activeSection === href ? "location" : undefined}>{label}</a>
+			</li>
+		{/each}
 	</ul>
 
 	<div class="extra right">
 		<ul class="contact__social">
-			{#each networks as { label, icon, url, rel = null, target = null }}
+			{#each networks as { label, url }}
 				<li class="contact__link contact__link--{label}">
-					<a href={url} {target} {rel}>
-						{label}
-					</a>
+					<a href={url}>{label}</a>
 				</li>
 			{/each}
 		</ul>
@@ -117,8 +92,6 @@
 <style>
 	.contact__social {
 		display: flex;
-		/* justify-content: center; */
-		/* align-items: center; */
 		list-style: none;
 		gap: calc(var(--gap) / 2);
 		padding: 0;
@@ -127,14 +100,13 @@
 	}
 	a {
 		text-decoration: none;
-	}
-
-	a:hover {
-		text-decoration: underline;
-	}
-	a.active {
-		font-weight: bold;
-		color: var(--color-black);
+		&:hover {
+			text-decoration: underline;
+		}
+		&.active {
+			font-weight: bold;
+			color: var(--color-black);
+		}
 	}
 	.extra {
 		position: absolute;
@@ -180,13 +152,16 @@
 		overflow: hidden;
 		margin-bottom: var(--nav-margin);
 		height: var(--nav-height);
+		z-index: 2;
 
 		/* bg lives on ::before so opacity can be transitioned (gradients can't animate directly) */
 		&::before {
 			content: "";
 			position: absolute;
 			inset: 0;
-			background: var(--color-apricot-light);
+			background: color-mix(in srgb, var(--color-apricot-light) 75%, transparent);
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
 			box-shadow: var(--nav-shadow);
 			opacity: 0;
 			transition: opacity var(--speed-transition) ease;

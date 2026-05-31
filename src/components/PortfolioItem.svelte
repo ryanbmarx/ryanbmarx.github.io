@@ -4,7 +4,7 @@
 	import Tags from "./Tags.svelte";
 	import ButtonGithub from "./ButtonGithub.svelte";
 
-	type PorfolioItem = {
+	export type PorfolioItemType = {
 		label: string;
 		date?: string;
 		description: string;
@@ -24,7 +24,7 @@
 		repo = null,
 		tags = [],
 		tagDefinitions = {},
-	}: PorfolioItem = $props();
+	}: PorfolioItemType = $props();
 
 	const links = $derived(rawLinks.filter(l => !l.archived));
 </script>

@@ -75,7 +75,6 @@
 	];
 </script>
 
-<h2>Experience</h2>
 <ul class="stack">
 	{#each work as { start, end, orgLink, org, role, description }}
 		<li class="stack">
