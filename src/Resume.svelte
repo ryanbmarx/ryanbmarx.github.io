@@ -45,33 +45,33 @@
 			description:
 				"I worked with business editors, reporters and columnists to identify and prioritize graphic opportunities for the daily business section and special projects. I participated in long- and short-term planning to devise digital experiences to enhance the daily and weekly coverage.",
 		},
-		{
-			start: 2009,
-			end: 2010,
-			org: "The Times of Northwest Indiana",
-			orgLink: "https://www.nwi.com/",
-			role: "Graphics Editor",
-			description:
-				"I identified and executed visual storytelling opportunities for the news, sports, business and features sections in print and online. I also worked to expand the nwi.com scope and community with online-only content.",
-		},
-		{
-			start: 2005,
-			end: 2009,
-			org: "The Times of Northwest Indiana",
-			orgLink: "https://www.nwi.com/",
-			role: "Designer",
-			description:
-				"My primary responsibility was combining photos, typography and copy into sharp, tightly edited presentations representing sound news judgment. I worked with editors, photographers and reporters to facilitate not only a compelling presentation but also a smooth production process. I designed newspaper pages and graphics for all sections and contributed digital presentation and graphics (especially around election time). ",
-		},
-		{
-			start: 2002,
-			end: 2005,
-			orgLink: "https://www.thenewsenterprise.com/",
-			org: "The News-Enterprise",
-			role: "Copy editor, Presentation Editor",
-			description:
-				"I designed newspaper pages and graphics for all sections, edited copy and helped coordinate entertainment coverage and special projects. I also helped guide the overall look and feel of the paper while coaching teammates on visual matters.",
-		},
+		// {
+		// 	start: 2009,
+		// 	end: 2010,
+		// 	org: "The Times of Northwest Indiana",
+		// 	orgLink: "https://www.nwi.com/",
+		// 	role: "Graphics Editor",
+		// 	description:
+		// 		"I identified and executed visual storytelling opportunities for the news, sports, business and features sections in print and online. I also worked to expand the nwi.com scope and community with online-only content.",
+		// },
+		// {
+		// 	start: 2005,
+		// 	end: 2009,
+		// 	org: "The Times of Northwest Indiana",
+		// 	orgLink: "https://www.nwi.com/",
+		// 	role: "Designer",
+		// 	description:
+		// 		"My primary responsibility was combining photos, typography and copy into sharp, tightly edited presentations representing sound news judgment. I worked with editors, photographers and reporters to facilitate not only a compelling presentation but also a smooth production process. I designed newspaper pages and graphics for all sections and contributed digital presentation and graphics (especially around election time). ",
+		// },
+		// {
+		// 	start: 2002,
+		// 	end: 2005,
+		// 	orgLink: "https://www.thenewsenterprise.com/",
+		// 	org: "The News-Enterprise",
+		// 	role: "Copy editor, Presentation Editor",
+		// 	description:
+		// 		"I designed newspaper pages and graphics for all sections, edited copy and helped coordinate entertainment coverage and special projects. I also helped guide the overall look and feel of the paper while coaching teammates on visual matters.",
+		// },
 	];
 </script>
 
