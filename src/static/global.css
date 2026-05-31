@@ -42,13 +42,14 @@
 	/* --container-width: 70rem; */
 	/* --container-padding-h: max(var(--gap), calc((100% - var(--container-width)) / 2)); */
 	--tap-target: 48px;
+	--nav-height: 4rem;
+	--nav-margin: 10rem;
 
 	/* OTHER VISUAL THINGS */
 	--speed-transition: 150ms;
 	--speed-transition-quick: 80ms;
 
 	/* THEME TOKENS */
-
 	--color-border: var(--color-black);
 	--color-border-light: var(--color-gray);
 	--color-highlight: var(--color-purple);
@@ -64,7 +65,7 @@ html body {
 	padding: 0 var(--gap);
 	min-height: -webkit-fill-available;
 	font-family: var(--sans-serif-fonts);
-	line-height: 1.5em;
+	line-height: var(--line-height-loose);
 }
 
 html body * {

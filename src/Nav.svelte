@@ -1,4 +1,26 @@
 <script lang="ts">
+	import Contact from "./Contact.svelte";
+
+	const networks: {
+		label: string;
+		icon: string;
+		url: string;
+		rel?: string | null;
+		target?: string | null;
+	}[] = [
+		{ label: "Github", icon: "github", url: "https://github.com/ryanbmarx" },
+		{
+			label: "LinkedIn",
+			icon: "linkedin",
+			url: "https://www.linkedin.com/in/ryanbmarx/",
+		},
+		{
+			label: "Email",
+			icon: "email",
+			url: "mailto:ryanbmarx+homepage@gmail.com",
+		},
+	];
+
 	let activeSection = $state("");
 
 	function trackActive(_nav: HTMLElement) {
@@ -52,15 +74,8 @@
 </script>
 
 <nav class="nav" {@attach observeStuck} {@attach trackActive}>
-	<div>
+	<div class="extra left">
 		<span>Ryan Marx</span>
-		<img
-			class="portrait"
-			height="250"
-			width="250"
-			loading="eager"
-			src="/img/ryanmarx.jpg"
-			alt="A closeup head shot of Ryan Marx. He's smiling softly and wearing a Milwaukee Brewers ballcap." />
 	</div>
 	<ul class="links">
 		<li>
@@ -84,25 +99,46 @@
 				aria-current={activeSection === "#projects" ? "location" : undefined}
 				>My projects</a>
 		</li>
-		<li>
-			<a
-				href="#contact"
-				class:active={activeSection === "#contact"}
-				aria-current={activeSection === "#contact" ? "location" : undefined}
-				>Let's talk</a>
-		</li>
 	</ul>
+
+	<div class="extra right">
+		<ul class="contact__social">
+			{#each networks as { label, icon, url, rel = null, target = null }}
+				<li class="contact__link contact__link--{label}">
+					<a href={url} {target} {rel}>
+						{label}
+					</a>
+				</li>
+			{/each}
+		</ul>
+	</div>
 </nav>
 
 <style>
+	.contact__social {
+		display: flex;
+		/* justify-content: center; */
+		/* align-items: center; */
+		list-style: none;
+		gap: calc(var(--gap) / 2);
+		padding: 0;
+		margin: 0;
+		font-size: var(--font-size-very-small);
+	}
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
 	a.active {
 		font-weight: bold;
 		color: var(--color-black);
 	}
-	div {
+	.extra {
 		position: absolute;
 		top: 50%;
-		left: var(--gap);
 		translate: 0 -50%;
 		transform: translate(0, -200%);
 		opacity: 0;
@@ -114,14 +150,15 @@
 			font-weight: bold;
 			font-size: var(--font-size-large);
 		}
-
-		img {
-			width: 6rem;
-			height: 6rem;
-			border-radius: 50%;
-			border: 8px solid #fff4;
-		}
 	}
+
+	.left {
+		left: var(--gap);
+	}
+	.right {
+		right: var(--gap);
+	}
+
 	.links {
 		display: flex;
 		justify-content: center;
@@ -141,6 +178,8 @@
 		margin-left: calc(var(--gap) * -1);
 		width: calc((var(--gap) * 2) + 100%);
 		overflow: hidden;
+		margin-bottom: var(--nav-margin);
+		height: var(--nav-height);
 
 		/* bg lives on ::before so opacity can be transitioned (gradients can't animate directly) */
 		&::before {
@@ -158,7 +197,7 @@
 		@supports (container-type: scroll-state) {
 			/* scroll-state queries require the sticky element to be a scroll-state container */
 			container-type: scroll-state;
-
+			box-shadow: var(--nav-shadow);
 			@container scroll-state(stuck: top) {
 				&::before {
 					opacity: 1;
@@ -168,12 +207,13 @@
 					border-color: transparent;
 				}
 
-				div {
+				.extra {
 					opacity: 1;
 					transform: translate(0, 0);
 					transition:
-						opacity 150ms 150ms ease-in-out,
-						transform 150ms 150ms ease-in-out;
+						opacity var(--speed-transition) var(--speed-transition) ease-in-out,
+						box-shadow var(--speed-transition) var(--speed-transition) ease-in-out,
+						transform var(--speed-transition) var(--speed-transition) ease-in-out;
 				}
 			}
 		}
@@ -185,15 +225,18 @@
 			}
 
 			&:global(.is-stuck) {
+				box-shadow: var(--nav-shadow);
+
 				.links {
 					border-color: transparent;
 				}
-				div {
+				.extra {
 					opacity: 1;
 					transform: translate(0, 0);
 					transition:
-						opacity 150ms 150ms ease-in-out,
-						transform 150ms 150ms ease-in-out;
+						opacity var(--speed-transition) var(--speed-transition) ease-in-out,
+						box-shadow var(--speed-transition) var(--speed-transition) ease-in-out,
+						transform var(--speed-transition) var(--speed-transition) ease-in-out;
 				}
 			}
 		}

@@ -1,13 +1,4 @@
 <script lang="ts">
-	import Background from "./Background.svelte";
-
-	import Resume from "./Resume.svelte";
-
-	import About from "./About.svelte";
-
-	import Section from "./Section.svelte";
-
-	import Nav from "./Nav.svelte";
 </script>
 
 <header>
@@ -30,7 +21,7 @@
 		flex-flow: column nowrap;
 		gap: var(--gap);
 
-		height: 100vh;
+		height: calc(100vh - var(--nav-height) - var(--nav-margin));
 
 		h1 {
 			font-size: 5rem;
