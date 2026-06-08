@@ -21,7 +21,8 @@
 		flex-flow: column nowrap;
 		gap: var(--gap);
 
-		height: calc(100vh - var(--nav-height) - var(--nav-margin));
+		height: 100vh;
+		padding-top: var(--nav-height);
 
 		h1 {
 			font-size: 5rem;
@@ -39,5 +40,9 @@
 	}
 
 	@media all and (min-width: 48rem) {
+		header {
+			padding-top: 0;
+			height: calc(100vh - var(--nav-height) - var(--nav-margin));
+		}
 	}
 </style>

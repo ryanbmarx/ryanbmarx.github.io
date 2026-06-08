@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { marked } from "marked";
 
-	import Tags from "./Tags.svelte";
 	import ButtonGithub from "./ButtonGithub.svelte";
+	import { type PorfolioItemType } from "./items";
 
 	const {
 		label,
@@ -30,7 +30,7 @@
 	</div>
 	<h3 class="label">{label}</h3>
 	{#if date}<span class="project__date">Published: {date}</span>{/if}
-	<Tags {tags} {tagDefinitions} />
+	<!-- <Tags {tags} {tagDefinitions} /> -->
 	{@html marked.parse(description)}
 	<ButtonGithub {repo} />
 	{#if links.length > 1}

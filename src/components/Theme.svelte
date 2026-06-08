@@ -7,8 +7,14 @@
 <style>
 	.theme {
 		position: absolute;
-		top: var(--gap);
+		bottom: var(--gap);
 		right: var(--gap);
 		width: fit-content;
+	}
+	@media all and (min-width: 48rem) {
+		.theme {
+			top: var(--gap);
+			bottom: unset;
+		}
 	}
 </style>

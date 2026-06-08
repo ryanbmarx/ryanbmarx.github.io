@@ -8,14 +8,20 @@
 	import Section from "./components/Section.svelte";
 	import Nav from "./components/Nav.svelte";
 	import Theme from "./components/Theme.svelte";
+	import { IsMobile } from "./hooks/is-mobile.svelte";
+	import NavMobile from "./components/NavMobile.svelte";
+	const isMobile = new IsMobile();
 </script>
 
 <svelte:head>Ryan Marx | Communucating with data and code</svelte:head>
 <ModeWatcher></ModeWatcher>
 <Theme></Theme>
 <Header></Header>
-<Nav></Nav>
-
+{#if isMobile.current}
+	<NavMobile></NavMobile>
+{:else}
+	<Nav></Nav>
+{/if}
 <Section id="about" header="About me">
 	<About></About>
 </Section>
