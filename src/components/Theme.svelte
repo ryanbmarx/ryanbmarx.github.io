@@ -14,6 +14,7 @@
 
 <style>
 	.theme {
+		--speed-transition-quick: 5s;
 		position: absolute;
 		bottom: var(--gap);
 		right: var(--gap);

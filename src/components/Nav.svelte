@@ -1,9 +1,5 @@
 <script lang="ts">
-	const networks = [
-		{ label: "Github", url: "https://github.com/ryanbmarx" },
-		{ label: "LinkedIn", url: "https://www.linkedin.com/in/ryanbmarx/" },
-		{ label: "Email", url: "mailto:ryanbmarx+homepage@gmail.com" },
-	];
+	import { networks } from "../constants";
 
 	const navLinks = [
 		{ href: "#about", label: "Get to know me" },
