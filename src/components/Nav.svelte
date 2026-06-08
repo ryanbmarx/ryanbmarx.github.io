@@ -1,12 +1,5 @@
 <script lang="ts">
-	import { networks } from "../constants";
-
-	const navLinks = [
-		{ href: "#about", label: "Get to know me" },
-		{ href: "#experience", label: "My experience" },
-		{ href: "#projects", label: "My projects" },
-	];
-
+	import { navLinks, networks } from "../constants";
 	let activeSection = $state("");
 
 	function trackActive(_nav: HTMLElement) {

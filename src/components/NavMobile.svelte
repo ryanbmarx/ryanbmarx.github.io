@@ -2,18 +2,7 @@
 	import NavCloseButton from "./NavCloseButton.svelte";
 
 	import NavButton from "./NavButton.svelte";
-
-	const networks = [
-		{ label: "Github", url: "https://github.com/ryanbmarx" },
-		{ label: "LinkedIn", url: "https://www.linkedin.com/in/ryanbmarx/" },
-		{ label: "Email", url: "mailto:ryanbmarx+homepage@gmail.com" },
-	];
-
-	const navLinks = [
-		{ href: "#about", label: "Get to know me" },
-		{ href: "#experience", label: "My experience" },
-		{ href: "#projects", label: "My projects" },
-	];
+	import { navLinks, networks } from "../constants";
 
 	let drawerOpen = $state(false);
 
@@ -75,10 +64,9 @@
 	.nav {
 		position: fixed;
 		bottom: 0;
-		left: 50%;
-		translate: -50% 0;
+		left: 3vw;
 
-		width: 95vw;
+		width: 94vw;
 		z-index: 2;
 		height: calc(100vh - var(--nav-height));
 		padding: 2rem;

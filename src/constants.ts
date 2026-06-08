@@ -3,3 +3,9 @@ export const networks = [
 	{ label: "LinkedIn", url: "https://www.linkedin.com/in/ryanbmarx/" },
 	{ label: "Email", url: "mailto:ryanbmarx+homepage@gmail.com" },
 ];
+
+export const navLinks = [
+	{ href: "#about", label: "Get to know me" },
+	{ href: "#experience", label: "My experience" },
+	{ href: "#projects", label: "My projects" },
+];
