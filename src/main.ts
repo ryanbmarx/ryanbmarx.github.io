@@ -1,7 +1,5 @@
 import { mount, hydrate } from "svelte";
 import App from "./App.svelte";
-import portfolioItems from "./config/portfolioItems.json";
-import tagDefinitions from "./config/tagDefinitions.json";
 
 const target = document.getElementById("app");
 
@@ -15,11 +13,11 @@ const hasSSRContent = target.innerHTML.trim().length > 0;
 const app = hasSSRContent
 	? hydrate(App, {
 			target,
-			props: { portfolioItems, tagDefinitions },
+			props: {},
 		})
 	: mount(App, {
 			target,
-			props: { portfolioItems, tagDefinitions },
+			props: {},
 		});
 
 export default app;

@@ -19,7 +19,7 @@
 
 	--color-link: var(--color-pink);
 	--color-link-text: white;
-	--color-font: var(--color-slate);
+	--color-font: light-dark(var(--color-slate), var(--color-isabelline));
 
 	/* TYPE */
 
@@ -54,6 +54,8 @@
 	--color-border-light: var(--color-gray);
 	--color-highlight: var(--color-purple);
 	--nav-shadow: 0 3px 7px #0004;
+
+	color-scheme: light dark;
 }
 
 html {
@@ -62,10 +64,9 @@ html {
 
 html body {
 	margin: 0;
-	padding: 0 var(--gap);
+	padding: 0;
 	min-height: -webkit-fill-available;
 	font-family: var(--sans-serif-fonts);
-	line-height: var(--line-height-loose);
 }
 
 html body * {
@@ -82,6 +83,8 @@ h5,
 h6 {
 	font-family: var(--sans-serif-fonts);
 	margin: 0;
+	color: var(--color-font);
+	line-height: var(--line-height-loose);
 }
 
 h2 {

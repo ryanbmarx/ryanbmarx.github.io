@@ -1,4 +1,13 @@
-import type { PorfolioItemType } from "./components/PortfolioItem.svelte";
+export type PorfolioItemType = {
+	label: string;
+	date?: string;
+	description: string;
+	image: string;
+	links?: { headline?: string; link: string; archived?: boolean }[];
+	repo?: string | null;
+	tags?: string[];
+	tagDefinitions?: Record<string, { label: string; description: string }>;
+};
 
 export const portfolioItems: PorfolioItemType[] = [
 	{
@@ -219,7 +228,7 @@ export const portfolioItems: PorfolioItemType[] = [
 				headline:
 					"The ultimate Palm Beach County voter guide to the November 2022 election",
 				link: "https://www.palmbeachpost.com/storytelling/palm-beach-florida-election-voters-guide-2022/",
-				archived: false,
+				archived: true,
 			},
 		],
 		tags: ["tool", "svelte"],
@@ -323,26 +332,26 @@ export const portfolioItems: PorfolioItemType[] = [
 			{
 				headline:
 					"Agriculture in the Age of Climate Transitions: Stranded Assets. Less Land. New Costs. New Opportunities.",
-				link: "https://orbitas.finance/2020/12/03/ag-climate-transitions-risk-opportunities/",
+				link: "/orbitas-indonesia-projection",
 			},
 		],
 		tags: ["data", "svelte"],
 	},
-	// {
-	// 	label: "Timeline: Class warfare in Chicago",
-	// 	image: "classwarfare.png",
-	// 	date: "Published: July 27, 2014",
-	// 	description:
-	// 		" This collarboration with a couple of the Chicago Tribune's resident historians covers the Windy City's rich history of class warfare. It's presented in a flexible timeline rig which I built for our Tarbell-based workflow and consumes data from a Google spreadsheet.",
-	// 	repo: "https://github.com/ryanbmarx/brief-history-of-class-warfare-timeline",
-	// 	links: [
-	// 		{
-	// 			headline: "A street fight through history ",
-	// 			link: "https://graphics.chicagotribune.com/news/local/history-of-class-warfare/",
-	// 		},
-	// 	],
-	// 	tags: ["article"],
-	// },
+	{
+		label: "Timeline: Class warfare in Chicago",
+		image: "classwarfare.png",
+		date: "Published: July 27, 2014",
+		description:
+			" This collarboration with a couple of the Chicago Tribune's resident historians covers the Windy City's rich history of class warfare. It's presented in a flexible timeline rig which I built for our Tarbell-based workflow and consumes data from a Google spreadsheet.",
+		repo: "https://github.com/ryanbmarx/brief-history-of-class-warfare-timeline",
+		links: [
+			{
+				headline: "A street fight through history ",
+				link: "https://graphics.chicagotribune.com/news/local/history-of-class-warfare/",
+			},
+		],
+		tags: ["article"],
+	},
 
 	{
 		label: "Faces of DACA",
@@ -403,8 +412,8 @@ export const portfolioItems: PorfolioItemType[] = [
 		repo: "https://github.com/ryanbmarx/superweeds",
 		links: [
 			{
-				headline: "How weeds defeat weedkillers (archive.org)",
-				link: "https://web.archive.org/web/20240805044628/https://graphics.chicagotribune.com/news/watchdog/how-weeds-resist/",
+				headline: "How weeds defeat weedkillers",
+				link: "http://graphics.chicagotribune.com/news/watchdog/how-weeds-resist/",
 			},
 		],
 		tags: ["article", "impaired"],
@@ -454,3 +463,41 @@ export const portfolioItems: PorfolioItemType[] = [
 		tags: ["data", "impaired"],
 	},
 ];
+
+type Tag = {
+	label: string;
+	description: string;
+};
+
+export const tags: Record<string, Tag> = {
+	ui: {
+		label: "UI",
+		description:
+			"Whether it's a dashboard or something else, these are good examples of user interfaces I have built. These applications tend to have more interactivity.",
+	},
+	data: {
+		label: "Data visualization",
+		description:
+			"The primary purpose of these projects is to tell a story by conveying data through a visual format.",
+	},
+	article: {
+		label: "Featured",
+		description:
+			"A nicely-designed article or other featured content that might not have a ton of interactivity but is full of information and organization.",
+	},
+	tool: {
+		label: "Tools",
+		description:
+			"These are not one-off projects. The codebase consitutes a tool or framework and has been reused several times.",
+	},
+	svelte: {
+		label: "Svelte",
+		description:
+			"Made with [Svelte](https://svelte.dev), a popular framework that I rather enjoy using.",
+	},
+	impaired: {
+		label: "Impaired",
+		description:
+			"Older projects with published links that might not work well (or at all) anymore because of CMS migrations or other factors. I'm not in control of them anymore, but I remain proud of the work. Why not take a look at the code?",
+	},
+};

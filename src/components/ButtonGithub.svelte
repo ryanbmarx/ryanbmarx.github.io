@@ -25,7 +25,8 @@
 		padding: 0.5rem;
 		margin: 0;
 		text-decoration: none;
-		background-color: var(--color-slate);
+		/* background-color: var(--color-slate); */
+		background-color: #000a;
 		color: white;
 
 		display: flex;
@@ -36,7 +37,8 @@
 		content: none;
 	}
 	.repo:hover {
-		background-color: var(--color-gray-dark);
+		/* background-color: var(--color-gray-dark); */
+		background-color: #000e;
 	}
 
 	.repo:hover svg {

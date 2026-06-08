@@ -4,17 +4,6 @@
 	import Tags from "./Tags.svelte";
 	import ButtonGithub from "./ButtonGithub.svelte";
 
-	export type PorfolioItemType = {
-		label: string;
-		date?: string;
-		description: string;
-		image: string;
-		links?: { headline?: string; link: string; archived?: boolean }[];
-		repo?: string | null;
-		tags?: string[];
-		tagDefinitions?: Record<string, { label: string; description: string }>;
-	};
-
 	const {
 		label,
 		date,
@@ -64,7 +53,7 @@
 <style>
 	.project__image {
 		overflow: hidden;
-		border: 1px solid var(--color-gray-light);
+		border: 1px solid light-dark(var(--color-gray-light), var(--color-slate));
 	}
 	.project__image__img {
 		display: block;
@@ -78,7 +67,7 @@
 
 	.project__date {
 		font: bold var(--font-size-very-small) / var(--line-height) var(--sans-serif-fonts);
-		color: var(--color-purple);
+		color: light-dark(var(--color-purple), var(--color-blue));
 		margin-top: calc(-1 * var(--gap));
 	}
 	.links {

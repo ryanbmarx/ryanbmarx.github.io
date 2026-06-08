@@ -1,19 +1,18 @@
 <script lang="ts">
-	import Portfolio from "./Portfolio.svelte";
-
-	import Header from "./Header.svelte";
-
-	import Resume from "./Resume.svelte";
-
-	import About from "./About.svelte";
-
-	import Section from "./Section.svelte";
-
-	import Nav from "./Nav.svelte";
+	import { ModeWatcher } from "mode-watcher";
+	import Footer from "./components/Footer.svelte";
+	import Portfolio from "./components/Portfolio.svelte";
+	import Header from "./components/Header.svelte";
+	import Resume from "./components/Resume.svelte";
+	import About from "./components/About.svelte";
+	import Section from "./components/Section.svelte";
+	import Nav from "./components/Nav.svelte";
+	import Theme from "./components/Theme.svelte";
 </script>
 
 <svelte:head>Ryan Marx | Communucating with data and code</svelte:head>
-
+<ModeWatcher></ModeWatcher>
+<Theme></Theme>
 <Header></Header>
 <Nav></Nav>
 
@@ -26,32 +25,26 @@
 <Section id="projects" header="My projects" wide>
 	<Portfolio></Portfolio>
 </Section>
-
-<div class="footer" role="presentation"></div>
+<Footer></Footer>
 
 <style>
-	.footer {
-		height: 2rem;
-		background-color: var(--color-purple);
-		opacity: 0.2;
-		filter: blur(3px);
-		width: 110%;
-		margin-left: -5%;
-	}
 	:global(body) {
 		/* https://grabient.com/IwOgDA7AzANCCsEBMcBswCcMC0YTDDBzyXiJCVS1wWFhtQmGJABYxnxG5gCWwAHGCA?angle=45 */
 
-		background: linear-gradient(45deg, #fa61da33 0%, #ff889133 50%, #ffcd5a33 100%);
+		background: light-dark(
+			linear-gradient(45deg, #fa61da33 0%, #ff889133 50%, #ffcd5a33 100%),
+			linear-gradient(
+				230deg,
+				rgba(16, 54, 82, 1) 0%,
+				rgba(31, 38, 115, 1) 52%,
+				rgba(57, 57, 153, 1) 100%
+			)
+		);
 	}
 	:global(#app) {
 		display: flex;
 		flex-flow: column nowrap;
 		gap: var(--gap);
 		min-height: 100vh;
-	}
-
-	.fpo {
-		height: 150vh;
-		background: #888;
 	}
 </style>

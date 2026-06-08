@@ -23,16 +23,16 @@
 			end: 2023,
 			org: "Gannett",
 			orgLink: "https://www.usatoday.com/",
-			role: "Storytelling developer",
+			role: "Web developer",
 			description:
-				"My team — The Storytelling Studio — collaborates with newsrooms across the company to facilitate top-notch storytelling by developing tools, frameworks and custom experiences to empower our partners in more than 200 newsrooms across the country. We use an agile, human-centered approach as we iteratively test our hypotheses and refine our goals. Journalists often approach us with their centerpiece work and a desire to maximize its impact. We build our tools from end to end to achieve a facility on our company's infrastructure and a alignment of technologies that wouldn't otherwise exist.",
+				"My team — The Storytelling Studio — collaborated with newsrooms across the company to facilitate top-notch storytelling by developing tools, frameworks and custom experiences. We empowered our partners in more than 200 newsrooms across the country. We used an agile, human-centered approach as we iteratively tested our hypotheses and refined our goals. Journalists often approached us with their centerpiece work and a desire to maximize its impact. We built our tools from end to end to achieve a facility on our company's infrastructure and a alignment of technologies that wouldn't otherwise exist.",
 		},
 		{
 			start: 2013,
 			end: 2018,
 			org: "Chicago Tribune",
 			orgLink: "https://www.chicagotribune.com/",
-			role: "Assistant DataViz Editor",
+			role: "Assistant Data Visualization Editor",
 			description:
 				"I helped coordinate the efforts of all graphic reporters and artists across long- and short-term projects while leading our transformation into a digital-focused team. I helped develop technology stacks, templates and best practices for everything from static graphics to fully composed articles and interactives. Though the graphics team was full of expert artists and journalists, our digital abilities were minimal. For our transformation to succeed, the plan needed to include everyone and, thus, a key responsibility for me was to serve as a coach/mentor to help us all contribute to our digital growth.",
 		},
@@ -41,7 +41,7 @@
 			end: 2013,
 			org: "Chicago Tribune",
 			orgLink: "https://www.chicagotribune.com/",
-			role: "Graphics Coordinator, Business",
+			role: "Data visualization Coordinator",
 			description:
 				"I worked with business editors, reporters and columnists to identify and prioritize graphic opportunities for the daily business section and special projects. I participated in long- and short-term planning to devise digital experiences to enhance the daily and weekly coverage.",
 		},
@@ -75,9 +75,9 @@
 	];
 </script>
 
-<ul class="stack">
+<ul class="stack resume">
 	{#each work as { start, end, orgLink, org, role, description }}
-		<li class="stack">
+		<li class="">
 			<h3 class="title">{role} — <a href={orgLink}>{org}</a></h3>
 			<p class="dates">{start} – {end}</p>
 			<p class="description">{@html description}</p>
@@ -86,11 +86,52 @@
 </ul>
 
 <style>
-	h2 {
-		margin-bottom: var(--gap);
+	.resume {
+		--timeline-dot: 0.75rem;
+		--timeline-gap: 3rem;
+		--timeline-color: light-dark(
+			var(--color-apricot-light),
+			var(--color-apricot-light)
+		);
+		overflow: hidden;
+		position: relative;
+		padding-left: var(--timeline-gap);
+
+		&::after {
+			content: "";
+			display: block;
+			width: 0px;
+			height: 100%;
+			position: absolute;
+			left: calc(var(--timeline-dot) / 2);
+			top: 1em;
+			width: 1px;
+			background-color: var(--timeline-color);
+			/* border-left: 2px solid var(--timeline-color); */
+			transform: translate(-50%, 0);
+		}
 	}
-	.title a {
-		color: inherit;
+
+	.title {
+		position: relative;
+
+		&::before {
+			/* The dot */
+			content: "";
+			display: block;
+			height: var(--timeline-dot);
+			width: var(--timeline-dot);
+			background-color: var(--timeline-color);
+			border-radius: 50%;
+
+			position: absolute;
+			right: calc(100% + var(--timeline-gap) - var(--timeline-dot));
+			top: calc(var(--line-height-loose) / 2);
+			transform: translate(0, -50%);
+		}
+		a {
+			color: inherit;
+		}
 	}
 	.dates {
 		font-style: italic;
@@ -101,7 +142,7 @@
 		font-size: var(--font-size-small);
 	}
 
-	li.stack {
+	li {
 		--gap: 0.25rem;
 	}
 </style>
