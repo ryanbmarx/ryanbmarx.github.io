@@ -34,13 +34,9 @@
 	--line-height-loose: 1.5em;
 
 	--sans-serif-fonts: "Poppins", "Helvetica", sans-serif;
-	/* --display-fonts: "BreulGroteskBBold", sans-serif; */
-	/* --serif-fonts: "Times New Roman", "Georgia", serif; */
 
 	/* // SCAFFOLDING */
 	--gap: 1rem;
-	/* --container-width: 70rem; */
-	/* --container-padding-h: max(var(--gap), calc((100% - var(--container-width)) / 2)); */
 	--tap-target: 48px;
 	--nav-height: 4rem;
 	--nav-margin: 10rem;
@@ -58,6 +54,7 @@
 		color-mix(in srgb, var(--color-apricot-light) 75%, transparent),
 		#0008
 	);
+	--nav-color-bg-opaque: light-dark(#f8dfbe, #0c1926);
 	color-scheme: light dark;
 }
 

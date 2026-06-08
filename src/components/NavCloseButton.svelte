@@ -17,6 +17,7 @@
 		background-color: transparent;
 		display: flex;
 		color: #fff8;
+		margin-bottom: auto;
 
 		position: relative;
 

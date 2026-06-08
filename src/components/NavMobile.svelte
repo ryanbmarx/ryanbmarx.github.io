@@ -31,7 +31,7 @@
 	<span class="name">Ryan Marx</span>
 	<NavButton onclick={() => setDrawerOpen(!drawerOpen)} open={drawerOpen}></NavButton>
 </div>
-<nav class="nav" class:open={drawerOpen}>
+<nav class="nav stack" class:open={drawerOpen}>
 	<NavCloseButton onclick={() => setDrawerOpen(false)}></NavCloseButton>
 	<ul class="links stack">
 		{#each navLinks as { href, label }}
@@ -83,7 +83,7 @@
 		height: calc(100vh - var(--nav-height));
 		padding: 2rem;
 		padding-top: 0;
-		background: var(--nav-color-bg);
+		background: var(--nav-color-bg-opaque);
 		height: 75%;
 		max-height: calc(100% - var(--nav-height));
 		border-radius: 1rem 1rem 0 0;
@@ -110,5 +110,6 @@
 	.links--small {
 		font-size: var(--font-size-medium);
 		text-align: right;
+		margin-bottom: auto;
 	}
 </style>
