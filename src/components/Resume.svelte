@@ -89,10 +89,7 @@
 	.resume {
 		--timeline-dot: 0.75rem;
 		--timeline-gap: 3rem;
-		--timeline-color: light-dark(
-			var(--color-apricot-light),
-			var(--color-apricot-light)
-		);
+		--timeline-color: light-dark(#8f979a, var(--color-apricot-light));
 		overflow: hidden;
 		position: relative;
 		padding-left: var(--timeline-gap);

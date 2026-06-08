@@ -46,8 +46,11 @@
 	--speed-transition-quick: 80ms;
 
 	/* THEME TOKENS */
-	--color-border: var(--color-black);
-	--color-border-light: var(--color-gray);
+	--color-border: light-dark(
+		color-mix(in srgb, var(--color-gray) 65%, transparent),
+		color-mix(in srgb, var(--color-black) 75%, transparent)
+	);
+
 	--color-highlight: var(--color-purple);
 	--nav-shadow: 0 3px 7px #0004;
 	--nav-color-bg: light-dark(
