@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { navLinks, networks } from "../constants";
 	let activeSection = $state("");
+	let isStuck = $state(true); // default true so CSS no-JS fallback shows stuck state
 
 	function trackActive(_nav: HTMLElement) {
 		const ids = navLinks.map(({ href }) => href.slice(1));
@@ -33,16 +34,15 @@
 	}
 
 	function observeStuck(nav: HTMLElement) {
-		// Only activate the JS fallback when scroll-state queries aren't supported
-		if (CSS.supports("container-type", "scroll-state")) return;
-
-		// Sentinel sits just above the nav; when it scrolls out of view the nav is stuck
 		const sentinel = document.createElement("div");
 		sentinel.setAttribute("role", "presentation");
 		nav.parentElement?.insertBefore(sentinel, nav);
 
+		// Synchronous check so the initial render is correct with no flash
+		isStuck = sentinel.getBoundingClientRect().bottom <= 0;
+
 		const observer = new IntersectionObserver(([entry]) => {
-			nav.classList.toggle("is-stuck", !entry.isIntersecting);
+			isStuck = !entry.isIntersecting;
 		});
 		observer.observe(sentinel);
 
@@ -53,7 +53,7 @@
 	}
 </script>
 
-<nav class="nav" {@attach observeStuck} {@attach trackActive}>
+<nav class="nav" {@attach observeStuck} {@attach trackActive} class:is-unstuck={!isStuck}>
 	<div class="extra left">
 		<span>Ryan Marx</span>
 	</div>
@@ -103,8 +103,12 @@
 		position: absolute;
 		top: 50%;
 		translate: 0 -50%;
-		transform: translate(0, -200%);
-		opacity: 0;
+		/* Stuck (default): visible, in place, delayed transition for sliding in */
+		opacity: 1;
+		transform: translate(0, 0);
+		transition:
+			opacity var(--speed-transition) var(--speed-transition) ease-in-out,
+			transform var(--speed-transition) var(--speed-transition) ease-in-out;
 
 		display: flex;
 		gap: var(--gap);
@@ -125,7 +129,7 @@
 	.links {
 		display: flex;
 		justify-content: center;
-		border: 1px solid var(--color-border-light);
+		border: 1px solid transparent;
 		transition: border-color var(--speed-transition) ease;
 
 		li {
@@ -138,70 +142,48 @@
 		position: sticky;
 		top: 0;
 		justify-content: center;
-		overflow: hidden;
 		margin-bottom: var(--nav-margin);
 		height: var(--nav-height);
 		z-index: 2;
+		/* Stuck by default */
+		backdrop-filter: var(--nav-blur);
+		-webkit-backdrop-filter: var(--nav-blur);
+		transition:
+			backdrop-filter var(--speed-transition) ease,
+			-webkit-backdrop-filter var(--speed-transition) ease;
 
-		/* bg lives on ::before so opacity can be transitioned (gradients can't animate directly) */
 		&::before {
 			content: "";
 			position: absolute;
 			inset: 0;
-			background: var(--nav-color-bg);
-			backdrop-filter: blur(12px);
-			-webkit-backdrop-filter: blur(12px);
+			background: var(--nav-color-bg-opaque);
 			box-shadow: var(--nav-shadow);
-			opacity: 0;
+			opacity: var(--nav-bg-opacity-stuck);
 			transition: opacity var(--speed-transition) ease;
 			pointer-events: none;
 			z-index: -1;
 		}
 
-		@supports (container-type: scroll-state) {
-			/* scroll-state queries require the sticky element to be a scroll-state container */
-			container-type: scroll-state;
-			box-shadow: var(--nav-shadow);
-			@container scroll-state(stuck: top) {
-				&::before {
-					opacity: 1;
-				}
+		/* JS adds this class when scrolled to the top (not stuck) */
+		&.is-unstuck {
+			backdrop-filter: blur(0px);
+			-webkit-backdrop-filter: blur(0px);
 
-				.links {
-					border-color: transparent;
-				}
-
-				.extra {
-					opacity: 1;
-					transform: translate(0, 0);
-					transition:
-						opacity var(--speed-transition) var(--speed-transition) ease-in-out,
-						box-shadow var(--speed-transition) var(--speed-transition) ease-in-out,
-						transform var(--speed-transition) var(--speed-transition) ease-in-out;
-				}
-			}
-		}
-
-		@supports not (container-type: scroll-state) {
-			/* JS fallback: toggled by IntersectionObserver */
-			&:global(.is-stuck)::before {
-				opacity: 1;
+			&::before {
+				opacity: 0;
 			}
 
-			&:global(.is-stuck) {
-				box-shadow: var(--nav-shadow);
+			.links {
+				border-color: var(--color-border-light);
+			}
 
-				.links {
-					border-color: transparent;
-				}
-				.extra {
-					opacity: 1;
-					transform: translate(0, 0);
-					transition:
-						opacity var(--speed-transition) var(--speed-transition) ease-in-out,
-						box-shadow var(--speed-transition) var(--speed-transition) ease-in-out,
-						transform var(--speed-transition) var(--speed-transition) ease-in-out;
-				}
+			/* No delay when sliding out */
+			.extra {
+				opacity: 0;
+				transform: translate(0, -200%);
+				transition:
+					opacity var(--speed-transition) ease-in-out,
+					transform var(--speed-transition) ease-in-out;
 			}
 		}
 	}

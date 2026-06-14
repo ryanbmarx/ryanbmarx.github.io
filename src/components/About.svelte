@@ -35,7 +35,8 @@
 	</p>
 	<p>
 		HTML, CSS, and TypeScript are my bread and butter. I love to ship with Svelte, Vue,
-		or even plain vanilla. I've worked with D3, Node, and mapping tools.
+		or even plain vanilla. I've worked with D3, Node, and mapping tools (Leaflet,
+		MapBox, etc.).
 	</p>
 	<h3>Also ...</h3>
 	<p>

@@ -51,13 +51,15 @@
 		color-mix(in srgb, var(--color-black) 75%, transparent)
 	);
 
+	--nav-bg-opacity-stuck: 0.5;
 	--color-highlight: var(--color-purple);
+	--nav-blur: blur(12px); /* Adds to frosted effect when stuck */
 	--nav-shadow: 0 3px 7px #0004;
 	--nav-color-bg: light-dark(
 		color-mix(in srgb, var(--color-apricot-light) 75%, transparent),
 		#0008
 	);
-	--nav-color-bg-opaque: light-dark(#f8dfbe, #0c1926);
+	--nav-color-bg-opaque: light-dark(var(--color-apricot-light), var(--color-black));
 	color-scheme: light dark;
 }
 
