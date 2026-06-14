@@ -23,7 +23,7 @@
 			end: 2023,
 			org: "Gannett",
 			orgLink: "https://www.usatoday.com/",
-			role: "Web developer (News applications)",
+			role: "Developer, news applications",
 			description:
 				"My team — The Storytelling Studio — collaborated with newsrooms across the company to facilitate top-notch storytelling by developing tools, frameworks and custom experiences. We empowered our partners in more than 200 newsrooms across the country. We used an agile, human-centered approach as we iteratively tested our hypotheses and refined our goals. Journalists often approached us with their centerpiece work and a desire to maximize its impact. We built our tools from end to end to achieve a facility on our company's infrastructure and a alignment of technologies that wouldn't otherwise exist.",
 		},
