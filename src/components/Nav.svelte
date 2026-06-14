@@ -103,9 +103,7 @@
 		position: absolute;
 		top: 50%;
 		translate: 0 -50%;
-		/* Stuck (default): visible, in place, delayed transition for sliding in */
-		opacity: 1;
-		transform: translate(0, 0);
+		/* delay matches duration so extras slide in only after backdrop has faded in */
 		transition:
 			opacity var(--speed-transition) var(--speed-transition) ease-in-out,
 			transform var(--speed-transition) var(--speed-transition) ease-in-out;
