@@ -71,19 +71,23 @@
 
 		opacity: 0;
 		transform: scale(1.1);
+		visibility: hidden;
 		transition:
 			transform var(--speed-transition),
-			opacity var(--speed-transition);
+			opacity var(--speed-transition),
+			visibility var(--speed-transition) allow-discrete;
 
 		&.open {
 			transform: scale(1);
 			opacity: 1;
+			visibility: visible;
 		}
 	}
 
 	li a {
 		text-decoration: none;
 		font-size: var(--font-size-very-large);
+		color: var(--color-white);
 	}
 
 	.name {
