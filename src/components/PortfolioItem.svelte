@@ -11,8 +11,6 @@
 		image,
 		links: rawLinks = [],
 		repo = null,
-		tags = [],
-		tagDefinitions = {},
 	}: PorfolioItemType = $props();
 
 	const links = $derived(rawLinks.filter(l => !l.archived));
@@ -30,7 +28,6 @@
 	</div>
 	<h3 class="label">{label}</h3>
 	{#if date}<span class="project__date">Published: {date}</span>{/if}
-	<!-- <Tags {tags} {tagDefinitions} /> -->
 	{@html marked.parse(description)}
 	<ButtonGithub {repo} />
 	{#if links.length > 1}
@@ -54,15 +51,17 @@
 	.project__image {
 		overflow: hidden;
 		border: 1px solid light-dark(var(--color-gray-light), var(--color-slate));
-	}
-	.project__image__img {
-		display: block;
-		width: 100%;
-		height: auto;
-		transition: transform 150ms ease-in-out;
-	}
-	.project__image__img:hover {
-		transform: scale(1.1) rotate(3deg);
+
+		.project__image__img {
+			display: block;
+			width: 100%;
+			height: auto;
+			transition: transform 150ms ease-in-out;
+
+			&:hover {
+				transform: scale(1.1) rotate(3deg);
+			}
+		}
 	}
 
 	.project__date {
@@ -70,24 +69,26 @@
 		color: light-dark(var(--color-purple), var(--color-blue));
 		margin-top: calc(-1 * var(--gap));
 	}
+
 	.links {
+		--arrow-width: 1em;
 		list-style: none;
 		margin: 0;
 		padding: 0;
-	}
 
-	.links li {
-		padding: 0 0 0 calc(var(--arrow-width) + 0.5em);
-		position: relative;
-		margin: 0 0 0.5rem 0;
-	}
-	.links li::before {
-		content: "\2192";
-		display: block;
-		width: var(--arrow-width);
-		height: var(--arrow-width);
-		position: absolute;
-		left: 0;
+		li {
+			padding-left: calc(var(--arrow-width) + 0.5em);
+			margin-bottom: 0.5rem;
+			position: relative;
+
+			&::before {
+				content: "\2192";
+				display: block;
+				width: var(--arrow-width);
+				position: absolute;
+				left: 0;
+			}
+		}
 	}
 
 	.link {
