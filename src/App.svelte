@@ -13,7 +13,7 @@
 	const isMobile = new IsMobile();
 </script>
 
-<svelte:head>Ryan Marx | Communucating with data and code</svelte:head>
+<svelte:head>Ryan Marx | Communicating with data and code</svelte:head>
 <ModeWatcher></ModeWatcher>
 <Theme></Theme>
 <Header></Header>
@@ -34,19 +34,6 @@
 <Footer></Footer>
 
 <style>
-	:global(body) {
-		/* https://grabient.com/IwOgDA7AzANCCsEBMcBswCcMC0YTDDBzyXiJCVS1wWFhtQmGJABYxnxG5gCWwAHGCA?angle=45 */
-
-		background: light-dark(
-			linear-gradient(45deg, #fa61da33 0%, #ff889133 50%, #ffcd5a33 100%),
-			linear-gradient(
-				230deg,
-				rgba(16, 54, 82, 1) 0%,
-				rgba(31, 38, 115, 1) 52%,
-				rgba(57, 57, 153, 1) 100%
-			)
-		);
-	}
 	:global(#app) {
 		display: flex;
 		flex-flow: column nowrap;

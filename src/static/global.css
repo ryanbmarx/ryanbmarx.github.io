@@ -70,6 +70,13 @@ html body {
 	padding: 0;
 	min-height: -webkit-fill-available;
 	font-family: var(--sans-serif-fonts);
+	/* https://grabient.com/IwOgDA7AzANCCsEBMcBswCcMC0YTDDBzyXiJCVS1wWFhtQmGJABYxnxG5gCWwAHGCA?angle=45 */
+	background: linear-gradient(
+		45deg,
+		light-dark(#fa61da33, rgba(16, 54, 82, 1)) 0%,
+		light-dark(#ff889133, rgba(31, 38, 115, 1)) 50%,
+		light-dark(#ffcd5a33, rgba(57, 57, 153, 1)) 100%
+	);
 }
 
 html body * {

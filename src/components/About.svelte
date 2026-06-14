@@ -1,8 +1,8 @@
-<script lang="ts">
-</script>
-
 <div class="stack">
-	<p>I'm a designer, developer, and problem solver based in the Chicago area.</p>
+	<p>
+		I'm a designer, developer, and problem solver with years of telling stories. I live
+		in the Chicago area but have worked with newsrooms from New York to Arizona.
+	</p>
 	<p>
 		I use visualization, development, UX design, writing, and editing to dig past
 		surface-level asks and distill mountains of information into meaningful, empowering
@@ -39,10 +39,10 @@
 	</p>
 	<h3>Also ...</h3>
 	<p>
-		When I'm not telling stories, you'll find me engaging my many inner nerds: science
-		fiction, theater, cooking, and youth softball (as a spectator, I promise). And,
-		finally, I believe there isn't anything that can't be made better with a cup of hot
-		coffee. Or two.
+		When I'm not telling stories, you'll find me entertaining one of my many inner
+		nerds: science fiction, theater, cooking, and youth softball (as a spectator, I
+		promise). And, finally (perhaps most importantly), I believe there isn't anything
+		that can't be made better with a cup of hot coffee. Or two.
 	</p>
 	<p><a href="#contact">Let's talk.</a> I look forward to hearing from you.</p>
 </div>
