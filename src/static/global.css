@@ -53,7 +53,6 @@
 
 	--nav-bg-opacity-stuck: 0.5;
 	--color-highlight: var(--color-purple);
-	--nav-blur: blur(12px); /* Adds to frosted effect when stuck */
 	--nav-shadow: 0 3px 7px #0004;
 	--nav-color-bg: light-dark(
 		color-mix(in srgb, var(--color-apricot-light) 75%, transparent),
