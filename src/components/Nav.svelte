@@ -74,10 +74,13 @@
 	</ul>
 
 	<div class="extra right content">
-		<ul class="contact__social">
-			{#each networks as { label, url }}
+		<ul class="contact">
+			{#each networks as { label, url, Icon }}
 				<li class="contact__link contact__link--{label}">
-					<a href={url}>{label}</a>
+					<a href={url}>
+						{label}
+						{#if Icon}<Icon size={12}></Icon>{/if}
+					</a>
 				</li>
 			{/each}
 		</ul>
@@ -85,16 +88,19 @@
 </nav>
 
 <style>
-	.contact__social {
+	.contact {
 		display: flex;
 		list-style: none;
-		gap: calc(var(--gap) / 2);
+		gap: calc(var(--gap));
 		padding: 0;
 		margin: 0;
 		font-size: var(--font-size-very-small);
 	}
 	a {
 		text-decoration: none;
+		display: flex;
+		gap: 0.25em;
+		align-items: center;
 		&:hover {
 			text-decoration: underline;
 		}
