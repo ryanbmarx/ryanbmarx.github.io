@@ -63,6 +63,13 @@
 	color-scheme: light dark;
 }
 
+@media (prefers-reduced-motion: reduce) {
+	:root {
+		--speed-transition: 1ms;
+		--speed-transition-quick: 1ms;
+	}
+}
+
 html {
 	scroll-behavior: smooth;
 }

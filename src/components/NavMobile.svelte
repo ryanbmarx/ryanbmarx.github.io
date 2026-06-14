@@ -63,7 +63,6 @@
 		width: calc(100vw - (var(--padding) * 2));
 		z-index: 2;
 		height: calc(100vh - var(--nav-height) - (2 * var(--padding)));
-		/* background: var(--nav-color-bg-opaque); */
 		background: #0008;
 		border-radius: 1rem 1rem 0 0;
 		border-radius: 1rem;
