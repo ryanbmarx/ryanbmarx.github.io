@@ -57,8 +57,8 @@
 		z-index: 3;
 
 		background: var(--nav-color-bg);
-		backdrop-filter: var(--nav-blur);
-		-webkit-backdrop-filter: var(--nav-blur);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
 		box-shadow: var(--nav-shadow);
 	}
 	.nav {

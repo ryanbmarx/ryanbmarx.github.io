@@ -53,7 +53,11 @@
 	}
 </script>
 
-<nav class="nav" {@attach observeStuck} {@attach trackActive} class:is-unstuck={!isStuck}>
+<nav
+	class="nav"
+	{@attach observeStuck}
+	{@attach trackActive}
+	class:is-unstuck={!isStuck}>
 	<div class="extra left">
 		<span>Ryan Marx</span>
 	</div>
@@ -144,8 +148,8 @@
 		height: var(--nav-height);
 		z-index: 2;
 		/* Stuck by default */
-		backdrop-filter: var(--nav-blur);
-		-webkit-backdrop-filter: var(--nav-blur);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
 		transition:
 			backdrop-filter var(--speed-transition) ease,
 			-webkit-backdrop-filter var(--speed-transition) ease;
