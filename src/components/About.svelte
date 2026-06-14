@@ -11,7 +11,7 @@
 	<h3>It's all communication.</h3>
 	<p>
 		We humans are natural storytellers and respond well when we find reflections of
-		ourselves in the tales and experiences of others. But it doesn't stop there.
+		ourselves in the tales and experiences of others. But, it doesn't stop there.
 	</p>
 	<p>
 		A good user experience tells a story, too. People encounter interfaces in their own
@@ -41,9 +41,9 @@
 	<h3>Also ...</h3>
 	<p>
 		When I'm not telling stories, you'll find me entertaining one of my many inner
-		nerds: science fiction, theater, cooking, and youth softball (as a spectator, I
-		promise). And, finally (perhaps most importantly), I believe there isn't anything
-		that can't be made better with a cup of hot coffee. Or two.
+		nerds: science fiction, theater, cooking, and youth softball (as a proud softball
+		dad). And, finally (perhaps most importantly), I believe there isn't anything that
+		can't be made better with a cup of hot coffee. Or two.
 	</p>
 	<p><a href="#contact">Let's talk.</a> I look forward to hearing from you.</p>
 </div>

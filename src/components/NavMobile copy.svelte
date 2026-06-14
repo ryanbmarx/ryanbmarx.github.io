@@ -1,4 +1,6 @@
 <script lang="ts">
+	import NavCloseButton from "./NavCloseButton.svelte";
+
 	import NavButton from "./NavButton.svelte";
 	import { navLinks, networks } from "../constants";
 
@@ -14,11 +16,12 @@
 	}
 </script>
 
-<div class="top frost">
+<div class="top">
 	<span class="name">Ryan Marx</span>
 	<NavButton onclick={() => setDrawerOpen(!drawerOpen)} open={drawerOpen}></NavButton>
 </div>
-<nav class="nav stack frost" class:open={drawerOpen}>
+<nav class="nav stack" class:open={drawerOpen}>
+	<NavCloseButton onclick={() => setDrawerOpen(false)}></NavCloseButton>
 	<ul class="links stack">
 		{#each navLinks as { href, label }}
 			<li>
@@ -26,6 +29,7 @@
 			</li>
 		{/each}
 	</ul>
+
 	<ul class="links links--small stack">
 		{#each networks as { label, url }}
 			<li class="contact__link contact__link--{label}">
@@ -42,48 +46,43 @@
 		left: 0;
 		width: 100%;
 		height: var(--nav-height);
-		background: var(--nav-color-bg-opaque);
+
 		padding: 0 var(--gap);
+
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		overflow: hidden;
+
 		z-index: 3;
+
+		background: var(--nav-color-bg);
+		-webkit-backdrop-filter: blur(12px);
+		backdrop-filter: blur(12px);
 		box-shadow: var(--nav-shadow);
 	}
 	.nav {
-		--padding: var(--gap);
-		align-items: center;
-		justify-content: center;
-		padding: 2rem;
 		position: fixed;
-		top: calc(var(--padding) + var(--nav-height));
-		left: var(--padding);
+		bottom: 0;
+		left: 3vw;
 
-		width: calc(100vw - (var(--padding) * 2));
+		width: 94vw;
 		z-index: 2;
-		height: calc(100vh - var(--nav-height) - (2 * var(--padding)));
-		/* background: var(--nav-color-bg-opaque); */
-		background: #0008;
+		height: calc(100vh - var(--nav-height));
+		padding: 2rem;
+		padding-top: 0;
+		background: var(--nav-color-bg-opaque);
+		height: 75%;
+		max-height: calc(100% - var(--nav-height));
 		border-radius: 1rem 1rem 0 0;
-		border-radius: 1rem;
 		box-shadow: 0 0 6px #0006;
 
-		opacity: 0;
-		transform: scale(1.1);
-		transition:
-			transform var(--speed-transition),
-			opacity var(--speed-transition);
+		transform: translate(0, 125%);
+		transition: transform var(--speed-transition-quick);
 
 		&.open {
-			transform: scale(1);
-			opacity: 1;
+			transform: translate(0, 0);
 		}
-	}
-
-	li a {
-		text-decoration: none;
-		font-size: var(--font-size-very-large);
 	}
 
 	.name {
@@ -93,20 +92,12 @@
 
 	.links {
 		font-size: var(--font-size-large);
-		text-align: center;
+		text-align: left;
 	}
 
 	.links--small {
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: center;
-		border-top: 1px solid var(--color-border);
-		margin-top: var(--gap);
-		padding-top: var(--gap);
-		width: fit-content;
-
-		a {
-			font-size: var(--font-size-medium);
-		}
+		font-size: var(--font-size-medium);
+		text-align: right;
+		margin-bottom: auto;
 	}
 </style>

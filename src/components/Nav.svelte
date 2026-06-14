@@ -54,7 +54,7 @@
 </script>
 
 <nav
-	class="nav"
+	class="nav frost"
 	{@attach observeStuck}
 	{@attach trackActive}
 	class:is-unstuck={!isStuck}>
@@ -147,8 +147,6 @@
 		margin-bottom: var(--nav-margin);
 		height: var(--nav-height);
 		z-index: 2;
-		-webkit-backdrop-filter: blur(12px);
-		backdrop-filter: blur(12px);
 		transition:
 			backdrop-filter var(--speed-transition) ease,
 			-webkit-backdrop-filter var(--speed-transition) ease;

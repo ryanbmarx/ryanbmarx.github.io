@@ -16,7 +16,8 @@
 	.theme {
 		--speed-transition-quick: 5s;
 		position: absolute;
-		bottom: var(--gap);
+		top: calc(var(--nav-height) + var(--gap));
+
 		right: var(--gap);
 		width: fit-content;
 

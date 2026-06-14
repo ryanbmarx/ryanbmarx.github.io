@@ -3,6 +3,7 @@
 :root {
 	/* COLORS */
 	--color-black: #0a090c;
+	--color-white: #ffffff;
 	--color-slate: #07393c;
 	--color-apricot-light: #fcd7ad;
 	--color-isabelline: #f0edee;
@@ -48,7 +49,7 @@
 	/* THEME TOKENS */
 	--color-border: light-dark(
 		color-mix(in srgb, var(--color-gray) 65%, transparent),
-		color-mix(in srgb, var(--color-black) 75%, transparent)
+		color-mix(in srgb, var(--color-white) 75%, transparent)
 	);
 
 	--nav-bg-opacity-stuck: 0.5;
@@ -125,4 +126,10 @@ p {
 	display: flex;
 	flex-flow: column nowrap;
 	gap: var(--gap);
+}
+
+.frost {
+	/* Used for the nav components */
+	-webkit-backdrop-filter: blur(12px);
+	backdrop-filter: blur(12px);
 }

@@ -1,28 +1,39 @@
 <script lang="ts">
 	const { onclick, open = false }: { onclick: () => void; open: boolean } = $props();
+	const label = $derived(open ? "Close" : "Menu");
 </script>
 
 <button aria-label="Open the navigation menu" {onclick} class:open>
-	<span class="first" role="presentation"></span>
-	<span class="second" role="presentation"></span>
-	<span class="third" role="presentation"></span>
+	<span class="label">{label}</span>
+	<div class="container" role="presentation">
+		<span class="bar first"></span>
+		<span class="bar second"></span>
+		<span class="bar third"></span>
+	</div>
 </button>
 
 <style>
+	.label {
+		font-size: var(--font-size-very-small);
+		opacity: 0.7;
+	}
 	button {
-		padding: 0.5rem;
-		width: var(--tap-target);
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+
 		height: var(--tap-target);
 		background: transparent;
 		border: none;
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: space-around;
 		cursor: pointer;
+	}
+	.container {
+		height: 100%;
+		width: var(--tap-target);
 		position: relative;
 	}
 
-	span {
+	.bar {
 		position: absolute;
 		left: 50%;
 		top: 50%;

@@ -81,3 +81,10 @@ ul {
 	padding: 0;
 	margin: 0;
 }
+
+/* 11. Basic UX defaults */
+
+a,
+button {
+	cursor: pointer;
+}
