@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "./Button.svelte";
+	import Button from "../../lib/components/Button.svelte";
 
 	import { navLinks } from "$lib/constants";
 	import { IsMobile } from "$lib/hooks/is-mobile.svelte";

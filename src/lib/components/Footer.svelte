@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { networks } from "../constants";
+	import Button from "./Button.svelte";
 </script>
 
 <footer class="footer">
@@ -11,7 +12,7 @@
 	<ul class="">
 		{#each networks as { label, url } (url)}
 			<li class="contact__link contact__link--{label}">
-				<a href={url}>{label}</a>
+				<Button href={url}>{label}</Button>
 			</li>
 		{/each}
 	</ul>
@@ -20,7 +21,9 @@
 <style>
 	.footer {
 		--color-font: var(--color-apricot-light);
+		--btn-color-border: currentColor;
 		padding: calc(2 * var(--gap)) var(--gap) calc(3 * var(--gap)) var(--gap);
+		padding: 2rem 4rem;
 		background-color: #151221;
 		position: relative;
 		margin-top: calc(var(--gap) * 4);
@@ -54,12 +57,6 @@
 			margin: 0;
 			padding: 0;
 		}
-
-		a {
-			display: block;
-			padding: 1em;
-			border: 1px solid currentColor;
-		}
 	}
 
 	@media all and (min-width: 48rem) {
@@ -68,10 +65,10 @@
 			grid-template-columns: max-content minmax(1px, 1fr);
 			grid-template-rows: repeat(2, auto);
 			gap: 0 calc(var(--gap) * 2);
+			align-items: center;
 		}
 
 		ul {
-			max-width: 25rem;
 			justify-self: end;
 			margin: 0;
 		}

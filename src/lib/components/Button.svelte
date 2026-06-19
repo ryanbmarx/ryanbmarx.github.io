@@ -16,7 +16,11 @@
 
 <style>
 	.btn {
-		border: 1px solid var(--color-font);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		border: 1px solid var(--btn-color-font, var(--color-font));
 		padding: var(--gap);
 		text-align: center;
 		cursor: pointer;
@@ -24,7 +28,7 @@
 		text-decoration: none;
 
 		&:hover {
-			background-color: #fff2;
+			background-color: var(--btn-border-color, #fff2);
 		}
 	}
 

@@ -32,6 +32,32 @@
 </nav>
 
 <style>
+	.nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		top: 0;
+		height: var(--nav-height);
+		width: 100%;
+		z-index: 10;
+		transition:
+			backdrop-filter var(--speed-transition) ease,
+			-webkit-backdrop-filter var(--speed-transition) ease;
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: var(--nav-color-bg-opaque);
+			box-shadow: var(--nav-shadow);
+			opacity: var(--nav-bg-opacity-stuck);
+			transition: opacity var(--speed-transition) ease;
+			pointer-events: none;
+			z-index: -1;
+		}
+	}
+
 	.contact {
 		display: flex;
 		list-style: none;
@@ -85,32 +111,6 @@
 
 		li {
 			padding: var(--gap);
-		}
-	}
-	.nav {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: fixed;
-		top: 0;
-		margin-bottom: var(--nav-margin);
-		height: var(--nav-height);
-		width: 100%;
-		z-index: 2;
-		transition:
-			backdrop-filter var(--speed-transition) ease,
-			-webkit-backdrop-filter var(--speed-transition) ease;
-
-		&::before {
-			content: "";
-			position: absolute;
-			inset: 0;
-			background: var(--nav-color-bg-opaque);
-			box-shadow: var(--nav-shadow);
-			opacity: var(--nav-bg-opacity-stuck);
-			transition: opacity var(--speed-transition) ease;
-			pointer-events: none;
-			z-index: -1;
 		}
 	}
 
