@@ -38,27 +38,26 @@
 			title: "Storytelling tools and games",
 			subtitle: "djslkfjsdklf",
 			href: "/projects/tools-and-games",
-			img: "indepth.jpg",
+			img: "cast.png",
 		},
 		{
 			title: "Data visualizations",
 			subtitle: "djslkfjsdklf",
-
-			href: "/projects/data-visualization",
-			img: "indepth.jpg",
+			href: "/projects/data",
+			img: "chart.jpg",
 		},
 		{
 			title: "Other things",
 			subtitle: "djslkfjsdklf",
-			href: "/projects/other",
-			img: "indepth.jpg",
+			href: "/projects/tribune",
+			img: "graphic.jpg",
 		},
 	] as const;
 </script>
 
 <div class="projects">
 	{#each items as { title, href, img } (href)}
-		<a class="project" {href} style:background-image={`url(/thumbs/${img})`}>{title}</a>
+		<a class="project" {href} style:--bg-image={`url(/thumbs/large/${img})`}>{title}</a>
 	{/each}
 </div>
 
@@ -71,15 +70,25 @@
 		grid-auto-flow: row;
 	}
 	.project {
+		position: relative;
+		overflow: hidden;
 		display: flex;
 		align-items: end;
 		justify-content: flex-end;
 		padding: var(--gap);
 		outline: 1px solid black;
-		min-height: 12rem;
-		background-size: cover;
-		background-position: center;
 		min-height: 40vh;
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background-image: var(--bg-image);
+			background-size: cover;
+			background-position: center;
+			transform: rotate(5deg) scale(1.2);
+			z-index: -1;
+		}
 	}
 
 	@media all and (min-width: 48rem) {

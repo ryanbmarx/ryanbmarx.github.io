@@ -1,14 +1,14 @@
 <script lang="ts">
-	import BrokenMessage from "$lib/components/portfolio/BrokenMessage.svelte";
 	import Portfolio from "$lib/components/portfolio/Portfolio.svelte";
 	import { marked } from "marked";
 	import { portfolioItems } from "../items";
 	import intro from "./intro.md?raw";
-	const items = portfolioItems.filter(i => i.tags.includes("indepth"));
+	const items = portfolioItems.filter(
+		i => i.tags.includes("trib") && i.tags.includes("data")
+	);
 </script>
 
 {@html marked.parse(intro)}
-<BrokenMessage></BrokenMessage>
 <Portfolio {items}></Portfolio>
 
 <style>

@@ -94,32 +94,32 @@ export const portfolioItems: PorfolioItemType[] = [
 			"Sometimes the news can and should be fun. Part of our ongoing 'news play' experiments, this quiz framework has been used to create topical and evergreen quizzes for 6 different news properties, and has been published weekly  by USA TODAY for more than two years. The primary business goals of this project was to drive reader registrations (not subscriptions).\n\nThousands of quiztakers visited Gannett sign-up pages. To encourage habitual quiztaking, this frameworks supports the possibility of two different leaderboards — weekly and all-time — as well as syndication across Gannett properties.",
 	},
 
-	{
-		label: "In-Depth",
-		image: "indepth.jpg",
-		links: [
-			{
-				headline:
-					"Hallowed Sound, Vol. 2: Stories of perseverance and preservation from the American South",
-				link: "https://www.tennessean.com/in-depth/entertainment/music/2021/09/23/hallowed-sound-stories-perseverance-preservation-american-south-music/5617513001/",
-				archived: true,
-			},
-			{
-				headline:
-					"A look at the stadiums where teams will compete in the 2022 FIFA World Cup in Qatar",
-				link: "https://www.usatoday.com/in-depth/graphics/2022/11/18/how-many-stadiums-does-qatar-2022-have-mapping-out-world-cup/8305335001/",
-				archived: true,
-			},
-			{
-				headline: "Meet the Black dancer who broke the Rockettes' color barrier",
-				link: "https://www.lohud.com/in-depth/news/2022/11/17/jennifer-jones-rockette-radio-city-music-hall/69616543007/",
-				archived: true,
-			},
-		],
-		tags: ["indepth"],
-		description:
-			"My team at Gannett was responsible for designing, engineering and maintaining the In-Depth article framework. This collection of tools enables more than 100 web producers across the company to craft visually stunning, reader-focused multimedia presentations using the everyday CMS and our own story editor.\n\nIt's been used to create more than 7,500 (as of December 2022) articles and is the tool of choice to present the strongest, most impactful journalism Gannett has to offer.\n\nIt has generated hundreds of thousands of pageviews, a 2x increase in engaged time over standard templates and frequently leads to subscriber conversions.",
-	},
+	// {
+	// 	label: "In-Depth",
+	// 	image: "indepth.jpg",
+	// 	links: [
+	// 		{
+	// 			headline:
+	// 				"Hallowed Sound, Vol. 2: Stories of perseverance and preservation from the American South",
+	// 			link: "https://www.tennessean.com/in-depth/entertainment/music/2021/09/23/hallowed-sound-stories-perseverance-preservation-american-south-music/5617513001/",
+	// 			archived: true,
+	// 		},
+	// 		{
+	// 			headline:
+	// 				"A look at the stadiums where teams will compete in the 2022 FIFA World Cup in Qatar",
+	// 			link: "https://www.usatoday.com/in-depth/graphics/2022/11/18/how-many-stadiums-does-qatar-2022-have-mapping-out-world-cup/8305335001/",
+	// 			archived: true,
+	// 		},
+	// 		{
+	// 			headline: "Meet the Black dancer who broke the Rockettes' color barrier",
+	// 			link: "https://www.lohud.com/in-depth/news/2022/11/17/jennifer-jones-rockette-radio-city-music-hall/69616543007/",
+	// 			archived: true,
+	// 		},
+	// 	],
+	// 	tags: ["indepth"],
+	// 	description:
+	// 		"My team at Gannett was responsible for designing, engineering and maintaining the In-Depth article framework. This collection of tools enables more than 100 web producers across the company to craft visually stunning, reader-focused multimedia presentations using the everyday CMS and our own story editor.\n\nIt's been used to create more than 7,500 (as of December 2022) articles and is the tool of choice to present the strongest, most impactful journalism Gannett has to offer.\n\nIt has generated hundreds of thousands of pageviews, a 2x increase in engaged time over standard templates and frequently leads to subscriber conversions.",
+	// },
 	{
 		label: "In-depth: Audiograms",
 		image: "audiogram.png",
@@ -421,7 +421,7 @@ export const portfolioItems: PorfolioItemType[] = [
 				link: "https://graphics.chicagotribune.com/entertainment/lollapalooza-history/",
 			},
 		],
-		tags: ["data", "impaired"],
+		tags: ["data", "trib"],
 	},
 	{
 		label: "Post-election: Examining Illinois after Trump election",
@@ -436,7 +436,7 @@ export const portfolioItems: PorfolioItemType[] = [
 				link: "https://www.chicagotribune.com/news/ct-election-midwest-voting-demographics-htmlstory.html",
 			},
 		],
-		tags: ["data", "impaired"],
+		tags: ["data", "trib"],
 	},
 	{
 		label: "Visualization & Lookup: Paying for public schools ",
@@ -451,6 +451,6 @@ export const portfolioItems: PorfolioItemType[] = [
 				link: "https://web.archive.org/web/20161219093408/https://www.chicagotribune.com/news/ct-local-school-funding-htmlstory.html",
 			},
 		],
-		tags: ["data", "impaired"],
+		tags: ["data", "trib"],
 	},
 ];
