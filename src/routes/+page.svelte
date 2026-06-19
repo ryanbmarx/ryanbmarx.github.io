@@ -1,5 +1,5 @@
 <script lang="ts">
-	import HomepageNav from "./HomepageNav.svelte";
+	import HomepageNav from "./_components/HomepageNav.svelte";
 
 	import { IsMobile } from "$lib/hooks/is-mobile.svelte";
 	const isMobile = new IsMobile();
