@@ -10,7 +10,7 @@
 	<FrostyRainbow></FrostyRainbow>
 </div>
 
-<div class="container">
+<main id="main-content" class="container">
 	<header>
 		<img
 			class="portrait"
@@ -23,7 +23,7 @@
 		<p>I communicate with code and data.</p>
 	</header>
 	<HomepageNav></HomepageNav>
-</div>
+</main>
 
 <style>
 	.background {

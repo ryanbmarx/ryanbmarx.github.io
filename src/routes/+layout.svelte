@@ -9,6 +9,8 @@
 	<title>Ryan Marx | Communicating with data and code</title>
 </svelte:head>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <ModeWatcher></ModeWatcher>
 <Theme></Theme>
 
@@ -19,4 +21,17 @@
 </div>
 
 <style>
+	.skip-link {
+		position: absolute;
+		top: -13rem;
+		left: 0;
+		z-index: 100;
+		padding: var(--gap);
+		background: light-dark(white, black);
+		color: light-dark(black, white);
+
+		&:focus {
+			top: 0;
+		}
+	}
 </style>

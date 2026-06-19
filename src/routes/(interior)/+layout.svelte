@@ -14,7 +14,7 @@
 <svelte:head>
 	<title>{page.data.title} | Ryan Marx</title>
 </svelte:head>
-}
+
 <div style="display: none">
 	{@html sprite}
 </div>
@@ -25,7 +25,7 @@
 	<Nav></Nav>
 {/if}
 
-<Section wide={isFullwidth}>
+<Section wide={isFullwidth} tag="main" id="main-content">
 	{@render children()}
 </Section>
 <Footer></Footer>
