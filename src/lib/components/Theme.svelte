@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { toggleMode, mode } from "mode-watcher";
 	import { Moon, Sun } from "@lucide/svelte";
+	import { mode, toggleMode } from "mode-watcher";
 </script>
 
 <button class="theme" onclick={toggleMode} aria-label="Toggle light/dark mode">
@@ -17,6 +17,8 @@
 		--speed-transition-quick: 5s;
 		position: absolute;
 		top: calc(var(--nav-height) + var(--gap));
+
+		z-index: 3;
 
 		right: var(--gap);
 		width: fit-content;

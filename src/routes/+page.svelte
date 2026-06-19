@@ -2,8 +2,13 @@
 	import HomepageNav from "./_components/HomepageNav.svelte";
 
 	import { IsMobile } from "$lib/hooks/is-mobile.svelte";
+	import FrostyRainbow from "./_components/background/FrostyRainbow.svelte";
 	const isMobile = new IsMobile();
 </script>
+
+<div class="background">
+	<FrostyRainbow></FrostyRainbow>
+</div>
 
 <div class="container">
 	<header>
@@ -21,6 +26,12 @@
 </div>
 
 <style>
+	.background {
+		position: fixed;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+	}
 	.container {
 		height: 100%;
 		height: 100vh;
@@ -29,6 +40,8 @@
 		align-items: center;
 		flex-flow: column nowrap;
 		gap: var(--gap);
+		position: relative;
+		z-index: 2;
 	}
 	header {
 		display: flex;
@@ -51,7 +64,7 @@
 		width: 8rem;
 		height: 8rem;
 		aspect-ratio: 1 / 1;
-		border: 6px solid var(--color-border);
+		border: 6px solid #fffa;
 	}
 
 	@media all and (min-width: 48rem) {
