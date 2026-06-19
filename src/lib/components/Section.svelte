@@ -24,14 +24,14 @@
 			<h2>{header}</h2>
 		</div>
 	{/if}
-	<div class="section__inner">
+	<div class="section__inner stack">
 		{@render children()}
 	</div>
 </svelte:element>
 
 <style>
 	.section {
-		--space-above: calc(5 * var(--gap));
+		/* --space-above: calc(5 * var(--gap)); */
 		padding: var(--gap);
 		gap: var(--gap);
 		padding-top: 0;
@@ -40,8 +40,8 @@
 		flex-flow: column nowrap;
 		align-items: center;
 
-		padding-top: var(--space-above);
-		margin-top: calc(-1 * var(--space-above));
+		padding-top: calc(var(--nav-height) + var(--gap));
+		/* margin-top: calc(-1 * var(--space-above)); */
 
 		h2 {
 			color: light-dark(var(--color-font), var(--color-apricot-light));

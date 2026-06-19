@@ -15,6 +15,12 @@ export default ts.config(
 			// TypeScript already catches undefined references; avoid false
 			// positives on ambient/global types.
 			"no-undef": "off",
+			// This site's links are plain anchors (hash links, mailto:, external
+			// URLs) with no dynamic routes that need resolve().
+			"svelte/no-navigation-without-resolve": "off",
+			// {@html} is used throughout for trusted, local content (markdown,
+			// SVG sprite), not user input.
+			"svelte/no-at-html-tags": "off",
 		},
 	},
 	{

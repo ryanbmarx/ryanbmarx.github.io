@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { marked } from "marked";
+
 	type WorkItem = {
 		start: number;
 		end: string | number;
@@ -76,11 +78,11 @@
 </script>
 
 <ul class="stack resume">
-	{#each work as { start, end, orgLink, org, role, description }}
+	{#each work as { start, end, orgLink, org, role, description } (start)}
 		<li class="">
 			<h3 class="title">{role} — <a href={orgLink}>{org}</a></h3>
 			<p class="dates">{start} – {end}</p>
-			<p class="description">{@html description}</p>
+			<p class="description">{@html marked.parse(description)}</p>
 		</li>
 	{/each}
 </ul>

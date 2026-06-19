@@ -9,7 +9,7 @@
 	</div>
 
 	<ul class="">
-		{#each networks as { label, url }}
+		{#each networks as { label, url } (url)}
 			<li class="contact__link contact__link--{label}">
 				<a href={url}>{label}</a>
 			</li>
@@ -23,6 +23,7 @@
 		padding: calc(2 * var(--gap)) var(--gap) calc(3 * var(--gap)) var(--gap);
 		background-color: #151221;
 		position: relative;
+		margin-top: calc(var(--gap) * 4);
 
 		&::before {
 			content: "";
