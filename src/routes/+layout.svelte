@@ -1,29 +1,22 @@
 <script lang="ts">
-	import { page } from "$app/state";
-	import Section from "$lib/components/Section.svelte";
 	import Theme from "$lib/components/Theme.svelte";
-	import { IsMobile } from "$lib/hooks/is-mobile.svelte";
 	import sprite from "$lib/sprite.svg?raw";
 	import { ModeWatcher } from "mode-watcher";
 	let { children } = $props();
-	const isFullwidth = $derived(page.data.fullwidth);
-	const isMobile = new IsMobile();
 </script>
 
 <svelte:head>
 	<title>Ryan Marx | Communicating with data and code</title>
 </svelte:head>
 
-<div style="display: none">
-	{@html sprite}
-</div>
-
 <ModeWatcher></ModeWatcher>
 <Theme></Theme>
 
-<Section wide={isFullwidth}>
-	{@render children()}
-</Section>
+{@render children()}
+
+<div style="display: none" hidden>
+	{@html sprite}
+</div>
 
 <style>
 </style>

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { marked } from "marked";
 
+	import { type PorfolioItemType } from "../../routes/(interior)/projects/items";
 	import ButtonGithub from "./ButtonGithub.svelte";
-	import { type PorfolioItemType } from "./items";
 
 	const {
 		label,

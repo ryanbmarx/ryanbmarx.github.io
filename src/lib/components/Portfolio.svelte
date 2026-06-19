@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { portfolioItems } from "../../routes/(interior)/projects/items";
 	import PortfolioItem from "./PortfolioItem.svelte";
-	import { portfolioItems } from "./items";
 </script>
 
 <ul class="items">

@@ -1,12 +1,63 @@
 <script lang="ts">
-	import Header from "$lib/components/Header.svelte";
+	import HomepageNav from "./HomepageNav.svelte";
+
 	import { IsMobile } from "$lib/hooks/is-mobile.svelte";
 	const isMobile = new IsMobile();
 </script>
 
-<Header></Header>
-<!-- {#if isMobile.current}
-	<NavMobile></NavMobile>
-{:else}
-	<Nav></Nav>
-{/if} -->
+<div class="container">
+	<header>
+		<img
+			class="portrait"
+			height="250"
+			width="250"
+			loading="eager"
+			src="/img/ryanmarx.jpg"
+			alt="A closeup head shot of Ryan Marx. He's smiling softly and wearing a Milwaukee Brewers ballcap." />
+		<h1>Hi. I'm Ryan.</h1>
+		<p>I communicate with code and data.</p>
+	</header>
+	<HomepageNav></HomepageNav>
+</div>
+
+<style>
+	.container {
+		height: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column nowrap;
+		gap: var(--gap);
+	}
+	header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column nowrap;
+		gap: var(--gap);
+		padding-top: var(--nav-height);
+
+		h1 {
+			font-size: 5rem;
+			line-height: 1em;
+			text-align: center;
+		}
+	}
+
+	.portrait {
+		margin: 0 auto;
+		border-radius: 50%;
+		width: 8rem;
+		height: 8rem;
+		aspect-ratio: 1 / 1;
+		border: 6px solid var(--color-border);
+	}
+
+	@media all and (min-width: 48rem) {
+		header {
+			padding-top: 0;
+			/* height: calc(100vh - var(--nav-height) - var(--nav-margin)); */
+		}
+	}
+</style>
