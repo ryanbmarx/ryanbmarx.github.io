@@ -48,11 +48,11 @@
 		}
 	}
 	.section__header {
-		max-width: 45rem;
+		max-width: var(--section-max-width);
 		width: 100%;
 	}
 	.section__inner {
-		max-width: 45rem;
+		max-width: var(--section-max-width);
 		width: 100%;
 	}
 	.wide {

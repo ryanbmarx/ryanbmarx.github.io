@@ -1,13 +1,4 @@
-export type PorfolioItemType = {
-	label: string;
-	date?: string;
-	description: string;
-	image: string;
-	links?: { headline?: string; link: string; archived?: boolean }[];
-	repo?: string | null;
-	tags?: string[];
-	tagDefinitions?: Record<string, { label: string; description: string }>;
-};
+import type { PorfolioItemType } from "$lib/components/portfolio/PortfolioItem.svelte";
 
 export const portfolioItems: PorfolioItemType[] = [
 	{
@@ -125,7 +116,7 @@ export const portfolioItems: PorfolioItemType[] = [
 				archived: true,
 			},
 		],
-		tags: ["tool"],
+		tags: ["indepth"],
 		description:
 			"My team at Gannett was responsible for designing, engineering and maintaining the In-Depth article framework. This collection of tools enables more than 100 web producers across the company to craft visually stunning, reader-focused multimedia presentations using the everyday CMS and our own story editor.\n\nIt's been used to create more than 7,500 (as of December 2022) articles and is the tool of choice to present the strongest, most impactful journalism Gannett has to offer.\n\nIt has generated hundreds of thousands of pageviews, a 2x increase in engaged time over standard templates and frequently leads to subscriber conversions.",
 	},
@@ -152,7 +143,7 @@ export const portfolioItems: PorfolioItemType[] = [
 				archived: true,
 			},
 		],
-		tags: ["tool", "svelte"],
+		tags: ["svelte", "indepth"],
 		description:
 			"This component for the In-Depth toolbox was our second-pass at audio clips. I designed and developed this from scratch as an attempt to grow the poor interaction rates observed with the first version. It's bigger and bolder — more pixels on the page — and has a strong visual presence.",
 	},
@@ -178,7 +169,7 @@ export const portfolioItems: PorfolioItemType[] = [
 				archived: true,
 			},
 		],
-		tags: ["tool", "svelte"],
+		tags: ["svelte", "indepth"],
 		image: "sms.png",
 		description:
 			"This component from the In-Depth toolbox is a top-to-bottom refactor of an existing app. Originally written in Angular (with the data hard-coded into the application), I rewrote it in our preferred Svelte, and abstracted the input data so that it could be used in any project. Visually, it uses the same CSS styling variables as the broader article stylesheets, so it adapts to existing ",
@@ -205,7 +196,7 @@ export const portfolioItems: PorfolioItemType[] = [
 				archived: true,
 			},
 		],
-		tags: ["tool", "svelte"],
+		tags: ["svelte", "indepth"],
 		description:
 			"This component for In-Depth takes two images, lines them up and toggles between them. We had originally decided to let the myriad 3rd-party versions of this tool serve In-Depth, but this one provides us useful analytics.",
 	},
@@ -350,7 +341,7 @@ export const portfolioItems: PorfolioItemType[] = [
 				link: "https://graphics.chicagotribune.com/news/local/history-of-class-warfare/",
 			},
 		],
-		tags: ["article"],
+		tags: ["trib"],
 	},
 
 	{
@@ -366,7 +357,7 @@ export const portfolioItems: PorfolioItemType[] = [
 				link: "https://graphics.chicagotribune.com/faces-of-daca-dreamers/",
 			},
 		],
-		tags: ["article"],
+		tags: ["trib"],
 	},
 	{
 		label: "Graphic novel presentations",
@@ -385,7 +376,7 @@ export const portfolioItems: PorfolioItemType[] = [
 				link: "https://graphics.chicagotribune.com/news/local/eastland/",
 			},
 		],
-		tags: ["article", "tool"],
+		tags: ["trib"],
 	},
 	{
 		label: "The Tax Divide - A 4-part series",
@@ -401,7 +392,7 @@ export const portfolioItems: PorfolioItemType[] = [
 				link: "https://apps.chicagotribune.com/news/watchdog/cook-county-property-tax-divide/assessments.html",
 			},
 		],
-		tags: ["article"],
+		tags: ["trib"],
 	},
 	{
 		label: "The problems with weedkillers and farming",
@@ -416,7 +407,7 @@ export const portfolioItems: PorfolioItemType[] = [
 				link: "http://graphics.chicagotribune.com/news/watchdog/how-weeds-resist/",
 			},
 		],
-		tags: ["article", "impaired"],
+		tags: ["trib", "impaired"],
 	},
 	{
 		label: "All the bands at that big music festival",
@@ -463,41 +454,3 @@ export const portfolioItems: PorfolioItemType[] = [
 		tags: ["data", "impaired"],
 	},
 ];
-
-type Tag = {
-	label: string;
-	description: string;
-};
-
-export const tags: Record<string, Tag> = {
-	ui: {
-		label: "UI",
-		description:
-			"Whether it's a dashboard or something else, these are good examples of user interfaces I have built. These applications tend to have more interactivity.",
-	},
-	data: {
-		label: "Data visualization",
-		description:
-			"The primary purpose of these projects is to tell a story by conveying data through a visual format.",
-	},
-	article: {
-		label: "Featured",
-		description:
-			"A nicely-designed article or other featured content that might not have a ton of interactivity but is full of information and organization.",
-	},
-	tool: {
-		label: "Tools",
-		description:
-			"These are not one-off projects. The codebase consitutes a tool or framework and has been reused several times.",
-	},
-	svelte: {
-		label: "Svelte",
-		description:
-			"Made with [Svelte](https://svelte.dev), a popular framework that I rather enjoy using.",
-	},
-	impaired: {
-		label: "Impaired",
-		description:
-			"Older projects with published links that might not work well (or at all) anymore because of CMS migrations or other factors. I'm not in control of them anymore, but I remain proud of the work. Why not take a look at the code?",
-	},
-};

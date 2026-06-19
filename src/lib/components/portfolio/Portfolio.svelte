@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { portfolioItems } from "../../routes/(interior)/projects/items";
-	import PortfolioItem from "./PortfolioItem.svelte";
+	import PortfolioItem, { type PorfolioItemType } from "./PortfolioItem.svelte";
+	const { items }: { items: PorfolioItemType[] } = $props();
 </script>
 
 <ul class="items">
-	{#each portfolioItems as item}
+	{#each items as item (item.label)}
 		<PortfolioItem {...item} />
 	{/each}
 </ul>

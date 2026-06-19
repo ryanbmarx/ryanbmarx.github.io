@@ -1,8 +1,18 @@
+<script lang="ts" module>
+	export type PorfolioItemType = {
+		label: string;
+		date?: string;
+		description: string;
+		image: string;
+		links?: { headline?: string; link: string; archived?: boolean }[];
+		repo?: string | null;
+		tags: string[];
+	};
+</script>
+
 <script lang="ts">
 	import { marked } from "marked";
-
-	import { type PorfolioItemType } from "../../routes/(interior)/projects/items";
-	import ButtonGithub from "./ButtonGithub.svelte";
+	import ButtonGithub from "../ButtonGithub.svelte";
 
 	const {
 		label,
@@ -11,7 +21,7 @@
 		image,
 		links: rawLinks = [],
 		repo = null,
-	}: PorfolioItemType = $props();
+	}: Omit<PorfolioItemType, "tags"> = $props();
 
 	const links = $derived(rawLinks.filter(l => !l.archived));
 </script>
@@ -20,7 +30,7 @@
 	<div class="project__image">
 		<img
 			class="project__image__img"
-			src="thumbs/{image}"
+			src="/thumbs/{image}"
 			alt=""
 			loading="lazy"
 			height="9"
@@ -34,7 +44,7 @@
 		<h4 class="sublabel">Examples:</h4>
 	{/if}
 	<ul class="links">
-		{#each links as { headline, link }}
+		{#each links as { headline, link } (link)}
 			<li>
 				<a
 					class="link sans-serif"

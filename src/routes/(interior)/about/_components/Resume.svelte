@@ -17,8 +17,11 @@
 			org: "Pulsar Informatics",
 			orgLink: "https://www.pulsarinformatics.com/",
 			role: "UX software engineer",
-			description:
-				"I am a key developer on a web-based application offering workforce fatigue management solutions. We use GraphQL, TypeScript, and SvelteKit to deliver actionable insights in real time. I collaborate cross-functionally with other engineering teams, product leadership, and customers to refine the end-user experience and contribute to roadmap planning.",
+			description: [
+				"- I develop a refined, intuitive interface for a web-based application offering workforce fatigue management solutions. We use GraphQL, TypeScript, and SvelteKit to deliver actionable insights in real time.",
+				"- I work with other engineers, product leadership, and customers to refine the end-user experience and contribute to roadmap planning.",
+				"- I am developing the company's first end-to-end testing strategy using Playwright.",
+			].join("\n"),
 		},
 		{
 			start: 2018,
@@ -26,8 +29,11 @@
 			org: "Gannett",
 			orgLink: "https://www.usatoday.com/",
 			role: "Developer, news applications",
-			description:
-				"My team — The Storytelling Studio — collaborated with newsrooms across the company to facilitate top-notch storytelling by developing tools, frameworks and custom experiences. We empowered our partners in more than 200 newsrooms across the country. We used an agile, human-centered approach as we iteratively tested our hypotheses and refined our goals. Journalists often approached us with their centerpiece work and a desire to maximize its impact. We built our tools from end to end to achieve a facility on our company's infrastructure and a alignment of technologies that wouldn't otherwise exist.",
+			description: [
+				"- As part of Gannett's experimental Storytelling Studio, I helped craft top-notch storytelling by developing tools, frameworks and custom experiences. I often wore multiple hats in any given project, including designer, developer, project manager as I worked with news teams across the company",
+				"- We used an agile, human-centered approach as we iteratively tested our hypotheses and refined our goals. Journalists often approached us with their centerpiece work and a desire to maximize its impact.",
+				"- We built our tools from end to end, to use our company's infrastructure in new and creative ways while emnpowering our collabotors to supercharge their best work.",
+			].join("\n"),
 		},
 		{
 			start: 2013,
@@ -35,8 +41,10 @@
 			org: "Chicago Tribune",
 			orgLink: "https://www.chicagotribune.com/",
 			role: "Assistant Data Visualization Editor",
-			description:
-				"I helped coordinate the efforts of all graphic reporters and artists across long- and short-term projects while leading our transformation into a digital-focused team. I helped develop technology stacks, templates and best practices for everything from static graphics to fully composed articles and interactives. Though the graphics team was full of expert artists and journalists, our digital abilities were minimal. For our transformation to succeed, the plan needed to include everyone and, thus, a key responsibility for me was to serve as a coach/mentor to help us all contribute to our digital growth.",
+			description: [
+				"- I worked with the team editor to coordinate the efforts of all graphic reporters and artists across long- and short-term projects.",
+				"- I led our teams conversion from a print-focused group to a digital-first team. I helped develop our technology stacks, templates and best practices for everything from static graphics to fully composed articles and interactives.",
+			].join("\n"),
 		},
 		{
 			start: 2010,
@@ -44,18 +52,22 @@
 			org: "Chicago Tribune",
 			orgLink: "https://www.chicagotribune.com/",
 			role: "Data visualization Coordinator",
-			description:
-				"I worked with business editors, reporters and columnists to identify and prioritize graphic opportunities for the daily business section and special projects. I participated in long- and short-term planning to devise digital experiences to enhance the daily and weekly coverage.",
+			description: [
+				"- I worked with business editors, reporters and columnists to identify and prioritize graphic opportunities for the daily business section and special projects.",
+				"- I participated in long- and short-term planning to devise digital experiences to enhance the daily and weekly coverage.",
+			].join("\n"),
 		},
-		// {
-		// 	start: 2009,
-		// 	end: 2010,
-		// 	org: "The Times of Northwest Indiana",
-		// 	orgLink: "https://www.nwi.com/",
-		// 	role: "Graphics Editor",
-		// 	description:
-		// 		"I identified and executed visual storytelling opportunities for the news, sports, business and features sections in print and online. I also worked to expand the nwi.com scope and community with online-only content.",
-		// },
+		{
+			start: 2009,
+			end: 2010,
+			org: "The Times of Northwest Indiana",
+			orgLink: "https://www.nwi.com/",
+			role: "Graphics Editor",
+			description: [
+				"- I identified and executed visual storytelling opportunities for the news, sports, business, and features sections in print and online.",
+				"- I also worked to expand the nwi.com scope and community with online-only content.",
+			].join("\n"),
+		},
 		// {
 		// 	start: 2005,
 		// 	end: 2009,
@@ -82,7 +94,7 @@
 		<li class="">
 			<h3 class="title">{role} — <a href={orgLink}>{org}</a></h3>
 			<p class="dates">{start} – {end}</p>
-			<p class="description">{@html marked.parse(description)}</p>
+			<div class="description">{@html marked.parse(description)}</div>
 		</li>
 	{/each}
 </ul>
@@ -108,6 +120,19 @@
 			background-color: var(--timeline-color);
 			/* border-left: 2px solid var(--timeline-color); */
 			transform: translate(-50%, 0);
+		}
+
+		:global {
+			ul {
+				--gap: 1rem;
+				list-style: disc;
+				padding-left: var(--gap);
+				margin-top: var(--gap);
+
+				li {
+					margin-bottom: calc(var(--gap) / 2);
+				}
+			}
 		}
 	}
 

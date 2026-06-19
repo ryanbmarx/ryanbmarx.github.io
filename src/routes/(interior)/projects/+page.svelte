@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Portfolio from "$lib/components/Portfolio.svelte";
 	// 	### What I do
 
 	// I thrive in collaborative and cross-functional capacities, helping disparate teams
@@ -25,6 +24,67 @@
 	// nerds: science fiction, theater, cooking, and youth softball (as a proud softball
 	// dad). And, finally (perhaps most importantly), I believe there isn't anything that
 	// can't be made better with a cup of hot coffee. Or two.
+
+	// "- I led our teams conversion from a print-focused group to a digital-first team. I helped develop technology stacks, templates and best practices for everything from static graphics to fully composed articles and interactives. Though the graphics team was full of expert artists and journalists, our digital abilities were minimal. For our transformation to succeed, the plan needed to include everyone and, thus, a key responsibility for me was to serve as a coach/mentor to help us all contribute to our digital growth.",
+
+	const items = [
+		{
+			title: "Indepth",
+			subtitle: "dfdsfdsfsd",
+			href: "/projects/indepth",
+			img: "indepth.jpg",
+		},
+		{
+			title: "Storytelling tools and games",
+			subtitle: "djslkfjsdklf",
+			href: "/projects/tools-and-games",
+			img: "indepth.jpg",
+		},
+		{
+			title: "Data visualizations",
+			subtitle: "djslkfjsdklf",
+
+			href: "/projects/data-visualization",
+			img: "indepth.jpg",
+		},
+		{
+			title: "Other things",
+			subtitle: "djslkfjsdklf",
+			href: "/projects/other",
+			img: "indepth.jpg",
+		},
+	] as const;
 </script>
 
-<Portfolio></Portfolio>
+<div class="projects">
+	{#each items as { title, href, img } (href)}
+		<a class="project" {href} style:background-image={`url(/thumbs/${img})`}>{title}</a>
+	{/each}
+</div>
+
+<!-- <Portfolio></Portfolio> -->
+<style>
+	.projects {
+		--columns: 1;
+		display: grid;
+		grid-template-columns: repeat(var(--columns), minmax(1px, 1fr));
+		grid-auto-flow: row;
+	}
+	.project {
+		display: flex;
+		align-items: end;
+		justify-content: flex-end;
+		padding: var(--gap);
+		outline: 1px solid black;
+		min-height: 12rem;
+		background-size: cover;
+		background-position: center;
+		min-height: 40vh;
+	}
+
+	@media all and (min-width: 48rem) {
+		.projects {
+			--columns: 2;
+		}
+	}
+</style>

@@ -44,11 +44,4 @@
 			transform: scale(1);
 		}
 	}
-
-	/* @media all and (min-width: 48rem) {
-		.theme {
-			top: var(--gap);
-			bottom: unset;
-		}
-	} */
 </style>

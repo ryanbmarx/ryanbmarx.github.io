@@ -37,10 +37,12 @@
 	--sans-serif-fonts: "Poppins", "Helvetica", sans-serif;
 
 	/* // SCAFFOLDING */
+	--section-max-width: 45rem;
 	--gap: 1rem;
 	--tap-target: 48px;
 	--nav-height: 4rem;
 	--nav-margin: 10rem;
+	--gutter-width: calc((100% - var(--section-max-width)) / 2);
 
 	/* OTHER VISUAL THINGS */
 	--speed-transition: 150ms;
