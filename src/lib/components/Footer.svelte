@@ -3,7 +3,7 @@
 	import Button from "./Button.svelte";
 </script>
 
-<footer class="footer">
+<footer id="contact" class="footer">
 	<div>
 		<h2>Want to chat? I do.</h2>
 		<p>Let's connect. I would love to hear from you.</p>
