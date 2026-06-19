@@ -11,6 +11,10 @@
 	const isMobile = new IsMobile();
 </script>
 
+<svelte:head>
+	<title>{page.data.title} | Ryan Marx</title>
+</svelte:head>
+}
 <div style="display: none">
 	{@html sprite}
 </div>
