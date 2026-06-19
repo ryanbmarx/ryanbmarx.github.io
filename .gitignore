@@ -106,5 +106,6 @@ dist
 
 .DS_Store
 
-# Generated content
-public/
+# SvelteKit
+.svelte-kit/
+/build

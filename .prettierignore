@@ -1,6 +1,6 @@
 .claude/
 _scratch/
-dist/
+build/
+.svelte-kit/
 node_modules/
-public/
-src/functions/sprite.svg
+src/lib/sprite.svg

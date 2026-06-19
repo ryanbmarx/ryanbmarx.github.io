@@ -8,7 +8,6 @@ export const networks = [
 ];
 
 export const navLinks = [
-	{ href: "#about", label: "Get to know me" },
-	{ href: "#experience", label: "My experience" },
-	{ href: "#projects", label: "My projects" },
+	{ href: "/about", label: "Get to know me" },
+	{ href: "/projects", label: "My projects" },
 ];

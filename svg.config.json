@@ -1,5 +1,5 @@
 {
-	"dest": "./src/functions",
+	"dest": "./src/lib",
 	"mode": {
 		"symbol": {
 			"dest": ".",
