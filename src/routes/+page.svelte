@@ -2,7 +2,7 @@
 	import HomepageNav from "./_components/HomepageNav.svelte";
 
 	import { IsMobile } from "$lib/hooks/is-mobile.svelte";
-	import FrostyRainbow from "./_components/background/FrostyRainbow.svelte";
+	import FrostyRainbow from "./_components/backgrounds/FrostyRainbow.svelte";
 	const isMobile = new IsMobile();
 </script>
 
@@ -61,8 +61,8 @@
 	.portrait {
 		margin: 0 auto;
 		border-radius: 50%;
-		width: 8rem;
-		height: 8rem;
+		width: 12rem;
+		height: 12rem;
 		aspect-ratio: 1 / 1;
 		border: 6px solid #fffa;
 	}

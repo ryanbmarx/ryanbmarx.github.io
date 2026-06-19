@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import { navLinks, networks } from "../constants";
+	import { navLinks, networks } from "../../constants";
 </script>
 
 <nav class="nav frost">

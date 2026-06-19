@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import Footer from "$lib/components/Footer.svelte";
-	import Nav from "$lib/components/Nav.svelte";
-	import NavMobile from "$lib/components/NavMobile.svelte";
+	import Nav from "$lib/components/nav/Nav.svelte";
+	import NavMobile from "$lib/components/nav/NavMobile.svelte";
 	import Section from "$lib/components/Section.svelte";
 	import { IsMobile } from "$lib/hooks/is-mobile.svelte";
 	import sprite from "$lib/sprite.svg?raw";
