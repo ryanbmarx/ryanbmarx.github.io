@@ -118,7 +118,6 @@
 			top: 1em;
 			width: 1px;
 			background-color: var(--timeline-color);
-			/* border-left: 2px solid var(--timeline-color); */
 			transform: translate(-50%, 0);
 		}
 
