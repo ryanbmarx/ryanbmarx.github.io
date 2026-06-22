@@ -8,12 +8,6 @@
 	// creators and content creation with technologists, cutting through friction so work
 	// moves forward without bottlenecks.
 
-	// Throughout the years I've made it all: featured interactives, standalone
-	// presentations, and dashboard user interfaces. Each format has its place, and
-	// choosing the right one for the job is a delicate, practical art. The goal is always
-	// to build lean solutions that don't sacrifice quality for speed — or speed for
-	// quality.
-
 	// HTML, CSS, and TypeScript are my bread and butter. I love to ship with Svelte, Vue,
 	// or even plain vanilla. I've worked with D3, Node, and mapping tools (Leaflet,
 	// MapBox, etc.).
@@ -29,71 +23,97 @@
 
 	const items = [
 		{
-			title: "Indepth",
-			subtitle: "dfdsfdsfsd",
+			title: "In-depth",
+			subtitle: "The crown jewel of the Storytelling Studio",
 			href: "/projects/indepth",
 			img: "indepth.jpg",
 		},
 		{
-			title: "Storytelling tools and games",
-			subtitle: "djslkfjsdklf",
+			title: "Tools and games",
+			subtitle: "Building habits and engagement by making the news fun.",
 			href: "/projects/tools-and-games",
 			img: "cast.png",
 		},
 		{
 			title: "Data visualizations",
-			subtitle: "djslkfjsdklf",
+			subtitle: "Finding the message from inside a mountain of information",
 			href: "/projects/data",
 			img: "chart.jpg",
 		},
 		{
 			title: "Other things",
-			subtitle: "djslkfjsdklf",
+			subtitle: "A 3D soccer player, composed articles, and  graphic novels.",
 			href: "/projects/tribune",
 			img: "graphic.jpg",
 		},
 	] as const;
 </script>
 
-<div class="projects">
-	{#each items as { title, href, img } (href)}
-		<a class="project" {href} style:--bg-image={`url(/thumbs/large/${img})`}>{title}</a>
+<h1>I make things.</h1>
+<p>
+	Throughout the years I've made it all: featured interactives, standalone
+	presentations, and dashboard user interfaces. Each format has its place, and choosing
+	the right one for the job is a delicate, practical art. The goal is always to build
+	lean solutions that don't sacrifice quality for speed — or speed for quality.
+</p>
+<ul class="projects stack">
+	{#each items as { title, href, img, subtitle } (href)}
+		<li class="project">
+			<div class="image">
+				<img class="image" src="/thumbs/large/{img}" alt="" />
+			</div>
+			<h2 class="header">
+				<a class="link" {href}>
+					<span class="title">{title}</span>
+					<span class="subtitle">{subtitle}</span>
+				</a>
+			</h2>
+		</li>
 	{/each}
-</div>
+</ul>
 
-<!-- <Portfolio></Portfolio> -->
 <style>
-	.projects {
-		--columns: 1;
-		display: grid;
-		grid-template-columns: repeat(var(--columns), minmax(1px, 1fr));
-		grid-auto-flow: row;
-	}
 	.project {
-		position: relative;
-		overflow: hidden;
 		display: flex;
-		align-items: end;
-		justify-content: flex-end;
-		padding: var(--gap);
-		outline: 1px solid black;
-		min-height: 40vh;
+		align-items: center;
+		gap: var(--gap);
+		border: 1px solid var(--color-border);
+	}
+	.image {
+		flex: 0 0 15rem;
 
-		&::before {
-			content: "";
-			position: absolute;
-			inset: 0;
-			background-image: var(--bg-image);
-			background-size: cover;
-			background-position: center;
-			transform: rotate(5deg) scale(1.2);
-			z-index: -1;
+		/* min-width: 15rem; */
+		aspect-ratio: 16x9;
+		object-fit: cover;
+		height: 10rem;
+		background-color: red;
+		overflow: hidden;
+
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+			transform: rotate(-5deg) scale(1.2);
 		}
 	}
 
-	@media all and (min-width: 48rem) {
-		.projects {
-			--columns: 2;
-		}
+	.header {
+		padding: var(--gap);
+	}
+	.link {
+		flex: 1 1;
+		text-decoration: none;
+		line-height: var(--line-height-tight);
+	}
+
+	.title {
+		color: var(--color-font-muted);
+		display: block;
+	}
+
+	.subtitle {
+		font-size: 0.8em;
+		text-decoration: underline;
+		text-wrap: balance;
 	}
 </style>
